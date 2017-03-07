@@ -1,0 +1,115 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, big, em, font, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit;  font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
+:focus { outline: 0;}
+ol, ul { list-style: none;}
+table { border-collapse: separate; border-spacing: 0;}
+caption, th, td { text-align: left; font-weight: normal;}
+strong,b{font-weight:bold}
+em{font-style:italic}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+/*-------------------------------------*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans.eot');
+    src: url('fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans.woff') format('woff'),
+         url('fonts/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*-------------------------------------*/
+*{-moz-box-sizing: border-box; box-sizing: border-box;}
+html {width:100%;}
+body {font-size:14px; color: #7e7e7e; background: #fff; line-height:1.3;  font-family: 'OpenSans', sans-serif;}
+a {color: #6a9b9a; }
+a:hover {text-decoration:none;}
+.clr,#clr,.Clr {clear: both;}
+/*-------------------------------------*/
+section { width:1140px; margin:0 auto;}
+#AllBodyImpressum { padding-bottom:30px; margin-bottom:5px;} 
+#AllBodyImpressum #TitleImpres { padding-top:25px;}
+#AllBodyImpressum #TitleImpres h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/Cabinet/BgTitle.png) left top no-repeat; padding-left:46px;}
+#AllBodyImpressum #TitleImpres h1 span {color:#e32026}
+
+#BlockImpresAll {background: url(images/CheckIn/BgCheckIn.jpg) center bottom no-repeat; padding-bottom:80px; margin-bottom:5px;}
+#BlockImpresAll #AllPreson { width:100%; text-align:center;}
+#BlockImpresAll #AllPreson .OnePerson { display:inline-block; height:470px; width:357px; margin:0 10px;}
+#BlockImpresAll #AllPreson .OnePerson .Foto { max-width:80%; height:230px; overflow:hidden;}
+#BlockImpresAll #AllPreson .OnePerson .Foto img { width:100%; height:230px;}
+#BlockImpresAll #AllPreson .OnePerson p { color:#000; border-bottom:1px solid #999}
+#BlockImpresAll #AllPreson .OnePerson p.FoolNamePers { font-weight:bold; font-size:20px; margin-top:10px;}
+#BlockImpresAll #AllPreson .OnePerson .Pos { width:100%; margin-top:15px; padding-left:10px;}
+#BlockImpresAll #AllPreson .OnePerson .Pos p { float: left;font-size:18px;}
+#BlockImpresAll #AllPreson .OnePerson .Email { width:100%; margin-top:15px;padding-left:10px;}
+#BlockImpresAll #AllPreson .OnePerson .Email p { float: left;font-size:18px;}
+#BlockImpresAll #AllPreson .OnePerson .Telef { width:100%; margin-top:15px;padding-left:10px;}
+#BlockImpresAll #AllPreson .OnePerson .Telef p { float: left;font-size:18px;}
+#BlockImpresAll #AllPreson .OnePerson .And { width:100%; margin-top:15px;padding-left:10px;}
+#BlockImpresAll #AllPreson .OnePerson .And p { float: left; font-size:18px;}
+#BlockImpresAll #AllPreson .OnePerson p.Onls { font-weight:bold; margin-right:15px; border:none;}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1334px) { /* 1200<width<1334 main 1200*/
+
+
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1139px) { /* 980<width<1139 main 980*/
+section { width:98%;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 979px) { /* 768<width<979 main 768*/
+#AllBodyImpressum #TitleImpres { padding-top:20px; padding-bottom:20px;}
+
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 767px) { /* 480<width<767 main 480*/
+#AllBodyImpressum #TitleImpres h1 {font-size:20px; background-size:28px;}
+#AllBodyImpressum #TitleImpres { padding-top:10px;}
+
+
+}
+/*-------------------------------------*/
+@media screen and (max-width: 479px) { /* 320<width<479 main 320*/
+html {width:100%; min-width:307px;}
+#AllBodyImpressum #TitleImpres h1 { background:none; text-align:center; padding-left:0;}
+
+#BlockImpresAll #AllPreson .OnePerson { width:300px; margin:0; margin-bottom:50px; height:auto;}
+#BlockImpresAll #AllPreson .OnePerson .Foto { width:100px; height:100px;}
+#BlockImpresAll #AllPreson .OnePerson .Foto img { width:270px; height:220px;}
+#BlockImpresAll #AllPreson .OnePerson .Pos p,#BlockImpresAll #AllPreson .OnePerson .Email p,#BlockImpresAll #AllPreson .OnePerson .Telef p,#BlockImpresAll #AllPreson .OnePerson .And p { font-size:13px;} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,283 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, big, em, font, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit;  font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
+:focus { outline: 0;}
+ol, ul { list-style: none;}
+table { border-collapse: separate; border-spacing: 0;}
+caption, th, td { text-align: left; font-weight: normal;}
+strong,b{font-weight:bold}
+em{font-style:italic}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+/*-------------------------------------*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans.eot');
+    src: url('fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans.woff') format('woff'),
+         url('fonts/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+#tooltip {
+    background: #FFFFFF;
+    border: 1px solid #666666;
+    color: #333333;
+    margin: 0px;
+    padding: 3px 5px;
+    position: absolute;
+    visibility: hidden;
+}
+/*-------------------------------------*/
+*{-moz-box-sizing: border-box; box-sizing: border-box;}
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {/* */
+border: none;
+}
+input.invalidform::-moz-placeholder {height:18px; color: #dc0007; font-family: 'OpenSans', sans-serif; font-style: inherit ; text-transform: uppercase; font-size: 14px;}
+input.invalidform::-webkit-input-placeholder {height:18px; color: #dc0007;  font-family: 'OpenSans', sans-serif; font-style: inherit; text-transform: uppercase; font-size: 14px;}
+
+input.validform::-moz-placeholder {height:18px; color: #d8d7dc; font-family: 'OpenSans', sans-serif; font-style: normal; text-transform: uppercase; font-size: 14px;}
+input.validform::-webkit-input-placeholder {height:18px; color: #d8d7dc;  font-family: 'OpenSans', sans-serif; font-style: normal; text-transform: uppercase; font-size: 14px;}
+#validEmail{  margin-top: 15px;  margin-left: -29px;  position: absolute;  width: 16px;  height: 16px;  z-index: 1060;  }
+#validPassword{  margin-top: 15px;  margin-left: -29px;  position: absolute;  width: 16px;  height: 16px;  z-index: 1060;  }
+#validPassword1{  margin-top: 15px;  margin-left: -29px;  position: absolute;  width: 16px;  height: 16px;  z-index: 1060;  }
+#validLogin{  margin-top: 15px;  margin-left: -29px;  position: absolute;  width: 16px;  height: 16px;  z-index: 1060;  }
+
+html {width:100%;}
+body {font-size:14px; color: #7e7e7e; background: #fff; line-height:1.3;  font-family: 'OpenSans', sans-serif;}
+a {color: #6a9b9a; }
+a:hover {text-decoration:none;}
+.clr,#clr,.Clr {clear: both;}
+/*-------------------------------------*/
+section { width:1140px; margin:0 auto;}
+#ChekInAll {width:100%; background: url(images/CheckIn/BgCheckIn.jpg) center top no-repeat; background-size: cover; padding-top:20px; padding-bottom:10px; margin-bottom:5px;}
+#ChekInAll h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/CheckIn/BgTitle.png) left top no-repeat; padding-left:50px;}
+#ChekInAll h1 span {color:#e32026; }
+#ChekInAll #CenterPChek {padding-left:50px; text-transform:uppercase; font-weight:bold; font-size:12px; color:#2f9cd0;   margin-bottom:35px;}
+#ChekInAll #ChekBlock { border:1px solid #f3f2f5; padding:40px 18px; width:67%; background:#fff; float:left;}
+#ChekInAll #regSuchess { height: 300px; border:1px solid #f3f2f5; padding:40px 18px; width:67%; background:#fff; float:left;}
+#ChekInAll #regSuchess p {text-align: center; font-size: 26px; margin-top: 40px;}
+#regSuchess { height: 300px; border:1px solid #f3f2f5; padding:40px 18px; width:67%; background:#fff; margin: 0 auto;}
+#regSuchess p {text-align: center; font-size: 26px; margin-top: 40px;}
+#ChekInAll #ChekBlock #BlockName1 { height:45px; margin-bottom:14px;}
+#ChekInAll #ChekBlock #BlockName1 p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#ChekInAll #ChekBlock #BlockName1 input { float:right; width:71%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#ChekInAll #ChekBlock #BlockAlias1 { height:45px; margin-bottom:14px;}
+#ChekInAll #ChekBlock #BlockAlias1 p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#ChekInAll #ChekBlock #BlockAlias1 input { margin-right: 4px; width:40%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#VideoCongratulations #Celebrities { height:45px; margin-bottom:14px; text-align: center;}
+#VideoCongratulations #Celebrities p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#VideoCongratulations #Celebrities input { margin-right: 4px; width:30%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#VideoCongratulations #CelebritiesEmail { height:45px; margin-bottom:14px; text-align: center;}
+#VideoCongratulations #CelebritiesEmail p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#VideoCongratulations #CelebritiesEmail input { margin-right: 4px; width:30%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+
+#ChekInAll #ChekBlock #Phone { height:45px; margin-bottom:14px;}
+#ChekInAll #ChekBlock #Phone p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#ChekInAll #ChekBlock #Phone input {margin-right: 4px; float:left; width:40%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+
+#ChekInAll #ChekBlock #Login { height:45px; margin-bottom:14px;}
+#ChekInAll #ChekBlock #Login p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#ChekInAll #ChekBlock #Login input {margin-right: 4px; float:left; width:40%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#ChekInAll #ChekBlock #Password { height:45px; margin-bottom:14px;}
+#ChekInAll #ChekBlock #Password p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#ChekInAll #ChekBlock #Password input { margin-right: 4px; float:left; width:40%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#ChekInAll #ChekBlock #PasswordReply { height:45px; margin-bottom:40px;}
+#ChekInAll #ChekBlock #PasswordReply p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#ChekInAll #ChekBlock #PasswordReply input { margin-right: 4px; float:left; width:40%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+
+
+#ChekInAll #ChekBlock #Agreement input[type="checkbox"] {position: absolute; left: -9999px;}
+#ChekInAll #ChekBlock #Agreement input[type="checkbox"] + label { background: url(images/i-checked.png) 0 0 no-repeat; padding-left: 32px; padding-top:10px;}
+#ChekInAll #ChekBlock #Agreement input[type="checkbox"]:checked + label {background-position: 0 -30px;}
+#ChekInAll #ChekBlock #Agreement label { float:left;}
+#ChekInAll #ChekBlock #Agreement label p {margin-top:-11px; padding-bottom:6px; line-height:0.9; color:#444444; text-transform:none; font-weight:100; font-size:14px; padding-right:0; width: 300px}
+
+#ChekInAll #ChekBlock #Agreement #ButtonLoading{width:230px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; float:right; margin-top:-3px; margin-right:5%;}
+#ChekInAll #ChekBlock #Agreement #ButtonLoading a{text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; padding-left:5%; background: url(images/CheckIn/BgReg.png) 91% center no-repeat;}
+#ChekInAll #ChekBlock #Agreement #ButtonLoading a:hover{background:url(images/CheckIn/BgReg.png) 91% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+#VideoCongratulations #ButtonSaveStar{width:30%; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; }
+#VideoCongratulations #ButtonSaveStar a{text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; padding-left:5%; background: url(images/CheckIn/BgReg.png) 91% center no-repeat; text-align: center;}
+#VideoCongratulations #ButtonSaveStar a:hover{background:url(images/CheckIn/BgReg.png) 91% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+
+#ChekInAll #regSuchess #ButtonSuchess{width:230px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; margin-top:55px;}
+#ChekInAll #regSuchess #ButtonSuchess a{text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; text-align: center;}
+#ChekInAll #regSuchess #ButtonSuchess a:hover{background: linear-gradient(to bottom, #d5433a, #ec6137);}
+
+#ChekInAll #BoxIcon { float:left; width:32%; margin-left:1%;}
+#ChekInAll #BoxIcon ul {}
+#ChekInAll #BoxIcon ul li { float:left; margin-bottom:35px; width:33%}
+#ChekInAll #BoxIcon ul li:nth-child(1) { background:url(images/CheckIn/Time.png) center top no-repeat;}
+#ChekInAll #BoxIcon ul li:nth-child(2) { background:url(images/CheckIn/Easily.png) center top no-repeat;}
+#ChekInAll #BoxIcon ul li:nth-child(3) { background:url(images/CheckIn/Prezentr.png) center top no-repeat;}
+#ChekInAll #BoxIcon ul li:nth-child(4) { background:url(images/CheckIn/Smile.png) center top no-repeat;}
+#ChekInAll #BoxIcon ul li:nth-child(5) { background:url(images/CheckIn/Just.png) center top no-repeat;}
+#ChekInAll #BoxIcon ul li:nth-child(6) { background:url(images/CheckIn/Profitably.png) center top no-repeat; }
+#ChekInAll #BoxIcon ul li p { color:#2f9cd0; font-size:20px; font-weight:bold; text-transform:uppercase; text-align:center; padding-top:100px;}
+#ChekInAll #ChekBlock #BlockName1 p { font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #BlockAlias1 p {font-size:11px; text-align:center;}
+#VideoCongratulations #Celebrities p {font-size:11px; text-align:center;}
+#VideoCongratulations #CelebritiesEmail p {font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #Phone p {font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #Login p {font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #Password p {font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #PasswordReply p {font-size:11px; text-align:center;}
+
+#Advantages { background:#f9f3f3; background:url(images/CheckIn/BgBottomChekIn1.jpg) top center no-repeat; margin-bottom: 5px;}
+#Advantages #BgAdvantages { margin:0 auto; padding-top:65px; padding-bottom:130px;}
+#Advantages #BgAdvantages ul {}
+#Advantages #BgAdvantages ul li { background:url(images/CheckIn/BgTitle.png) left top no-repeat; font-size:20px; font-weight:bold; color:#e32026; text-transform:uppercase; padding:5px 0 5px 60px; margin-bottom:10px;}
+.validmessage{ color: red; padding-top: 14px; width: 30%;  float: right;}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1334px) { /* 1200<width<1334 main 1200*/
+
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1199px) { /* 980<width<1199 main 980*/
+section { width:98%;}
+#ChekInAll h1 {font-size:26px; background-size:35px;}
+#ChekInAll #ChekBlock #BlockName1 p { font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #BlockAlias1 p {font-size:11px; text-align:center;}
+    #VideoCongratulations #Celebrities p {font-size:11px; text-align:center;}
+    #VideoCongratulations #CelebritiesEmail p {font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #Phone p {font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #Login p {font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #Password p {font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #Agreement label  { width:100%;}
+#ChekInAll #ChekBlock #Agreement #ButtonLoading { margin-top:10px;}
+    #VideoCongratulations #ButtonSaveStar { margin-top:10px;}
+#ChekInAll #BoxIcon ul li { background-size: contain;}
+#ChekInAll #BoxIcon ul li p { font-size:16px;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 979px) { /* 768<width<979 main 768*/
+#ChekInAll #ChekBlock { width:100%;}
+#ChekInAll #BoxIcon { width:100%;}
+#ChekInAll #BoxIcon ul { margin-top:15px;}
+#ChekInAll #BoxIcon ul li { width:16.5%; margin-bottom:0;}
+#Advantages #BgAdvantages { padding-bottom:50px;}
+    #ChekInAll #regSuchess { width: 100%;  }
+    #regSuchess { width: 100%;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 767px) { /* 480<width<767 main 480*/
+#ChekInAll h1 {font-size:20px; background-size:28px; padding-left:40px;}
+#ChekInAll #CenterPChek {font-size:11px; padding-left:40px; margin-bottom:15px;}
+#ChekInAll #ChekBlock { padding:15px;}
+#ChekInAll #ChekBlock #BlockName1 { height:35px;}
+#ChekInAll #ChekBlock #BlockName1 p { line-height:1.5; padding-top:5px;}
+    #ChekInAll #ChekBlock #BlockName1 input {font-size:14px;}
+#ChekInAll #ChekBlock #BlockAlias1 { height:35px;}
+#ChekInAll #ChekBlock #BlockAlias1 p { line-height:35px;}
+    #ChekInAll #ChekBlock #BlockAlias1 input { width:40%; font-size:14px;}
+    #VideoCongratulations #Celebrities { height:35px;}
+    #VideoCongratulations #Celebrities p { line-height:35px;}
+    #VideoCongratulations #Celebrities input { width:40%; font-size:14px;}
+    #VideoCongratulations #CelebritiesEmail { height:35px;}
+    #VideoCongratulations #CelebritiesEmail p { line-height:35px;}
+    #VideoCongratulations #CelebritiesEmail input { width:40%; font-size:14px;}
+    #VideoCongratulations #ButtonSaveStar{width:40%;}
+    #VideoCongratulations #ButtonSaveStar a{font-size:12px;}
+#ChekInAll #ChekBlock #Phone { height:35px;}
+#ChekInAll #ChekBlock #Phone p { line-height:35px;}
+#ChekInAll #ChekBlock #Phone input { width:40%;  font-size:14px;}
+
+    #ChekInAll #ChekBlock #Login { height:35px;}
+    #ChekInAll #ChekBlock #Login p { line-height:35px;}
+    #ChekInAll #ChekBlock #Login input { width:40%; font-size:14px;}
+#ChekInAll #ChekBlock #Password { height:35px;}
+#ChekInAll #ChekBlock #Password p { line-height:35px;}
+#ChekInAll #ChekBlock #Password input { width:40%; font-size:14px;}
+    #ChekInAll #ChekBlock #PasswordReply { height:35px;}
+    #ChekInAll #ChekBlock #PasswordReply p {line-height:1.5; padding-top:5px;}
+    #ChekInAll #ChekBlock #PasswordReply input { width:40%; font-size:14px;}
+#ChekInAll #BoxIcon ul li { background-size:45px !important;}
+#ChekInAll #BoxIcon ul li p { padding-top:55px; font-size:12px;}
+#Advantages {background:#f9f3f3;}
+#Advantages #BgAdvantages  {padding-top:25px; padding-bottom:20px;}
+#Advantages #BgAdvantages ul li { background-size:28px; padding:3px 0 3px 40px; font-size:16px;}
+    .validmessage{  font-size: 14px; text-decoration: none; width: 29%; float:right  }
+    input.invalidform::-moz-placeholder {font-size: 12px;}
+    input.invalidform::-webkit-input-placeholder { font-size: 12px;}
+    input.validform::-moz-placeholder {font-size: 12px;}
+    input.validform::-webkit-input-placeholder { font-size: 12px;}
+    #validEmail{  margin-top: 10px;  margin-left: -25px;  }
+    #validPassword{  margin-top: 10px;  margin-left: -25px;  }
+    #validPassword1{  margin-top: 10px;  margin-left: -25px;  }
+    #validLogin{  margin-top: 10px;  margin-left: -25px;  }
+}
+/*-------------------------------------*/
+@media screen and (max-width: 479px) { /* 320<width<479 main 320*/
+html {width:100%; min-width:307px;}
+#ChekInAll h1 {background:none; text-align:center; font-size:15px; padding-left:0;}
+#ChekInAll #CenterPChek { padding-left:0; text-align:center;}
+#ChekInAll #ChekBlock #BlockName1 p { display: none}
+#ChekInAll #ChekBlock #BlockName1 input { width:100%; margin-bottom:14px;}
+#ChekInAll #ChekBlock #BlockAlias1 p { display: none}
+#ChekInAll #ChekBlock #BlockAlias1 input { width:100%; margin-bottom:14px;}
+    #VideoCongratulations #Celebrities p { display: none}
+    #VideoCongratulations #Celebrities input { width:100%; margin-bottom:14px;}
+    #VideoCongratulations #CelebritiesEmail p { display: none}
+    #VideoCongratulations #CelebritiesEmail input { width:100%; margin-bottom:14px;}
+#ChekInAll #ChekBlock #Phone p { display: none}
+#ChekInAll #ChekBlock #Phone input { width:100%; margin-bottom:14px;}
+#ChekInAll #ChekBlock #Login p { display: none}
+#ChekInAll #ChekBlock #Login input { width:100%; margin-bottom:14px;}
+#ChekInAll #ChekBlock #Password p { display: none}
+#ChekInAll #ChekBlock #Password input { width:100%; margin-bottom:14px;}
+#ChekInAll #ChekBlock #PasswordReply p { display: none}
+#ChekInAll #ChekBlock #PasswordReply input { width:100%; margin-bottom:14px;}
+#ChekInAll #ChekBlock #Agreement input[type="checkbox"] {position: static; left: 0;}
+#ChekInAll #ChekBlock #Agreement input[type="checkbox"] + label { background:none;}
+#ChekInAll #ChekBlock #Agreement input[type="checkbox"]:checked + label {background-position: 0;}
+#ChekInAll #ChekBlock #Agreement label {float: none; padding-left:0;}
+#ChekInAll #ChekBlock #Agreement label p {margin-top:-20px; text-align:left !important; padding-left:25px;}
+#ChekInAll #ChekBlock #Agreement #ButtonLoading { width:100%; margin-right:0; float:none;}
+    #VideoCongratulations #ButtonSaveStar { width:100%; margin-right:0; float:none;}
+    #VideoCongratulations #ButtonSaveStar a{font-size:15px;}
+#ChekInAll #BoxIcon ul { margin-bottom:0;}
+#ChekInAll #BoxIcon ul li { background-size:35px !important; width:33%; margin-bottom:15px;}
+#ChekInAll #BoxIcon ul li p { padding-top:40px; font-size:8px;}
+#Advantages #BgAdvantages ul li { font-size:14px; padding:2px 0 7px 40px;}
+.validmessage{ position: absolute; width: 100%; margin-top: 18px; }
+input.validform::-moz-placeholder {color: #767479; }
+input.validform::-webkit-input-placeholder { color: #767479;}
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

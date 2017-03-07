@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<title>Der Kunde hat eine Anfrage gestellt</title>
+<body>
+<style type="text/css">
+    .tabl {
+        background: #ffffff
+    }
+
+    .tabl td {
+        max-width: 200px;
+        word-wrap: break-word;
+    }
+
+    h1 {
+        color: #98bfd2;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        font-size: 24px;
+        font-weight: normal;
+        text-align: center;
+    }
+</style>
+<!-- Container Table -->
+<table cellpadding="0" cellspacing="0" border="0" width="99%" bgcolor="#F6F6F5">
+    <tr>
+        <td align="center">
+
+            <!-- Email Wrapper Table -->
+
+            <table class="tabl" cellpadding="0" cellspacing="0" border="0" width="800" style="background: #ffffff;">
+                <tr>
+                    <td colspan="4" aligh="center" style="max-width: 200px;word-wrap: break-word;"><h1
+                            style="color: #98bfd2;font-family: Arial,Helvetica,sans-serif;padding: 0;margin: 0;font-size: 24px;font-weight: normal;text-align: center;">
+                        Der Kunde hat die Bestellung gemacht und den Star  ${nameStar} ausgewählt  order №-${id} -</h1></td>
+                </tr>
+                <tr>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">Name des Auftraggebers:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;">${nametwo}</td>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">E-Mail Adresse des Auftraggebers:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;">${emailtwo}</td>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">Handynummer des Auftraggebers:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;">${phonetwo}</td>
+                </tr>
+                <tr>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">Name des Empfängers:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;">${name}</td>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">E-Mail des Empfängers:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;">${email}</td>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">Handynummer des Empfängers:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;">${phone}</td>
+
+                </tr>
+                <tr>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">Photo:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;">${photo}</td>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">Audio:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;"></td>
+                </tr>
+                <tr>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">Betreff:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;">${event}</td>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">die Art und Weise der Absendung:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;">${sendUp}</td>
+                </tr>
+                <tr>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">Text:</td>
+                    <td colspan="3" style="max-width: 200px;word-wrap: break-word;">${text}</td>
+                </tr>
+            </table>
+            <!-- End Email Wrapper Table -->
+        </td>
+    </tr>
+</table>
+<!-- End Container Table -->
+</body>
+</html>

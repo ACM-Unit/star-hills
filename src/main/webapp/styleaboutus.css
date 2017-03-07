@@ -1,0 +1,125 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, big, em, font, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit;  font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
+:focus { outline: 0;}
+ol, ul { list-style: none;}
+table { border-collapse: separate; border-spacing: 0;}
+caption, th, td { text-align: left; font-weight: normal;}
+strong,b{font-weight:bold}
+em{font-style:italic}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+/*-------------------------------------*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans.eot');
+    src: url('fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans.woff') format('woff'),
+         url('fonts/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*-------------------------------------*/
+*{-moz-box-sizing: border-box; box-sizing: border-box;}
+html {width:100%;}
+body {font-size:14px; color: #7e7e7e; background: #fff; line-height:1.3;  font-family: 'OpenSans', sans-serif;}
+a {color: #6a9b9a; }
+a:hover {text-decoration:none;}
+.clr,#clr,.Clr {clear: both;}
+section { width:1145px; margin:0 auto;}
+/*-------------------------------------*/
+#AboutAss {width:100%; background: url(images/Formalization/BgFormalization.jpg) center bottom no-repeat; background-size:cover; padding-bottom:20px;}
+#Block { width:1145px; margin:0 auto; font-size:11.5px; color:#444343; text-transform:uppercase; line-height:2;}
+#Block span { color:#e31f25;}
+#AboutAss #AllBlock {position:relative;}
+#AboutAss #BlockVideo { width:522px; height:354; position:absolute; left:50%; margin-left:-265px; top:110px; }
+#AboutAss #BlockVideo img { width:100%;}
+#AboutAss #BlockOne { width:279px; height:216px; background:url(images/AboutUs/Bl1.png) center center no-repeat; float:left; margin-top:50px; padding-top:57px; padding-left:30px;}
+#AboutAss #BlockOne p {}
+#AboutAss #BlockTwo { width:311px; height:199px; background:url(images/AboutUs/Bl2.png) center center no-repeat; float:right; margin-top:41px; padding-left:48px; padding-top:25px; padding-right:15px;}
+#AboutAss #BlockThree {  width:338px; height:376px; background:url(images/AboutUs/Bl3.png) center center no-repeat; float:left; margin-top:15px; padding-left:45px; padding-top:40px; padding-right:75px;}
+#AboutAss #BlockFor {  width:300px; height:437px; background:url(images/AboutUs/Bl4.png) center center no-repeat; float:right; margin-top:-8px; padding-top:30px; padding-left:28px;}
+#AboutAss #BlockFor p { padding-left:25px; line-height:1.2;}
+#AboutAss #BlockFor ul { padding-top:10px;}
+#AboutAss #BlockFor ul li { background: url(images/AboutUs/BgLi.png) left 5px no-repeat; padding-left:18px;}
+
+#Txt { font-size:14px; color:#000; line-height:1.4;}
+#Txt p.Punkt { font-size:20px; margin:10px 0 20px 0;}
+#Txt p.List { margin-left:5%;}
+#Txt p.List span { margin-right:15px;}
+#Txt p.Last { margin-top:20px;}
+/*-------------------------------------*/
+@media screen and (max-width: 1334px) { /* 1200<width<1334 main 1200*/
+
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1199px) { /* 980<width<1199 main 980*/
+#Block { width:98%; font-size:11px; line-height:2;}
+#AllBlock { width:960px; margin:0 auto; }
+#AboutAss #BlockVideo { width:350px; margin-left:-175px;}
+#AboutAss #BlockOne { margin-top:0; background-size:contain; margin-left:20px; padding-right:20px; padding-left:45px; width:270px}
+#AboutAss #BlockTwo { margin-top:0; background-size:contain; padding-left:50px; width:270px; margin-right:20px;}
+#AboutAss #BlockThree {margin-top:0; background-size:contain; width:310px; padding-top:50px;}
+#AboutAss #BlockFor {background-size:contain; width:300px;}
+#AboutAss #BlockFor p {}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 979px) { /* 768<width<979 main 768*/
+#AllBlock { width:auto;}
+#AboutAss #AllBlock { position:static;}
+#AboutAss #BlockVideo { position:static; margin:0 auto; margin-top:15px;}
+#AboutAss #BlockOne { background:none; width:50%; margin:0; height:auto;}
+#AboutAss #BlockTwo { background:none; float:left; width:50%; margin:0; height:auto;}
+#AboutAss #BlockThree { background:none; float:left; width:50%; margin:0; padding-top:20px;}
+#AboutAss #BlockFor { background:none; float:left; width:50%; padding-top:30px;}
+#AboutAss #BlockFor p { font-size:12px;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 767px) { /* 480<width<767 main 480*/
+#AboutAss #BlockOne { margin:0; padding:0;padding-right:20px;}
+#AboutAss #BlockTwo {margin:0; padding:0; }
+#AboutAss #BlockThree {margin:0; padding:0; padding-top:30px; padding-right:15px;}
+#AboutAss #BlockFor {margin:0; padding:0; padding-top:30px;}
+}
+/*-------------------------------------*/
+@media screen and (max-width: 479px) { /* 320<width<479 main 320*/
+html {width:100%; min-width:307px;}
+#AboutAss #BlockVideo { width:90%; margin:0 auto; margin-top:15px;}
+#AboutAss #BlockOne { width:100%; padding:0; padding-left:10px; margin-top:15px;}
+#AboutAss #BlockTwo { width:100%; padding:0; padding-left:10px; margin-top:15px;}
+#AboutAss #BlockThree { width:100%; padding:0; height:auto; padding-left:10px; margin-top:15px;}
+#AboutAss #BlockFor { width:100%; padding:0; padding-left:15px; margin-top:15px; height:auto;}
+#AboutAss #BlockFor p { text-align:center; padding:0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

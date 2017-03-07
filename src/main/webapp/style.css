@@ -1,0 +1,310 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, big, em, font, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit;  font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
+:focus { outline: 0;}
+ol, ul { list-style: none;}
+table { border-collapse: separate; border-spacing: 0;}
+caption, th, td { text-align: left; font-weight: normal;}
+strong,b{font-weight:bold}
+em{font-style:italic}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+/*-------------------------------------*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans.eot');
+    src: url('fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans.woff') format('woff'),
+         url('fonts/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*-------------------------------------*/
+*{-moz-box-sizing: border-box; box-sizing: border-box;}
+html {width:100%;}
+body {font-size:14px; color: #7e7e7e; background: #fff; line-height:1.3;  font-family: 'OpenSans', sans-serif;}
+a {color: #6a9b9a; }
+a:hover {text-decoration:none;}
+.clr,#clr,.Clr {clear: both;}
+/*-------------------------------------*/
+.modalWaiting {display: none; position: fixed; z-index:9999; top:0; left:0; height:100%; width:100%; background: rgba( 255, 255, 255, .8 ) url('/js/owl-carousel/AjaxLoader.gif') 50% 50% no-repeat; }
+.modalWaitingSearсh {display: none; position: fixed; z-index:9999; top:0; left:0; height:100%; width:100%; background: rgba( 255, 255, 255, .8 ) url('/js/owl-carousel/AjaxLoader.gif') 50% 50% no-repeat; }
+section { width:1140px; margin:0 auto;}
+#Top {background: linear-gradient(to top, #2796ca, #3ea9db); width:100%; border-top:1px solid #82c7e8; position: fixed; z-index: 999}
+#Home { background:url(images/BgDorder.jpg) left center repeat-y, linear-gradient(to top, #2677aa, #3795cf); width:57px; height:43px; margin-top:-1px; float:left;}
+#Home a {background:url(images/Home.png) center center no-repeat, url(images/HomeBgTop.jpg) top center repeat-x, url(images/HomeBgBottom.jpg) bottom center repeat-x; display:block; width:55px; height:43px; margin: 0 auto;}
+nav { float:left; height:43px;}
+nav ul {}
+nav ul li { float:left; }
+
+nav ul li a { text-transform: uppercase; text-decoration:none; color:#FFF; height:43px; line-height:43px; display:block; font-size:13px; font-weight:600; padding:0 20px; background:url(images/BgDorder.jpg) left top repeat-y;}
+nav ul li:last-child a{ background:url(images/BgDorder.jpg) right top repeat-y, url(images/BgDorder.jpg) left top repeat-y;}
+nav ul li a:hover {background:url(images/BgDorder.jpg) left top repeat-y, linear-gradient(to top, #2677aa, #3795cf);}
+nav ul li:last-child a:hover { background:url(images/BgDorder.jpg) left top repeat-y, url(images/BgDorder.jpg) right top repeat-y, linear-gradient(to top, #2677aa, #3795cf);}
+#Phone1 { float:right; height:43px; line-height:43px; font-size:18px; color: #fff;}
+#Phone1 #BgPhone { background:url(images/Phone.png) center center no-repeat, url(images/BgDorder.jpg) left top repeat-y, url(images/BgDorderRightPhone.jpg) right top repeat-y; width:42px; height:43px; display:block; float:right; margin-left:17px;}
+
+#Header { margin-bottom:5px; background:url(/images/Cabinet/BgBlockSlider.jpg) 50px center repeat-x; width:100%; margin-top:46px;}
+#Header #Logo { width:29.2%; height:92px; float:left; margin:20px 0 12px 0; margin-right:14%;}
+#Header #Logo a { display:block; background:url(images/Logo.png) center center no-repeat;width:333px; height:92px;}
+
+#Header #Searching {float:left; margin-top:37px; width:31%;}
+#Header #Searching p { color:#8a8988; font-size:18px; margin-bottom:3px;}
+#Header #Searching .search {width:100%; position: relative;}
+#Header #Searching .search input { border: none;}
+#Header #Searching .search .input { width: 100%; padding: 8px 37px 9px 15px; border: 1px solid #e4e4e4; border-top:1px solid #bfbfbf; border-radius: 5px; background: #e9e9e9; color:#000; outline: none; text-transform:uppercase; font-size:12px; font-weight:bold;}
+#Header #Searching .search .input:focus { box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4); background: #E8E8E8; color: #333;}
+#Header #Searching .search .submit {position: absolute; top:3px; right: 3px; cursor: pointer; background:url(images/Search.png) center center no-repeat, linear-gradient(to top, #e6e6e6, #f5f5f5); display:inline-block; width:28px; height:27px; border:1px solid #bdbdbd; border-bottom:2px solid #bdbdbd;}
+#Header #Searching .search .submit:hover {opacity: 0.8;}
+#Header #Searching input[type="search"] {-webkit-appearance: none;}
+#Header #Searching .search .submit:active { border:2px solid #bdbdbd; border-radius:2px;}
+#Header #ButtonBlock { float:left; width:25.8%; font-size:14px; text-transform:uppercase;  text-align:center;}
+
+#Header #ButtonBlock #ButtonUser {text-transform: none; font-size: 14px; min-width: 155px; height:25px; margin-top:5px; float:right;}
+#Header #ButtonBlock #ButtonLogin {width:155px; height:32px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; float:right;}
+#Header #ButtonBlock #ButtonLogin a { text-decoration:none; color:#262626; border:1px solid #f9f9f9; display:block; width:153px; height:30px; line-height:30px; border-radius:3px; background:url(images/BgLogin.png) 95% center no-repeat;}
+#Header #ButtonBlock #ButtonLogin a:hover {background:url(images/BgLogin.png) 95% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+
+#Header #ButtonCheckIn {width:155px; height:32px; background: linear-gradient(to top, #387fad, #489cd1); border-radius:3px; border:1px solid #275f85; float:right; margin-top:8px; box-shadow: 0 1px 0 #1b4b6f;}
+#Header #ButtonCheckIn a {text-decoration:none; color:#fff; border:1px solid #4E97C5; display:block; width:153px; height:30px; line-height:30px; border-radius:3px; background:url(images/BgReg.png) 95% center no-repeat;}
+#Header #ButtonCheckIn a:hover {background:url(images/BgReg.png) 95% center no-repeat, linear-gradient(to bottom, #387fad, #489cd1)}
+
+#BlockImgAll { width:100%; background:url(images/BgTop.jpg) center top no-repeat; background-size: cover;}
+#BlockImgAll #BlockImg { width:1335px; margin:0 auto;}
+#BlockImgAll #BlockImg #LeftBlock { float: left; width:12.6%; margin-right:5px;}
+#BlockImgAll #BlockImg #LeftBlock .box {width:100%; height:116px; margin-bottom:5px; position:relative; z-index:10}
+#BlockImgAll #BlockImg #LeftBlock .box img { height:100%; width:100%; -moz-transition: all 1s ease-out; -o-transition: all 0.5s ease-out; -webkit-transition: all 0.5s ease-out; transition: all 0.5s ease-out; opacity:0.5;}
+#BlockImgAll #BlockImg #LeftBlock .box img:hover {-webkit-transform: scale(1.1); -moz-transform: scale(1.1); -o-transform: scale(1.1); transform: scale(1.1); opacity:1;}
+#BlockImgAll #BlockImg #SliderBlock {float: left; width:74%; margin-right:5px; margin-bottom:35px;}
+#BlockImgAll #BlockImg #RightBlock {float: left; width:12.6%;}
+#BlockImgAll #BlockImg #RightBlock .box { width:100%; height:116px; margin-bottom:5px; position:relative; z-index:10}
+#BlockImgAll #BlockImg #RightBlock .box1 {overflow:hidden; width:100%; height:237px; margin-bottom:5px; border:1px solid #e5dfdc; padding:23px 0; background:url(images/Pig1.png) 30% 85% no-repeat;}
+#BlockImgAll #BlockImg #RightBlock .box1 p { color:#262626; text-align:center; line-height:0.95; font-weight:bold;}
+#BlockImgAll #BlockImg #RightBlock .box1 p.boxTop { color:#262626; font-family: 'OpenSans', sans-serif; font-size:25px; }
+#BlockImgAll #BlockImg #RightBlock .box1 p.boxTop2 {font-family:Georgia, "Times New Roman", Times, serif; font-size:28px; font-style:italic;}
+#BlockImgAll #BlockImg #RightBlock .box1 p.boxTop2 span { color:#e99800; font-size:30px;}
+#BlockImgAll #BlockImg #RightBlock .box img {  height:100%; width:100%; -moz-transition: all 1s ease-out; -o-transition: all 0.5s ease-out; -webkit-transition: all 0.5s ease-out; transition: all 0.5s ease-out; opacity:0.5;}
+#BlockImgAll #BlockImg #RightBlock .box img:hover {-webkit-transform: scale(1.1); -moz-transform: scale(1.1); -o-transform: scale(1.1); transform: scale(1.1); opacity:1;}
+#BlockImgAll #BlockImg #RightBlock .box1 .delimiter { height:4px; width:70%; border-top:1px solid #cccccc; border-bottom:1px solid #cccccc; margin:0 auto; margin-top:5px; margin-bottom:10px;}
+#BlockImgAll #BlockImg #RightBlock .box1 a { background:url(images/RightSlider.png) center center no-repeat; width:40px; height:40px; display:block; margin-left:auto; margin-top:25%;}
+#BlockImgAll #BlockImgBottom { width:1167px; height:77px; background:#fff; margin:0 auto;}
+
+#VideoCongratulations {}
+#VideoCongratulations h1 { text-transform:uppercase; text-align:center; font-size:30px; font-weight:bold; color:#444444; margin-top:-30px; background:url(images/BgTitle.png) 0% top no-repeat; margin-bottom: 50px;}
+#VideoCongratulations h1 span {    padding-left: 50px; color:#e32026}
+#VideoCongratulations h2 { text-transform:uppercase; text-align:center; font-size:30px; font-weight:bold; color:#444444; margin-top:-30px; margin-bottom: 50px;}
+#VideoCongratulations h2 span {color:#e32026}
+#VideoCongratulations #CenterP { text-align:center; text-transform:uppercase; font-weight:bold; font-size:12px; color:#2f9cd0; margin-top:7px; margin-bottom:30px;}
+#VideoCongratulations #VideoBlock { background:url(images/Video.jpg) center center no-repeat; height:318px; width:100%;}
+#VideoCongratulations #BlockVideoBottom {width:1167px; height:70px; background:#f9f3f3; margin:0 auto; margin-top:60px; z-index:2; position:relative; }
+#VideoCongratulations #BlockVideoBottom #TitleOurMission {text-transform:uppercase; text-align:center; font-size:30px; font-weight:bold; color:#444444;  background:url(images/BgTitle.png) 27% bottom no-repeat; padding-top:40px; margin-bottom: 50px; text-align: center;}
+#VideoCongratulations #BlockVideoBottom #TitleOurMission span {color:#e32026}
+
+#OurMission {background:#f9f3f3; z-index:1; margin-bottom:5px;}
+#OurMission #OurMissionBlock { background:url(images/Girl1.png) right top no-repeat; padding-top:106px; padding-bottom:40px;}
+#OurMission #OurMissionBlock #TextOurMission { width:47.9%; color:#757373; font-size:14px; padding-left:80px;}
+#OurMission #OurMissionBlock #TextOurMission p { margin-bottom:25px;}
+
+#BottomNavAll { background:url(/images/Cabinet/BgBlockSlider.jpg) left center repeat-x; padding:35px 0 22px 0; margin-top: 5px;}
+#BottomNavAll #ListMenu { width:50%; float:left;}
+#BottomNavAll #ListMenu ul { width:100%;}
+#BottomNavAll #ListMenu ul li { float:left; padding-bottom:12px;}
+#BottomNavAll #ListMenu ul li a { color:#444444; text-transform:uppercase; font-size:14px; text-decoration:none; padding:0 13px; border-left:1px solid #c5c4c6; border-right:1px solid #fff;}
+#BottomNavAll #ListMenu ul li:first-child a { padding-left:0; border-left:none;}
+#BottomNavAll #ListMenu ul li:last-child a { border-right:none; padding-right:0;}
+#BottomNavAll #ListMenu ul li a:hover { color:#329fd2}
+
+#BottomNavAll #PhoneBottom { background:url(images/PhoneFooter1.png) right center no-repeat; width:25.2%; color:#444444; font-size:18px; padding:15px 0; padding-left:6%; float:left;}
+#BottomNavAll #Soc { float:left; width:24.8%;}
+#BottomNavAll #Soc ul { padding-top:7px;}
+#BottomNavAll #Soc ul li { float:right; margin-left:10px;}
+#BottomNavAll #Soc ul li a { display:block; width:36px; height:38px; margin-left:auto;}
+#BottomNavAll #Soc ul li:nth-child(3) a { background:url(images/Facebook.jpg) center center no-repeat;}
+#BottomNavAll #Soc ul li:nth-child(2) a { background:url(images/Twitter.jpg) center center no-repeat; border-radius:50%;}
+#BottomNavAll #Soc ul li:nth-child(1) a { background:url(images/instagram.png) center center no-repeat;}
+
+footer { font-size:14px; color:#a2a2a2; text-align:center; padding:18px 0;}
+footer a { text-decoration:none; color:#a2a2a2;}
+/*-------------------------------------*/
+@media screen and (max-width: 1334px) { /* 1200<width<1334 main 1200*/
+
+#BlockImgAll #BlockImg { width:1200px; margin:0 auto;}
+#BlockImgAll #BlockImg #LeftBlock {width:12.5%;}
+#BlockImgAll #BlockImg #LeftBlock .box {height:104px;}
+#BlockImgAll #BlockImg #SliderBlock { width:74%;}
+#BlockImgAll #BlockImg #RightBlock {width:12.5%;}
+#BlockImgAll #BlockImg #RightBlock .box {height:104px;}
+#BlockImgAll #BlockImg #RightBlock .box1 { height:213px; padding:15px 0; background-size:65px;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1199px) { /* 980<width<1199 main 980*/
+section { width:98%;}
+#BlockImgAll #BlockImg {width:98%;}
+#BlockImgAll #BlockImg #LeftBlock { width:100%;}
+#BlockImgAll #BlockImg #LeftBlock .box { float:left; width:19.58%; margin-bottom:5px; margin-right:5px;}
+#BlockImgAll #BlockImg #LeftBlock .box:last-child {margin-right:0;}
+#BlockImgAll #BlockImg #SliderBlock { width:100%; margin-bottom:5px;}
+#BlockImgAll #BlockImg #RightBlock { width:100%;}
+#BlockImgAll #BlockImg #RightBlock .box { float:left; width:19.6%; margin-bottom:0; margin-right:5px;}
+#BlockImgAll #BlockImg #RightBlock .box:last-child {margin-right:0;}
+#BlockImgAll #BlockImg #RightBlock .box img {height:100%; width:100%;}
+#BlockImgAll #BlockImg #RightBlock .box1 {height:104px; width:39.4%; padding:3px 0; float:left; margin-right:5px; background-position: 75% center; padding-left:1%; background-size:75px;}
+#BlockImgAll #BlockImg #RightBlock .box1 p { width:50%;}
+
+#BlockImgAll #BlockImg #RightBlock .box1 .delimiter { width:50%; margin:0; margin-bottom:3px; margin-top:3px;}
+#BlockImgAll #BlockImg #RightBlock .box1 a { margin:0; padding:0; float:right; margin-top:-7%;}
+
+#BlockImgAll #BlockImgBottom { width:100%; height:0; }
+
+#VideoCongratulations { margin-top:15px;}
+#VideoCongratulations h1 { background:none; margin-top:0;}
+    #VideoCongratulations h2 { background:none; margin-top:0;}
+#VideoCongratulations #CenterP { margin-bottom:15px;}
+#VideoCongratulations #VideoBlock { background-size: contain; height:300px;}
+#VideoCongratulations #BlockVideoBottom { width:100%; height:0; margin-top:20px; padding-top:15px;}
+#VideoCongratulations #BlockVideoBottom #TitleOurMission {background-position:21% bottom; padding:0;}
+
+#OurMission {margin-bottom:0; }
+#OurMission #OurMissionBlock #TextOurMission {padding-left:2%;}
+
+#BottomNavAll { padding:25px 0 15px 0;}
+#OurMission #OurMissionBlock { background-size:contain; margin-bottom:5px;}
+#BottomNavAll #ListMenu ul li a {font-size:12px; padding:0 7px;}
+
+#BottomNavAll #PhoneBottom { padding-left:2%;}
+footer {padding:14px 0;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 979px) { /* 768<width<979 main 768*/
+nav ul li a {font-size:12px; font-weight:200; padding:0 15px;}
+#Phone1 {font-size:15px;}
+#Header #Logo { margin:6px 0 7px 0; margin-right:7%; width:250px; height:82px;}
+#Header #Logo a { background-size:230px; width:100%; height:100%;}
+#Header #Searching { margin-top:15px;}
+#Header #ButtonBlock #ButtonLogin { margin-top:15px;}
+#BlockImgAll #BlockImg #LeftBlock .box { width:19.2%; margin-left:0.3%; margin-right:0.6%}
+#BlockImgAll #BlockImg #RightBlock .box {width:19.2%; margin-left:0.3%; margin-right:0.6%}
+#BlockImgAll #BlockImg #RightBlock .box1 {width:100%; width:39.4%;}
+#BlockImgAll #BlockImg #RightBlock .box1 a {margin-top:-10%;}
+#VideoCongratulations h1 { background-position:0% top; font-size:25px; background-size:30px;}
+    #VideoCongratulations h2 { background-position:0% top; font-size:25px; background-size:30px;}
+#VideoCongratulations #BlockVideoBottom #TitleOurMission {background-position:20% top; font-size:25px; background-size:30px;}
+#VideoCongratulations #VideoBlock { height:250px;}
+#BottomNavAll {padding:10px 0 10px 0;}
+#BottomNavAll #ListMenu { width:500px; padding-top:7px;} 
+#BottomNavAll #ListMenu ul li a { font-size:12px;}
+#BottomNavAll #PhoneBottom { padding:0; background:none; float:right; text-align:right; padding-right:3%;}
+#BottomNavAll #Soc {float:right; width:30%; padding-right:3%;}
+#BottomNavAll #Soc ul { padding-top:0;}
+    #VideoCongratulations h1 span {    padding-left: 0px;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 767px) { /* 480<width<767 main 480*/
+    #Header #ButtonBlock #ButtonUser {text-decoration: none; font-size: 14px; text-align: left; width:500px; height:25px; margin-top:5px; float: left; margin-left: 3%;}
+#Home { width:12%;}
+#Home a { width:100%;}
+nav { width:88%; height:40px;}
+nav ul { width:100%;}
+nav ul li { text-align:center; width:50%;}
+nav ul li a { background:none;  margin:0; padding:0; height:20px; line-height:20px; border-bottom:1px solid #83adf5; width:95%; margin-left:2%;}
+nav ul li:last-child a { background:none;}
+nav ul li a:hover { background:none; color:#ccc;}
+nav ul li:last-child a:hover {background:none;}
+#Phone1 { width:100%; text-align:center;}
+#Phone1 #BgPhone { background:none;}
+#Header { margin:0;}
+#Header #Logo {margin:0;}
+#Header #Logo a { width:90%; background-size:contain;}
+#Header #Searching { margin-top:15px; width:45%; float:right;}
+#Header #Searching p { font-size:14px;}
+#Header #ButtonBlock { width:100%; margin:5px 0 12px 0;}
+#Header #ButtonBlock #ButtonLogin { float:left; margin-top:0; width:45%; margin-left:3%;}
+#Header #ButtonBlock #ButtonLogin a { width:100%;}
+#Header #ButtonCheckIn { float:left; margin-top:0; width:45%; margin-left:3%;}
+#Header #ButtonCheckIn a {width:100%;}
+#BlockImgAll #BlockImg #LeftBlock .box { height:80px;}
+#BlockImgAll #BlockImg #RightBlock .box { height:80px;}
+#BlockImgAll #BlockImg #RightBlock .box1 { height:80px; margin-right:0.6%; background-size:42px; background-position: 95% top; padding-top:10px;}
+#BlockImgAll #BlockImg #RightBlock .box1 p.boxTop { font-size:15px;}
+#BlockImgAll #BlockImg #RightBlock .box1 p.boxTop2 { font-size:18px;}
+#BlockImgAll #BlockImg #RightBlock .box1 p.boxTop2 span { font-size:17px;}
+#BlockImgAll #BlockImg #RightBlock .box1 a { width:100%; height:80px; margin-top:-68px; background-position:95% bottom;}
+#VideoCongratulations h1 { background-position:0% top; font-size:18px; background-size:30px;}
+    #VideoCongratulations h2 { background-position:0% top; font-size:25px; background-size:30px;}
+#VideoCongratulations #VideoBlock { height:150px;}
+#VideoCongratulations #BlockVideoBottom #TitleOurMission {background-position:10% top; font-size:18px; background-size:30px;}
+#OurMission #OurMissionBlock { background:none; padding:50px 10px 5px 0;}
+#OurMission #OurMissionBlock #TextOurMission { width:100%;}
+#BottomNavAll #ListMenu { width:100%; margin:0 auto;}
+#BottomNavAll #ListMenu ul { width:450px; margin:0 auto;}
+#BottomNavAll #ListMenu ul:first-child li {}
+
+#BottomNavAll #PhoneBottom { width:50%; float:left; margin:0; padding:0; margin-top:7px; text-align:left; }
+#BottomNavAll #Soc { width:50%; float:left; padding-right:2%;}
+#BottomNavAll #Soc ul li { margin-left:10px;}
+    #VideoCongratulations h1 span {    padding-left: 0px;}
+}
+/*-------------------------------------*/
+@media screen and (max-width: 479px) { /* 320<width<479 main 320*/
+html {width:100%; min-width:307px;}
+
+nav ul li a { font-size:11px;}
+#Phone1 { padding-left:18%;}
+#Header { background-size: cover; padding-top:10px;}
+#Header #Logo { display:none;}
+#Header #Searching { width:90%;  margin:0; margin-left:5%; float:none;}
+#Header #Searching p { text-align:center;}
+#Header #ButtonBlock { margin-top:15px;}
+#BlockImgAll #BlockImg #LeftBlock .box { display:none;}
+#BlockImgAll #BlockImg #RightBlock .box { display:none;}
+#BlockImgAll #BlockImg #RightBlock .box1 { width:100%; background-position: 70% center; background-size:70px;}
+#BlockImgAll #BlockImg #RightBlock .box1 p.boxTop { font-size:18px;}
+#BlockImgAll #BlockImg #RightBlock .box1 p.boxTop2 { font-size:19px;}
+#BlockImgAll #BlockImg #RightBlock .box1 p.boxTop2 span { font-size:18px;}
+#BlockImgAll #BlockImg #RightBlock .box1 a {background-position:95% center;}
+#VideoCongratulations h1 { background:none;}
+    #VideoCongratulations h2 { background:none;}
+#VideoCongratulations #BlockVideoBottom #TitleOurMission { background:none;}
+#BottomNavAll { background-size:cover; padding:0;} 
+#BottomNavAll #ListMenu {width:50%;}
+#BottomNavAll #ListMenu ul { width:100%; margin:0; text-align:center;}
+#BottomNavAll #ListMenu ul li { float:none;}
+#BottomNavAll #ListMenu ul li a { border:none; padding-left:0; display:block}
+#BottomNavAll #PhoneBottom { width:50%; font-size:15px; text-align:center;}
+#BottomNavAll #Soc ul {}
+#BottomNavAll #Soc ul li { float:none; }
+#BottomNavAll #Soc ul li a {margin:0 auto; margin-top:15px;}
+#VideoCongratulations h1 span {    padding-left: 0px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

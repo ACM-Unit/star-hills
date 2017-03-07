@@ -1,0 +1,202 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, big, em, font, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit;  font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
+:focus { outline: 0;}
+ol, ul { list-style: none;}
+table { border-collapse: separate; border-spacing: 0;}
+caption, th, td { text-align: left; font-weight: normal;}
+strong,b{font-weight:bold}
+em{font-style:italic}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+/*-------------------------------------*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans.eot');
+    src: url('fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans.woff') format('woff'),
+         url('fonts/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*--------------------------------------*/
+*{-moz-box-sizing: border-box; box-sizing: border-box;}
+html {width:100%;}
+body {font-size:14px; color: #7e7e7e; background: #fff; line-height:1.3;  font-family: 'OpenSans', sans-serif;}
+a {color: #6a9b9a; cursor: pointer;}
+a:hover {text-decoration:none;}
+.clr,#clr,.Clr {clear: both;}
+/*-------------------------------------*/
+section { width:1140px; margin:0 auto; position: relative;}
+
+#AllSearch {background: url(./images/Formalization/BgFormalization.jpg) bottom center no-repeat; background-size: cover; padding-bottom:200px; padding-top:50px; margin-bottom:5px; min-height:700px;}
+#Left { float:left;}
+.SlideToggle { width:530px; height:47px;}
+#BlockSerch {background:url(./images/SearckCat/Searchi.jpg) 3% center no-repeat, url(./images/SearckCat/List.jpg) 97% center no-repeat, #444343; width:530px; border-radius:5px; padding:10px 0; cursor:pointer;}
+#BlockSerch p { font-size:20px; font-weight:bold; color:#ffffff;  text-transform:uppercase; padding-left:50px;}
+#firstpane { display:none;}
+.menu_list {width: 325px; display: block; padding:0; margin:0; position:relative; list-style-type:none;}
+.menu_head {padding: 12px 10px 12px 50px;cursor: pointer;position: relative;margin:1px;font-weight:bold; background: #e7e6e9; width:325px; display: block; text-transform:uppercase; font-weight:bold; font-size:16px; color:#444343; border-radius:5px; margin-top:7px;}
+.menu_head:hover { background:#e32026; color:#ffffff}
+#Offer #offerblock p span { margin-top: 9px; }
+#Offer {background:url(/images/Cabinet/BgBlockSlider.jpg) 50px center repeat-x; width: 100%; height: auto; padding-bottom: 15px; padding-top: 15px;}
+#Offer #offerblock p { color: #444444; font-size: 15px;text-decoration: none;text-transform: uppercase;}
+#Offer #offerblock {width: 85%;  float: left;padding-left: 0;padding-right: 0px;margin-top: 4px;}
+#Offer #offerblock input {
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+    font-size: 15px;
+    height: 35px;
+    padding: 0 15px;
+    text-align: left;
+    text-transform: uppercase;
+    width: 170px;
+    margin-left: 10px;
+    }
+
+#Offer #ButtonOffer {    font-size: 15px;
+    margin-top: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase; float: left; width:155px; height:32px; background: linear-gradient(to top, #387fad, #489cd1); border-radius:3px; border:1px solid #275f85; box-shadow: 0 1px 0 #1b4b6f;}
+#Offer #ButtonOffer a {text-decoration:none; color:#fff; border:1px solid #4E97C5; display:block; width:153px; height:30px; line-height:30px; border-radius:3px; background:url(images/BgReg.png) 91% center no-repeat;}
+#Offer #ButtonOffer a:hover {background:url(images/BgReg.png) 91% center no-repeat, linear-gradient(to bottom, #387fad, #489cd1)}
+
+
+.menu_body {display:none;margin-left:205px; width:325px; position:relative; }
+.menu_body>li { margin-top:8px; }
+.menu_body>li>a {border-radius:5px;padding-left:20px;}
+.menu_body a{display:block;color:#006699; background:#EFEFEF; padding-left:10px; font-weight:bold; text-decoration:none; position: relative; text-transform:uppercase; font-size:16px; padding:12px 10px; text-decoration:none; color:#444343;}
+.menu_body a:hover{ background:#e32026; color:#ffffff}
+.drop-link {position: relative;}
+.drop-block {display: block; position: absolute; z-index: 999; left: 100%; /*если меню справа - right: 100%;*/ top: -9999em; /*скрываем выпадающие блоки*/ border-radius: 10px; opacity: 0; padding: 0; width: 250px; /*обычная ширина*/ list-style-type:none;}
+.drop-block li { border-left: 4px solid #fff; padding:0; margin:0; position:relative; z-index: 1000;}
+.drop-block li a { width: 200px; display: inline-block; text-transform: none; font-size:14px; font-weight:normal; color:#444444; border-radius: none; margin:0; background:url(./images/SearckCat/Li.png) 5% center no-repeat, #EFEFEF; padding:7px 0 7px 35px;}
+.drop-block li img { display: inline-block; width: 7%;}
+.drop-block li a:hover {background:url(./images/SearckCat/LiHover.png) 5% center no-repeat, #EFEFEF; color:#e32026;}
+.drop-block li a:focus {background:url(./images/SearckCat/LiHover.png) 5% center no-repeat, #EFEFEF; color:#e32026;}
+.drop-block li:first-child a { border-top-left-radius:5px; border-top-right-radius:5px;}
+.drop-block li:last-child a { border-bottom-left-radius:5px; border-bottom-right-radius:5px;}
+
+.drop-link:hover > .drop-block { top: 0; /*показываем выпадающие блоки*/ opacity: 1;}
+
+
+#AllSearch #SearchingBlock { width:400px; height:33px; float:right;}
+
+#AllSearch #SearchingBlock .search {width:100%; position: relative;}
+#AllSearch #SearchingBlock .search input { border: none;}
+#AllSearch #SearchingBlock .search .input { width: 100%; padding: 8px 37px 9px 15px; border: 1px solid #e4e4e4; border-top:1px solid #bfbfbf; border-radius: 5px; background: #e9e9e9; color:#000; outline: none; text-transform:uppercase; font-size:12px; font-weight:bold;}
+#AllSearch #SearchingBlock .search .input:focus { box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4); background: #E8E8E8; color: #333;}
+#AllSearch #SearchingBlock .search .submit {position: absolute; top:3px; right: 3px; cursor: pointer; background:url(./images/Search.png) center center no-repeat, linear-gradient(to top, #e6e6e6, #f5f5f5); display:inline-block; width:28px; height:27px; border:1px solid #bdbdbd; border-bottom:2px solid #bdbdbd;}
+#AllSearch #SearchingBlock .search .submit:hover {opacity: 0.8;}
+#AllSearch #SearchingBlock input[type="search"] {-webkit-appearance: none;}
+#AllSearch #SearchingBlock .search .submit:active { border:2px solid #bdbdbd; border-radius:2px;}
+
+#AllSearch #FotoBLockAll { width:290px; margin-right:25px; margin-top:50px; position: absolute; margin-left:auto; right:0;}
+#AllSearch #FotoS { width:100%; text-align:center;}
+#AllSearch #FotoS img { width:100%;}
+#AllSearch #NameS { width:100%; text-align:center; font-size:28px; color:#000; font-weight:bold;}
+
+#AllSearch #FotoBLockAll #ButtonN { width:130px; height:32px; border-radius:3px; margin:20px auto; }
+#AllSearch #FotoBLockAll #ButtonN a {text-decoration:none; color:#fff ; border:1px solid #c27073; border:1px solid #e10f31; box-shadow: 0 1px 0 #a70f27; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; padding-left:15%; background: url(./images/Cabinet/BgReg.png) 91% center no-repeat, linear-gradient(to top, #d5433a, #ec6137);}
+#AllSearch #FotoBLockAll #ButtonN p {text-decoration:none; color:#fff ;  border:1px solid #с4с4с4; display:block; width:100%; box-shadow: 0 1px 0 #ccc;  height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; padding-left:15%; background: url(./images/Cabinet/BgReg.png) 91% center no-repeat, linear-gradient(to top, #e4e4e4, #bfbfbf);cursor: pointer}
+#AllSearch #FotoBLockAll #ButtonN a:hover {background:url(./images/Cabinet/BgReg.png) 91% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1334px) { /* 1200<width<1334 main 1200*/
+
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1199px) { /* 980<width<1199 main 980*/
+section { width:98%;}
+    .drop-block li a { width:140px;}
+    #AllSearch #FotoBLockAll { width:220px;}
+    #Offer #offerblock p { text-align: center; padding-left: 10px; padding-right: 10px;}
+    #Offer #offerblock input {width: 42%; margin-top: 15px;}
+    #Offer #offerblock {width: 100%;}
+    #Offer #ButtonOffer {margin: 15px 40%;}
+    #Offer #offerblock p span { margin-top: 25px; }
+
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 979px) { /* 768<width<979 main 768*/
+#AllSearch #SearchingBlock {float:none; margin:0 auto; margin-bottom:15px;}
+    #AllSearch #FotoBLockAll { position:inherit; margin:0 auto; margin-bottom:5px;}
+    .drop-block li a { width:200px;}
+    #Offer #offerblock p { text-align: center; padding-left: 10px; padding-right: 10px;}
+    #Offer #offerblock input {width: 40%; margin-top: 15px;}
+    #Offer #offerblock {width: 100%;}
+    #Offer #ButtonOffer {margin: 15px 40%;}
+    #Offer #offerblock p span { margin-top: 25px; }
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 767px) { /* 480<width<767 main 480*/
+#AllSearch { padding-top:20px;}
+.SlideToggle { width:460px;}
+#BlockSerch { width:460px;}
+.menu_list { width:250px;}
+.menu_head { width:250px;}
+.menu_body { width:230px; margin-left:50px;}
+.drop-block { width:150px; margin-left:0;}
+.drop-block li a { width:150px;}
+#firstpane #ButtonN { margin-left:50px;}
+    #Offer #offerblock p { text-align: center; padding-left: 10px; padding-right: 10px;}
+    #Offer #offerblock input {width: 90%; margin-top: 15px;}
+    #Offer #offerblock {width: 100%;}
+    #Offer #ButtonOffer {margin: 15px 35%;}
+    #Offer #offerblock p span { margin-top: 25px; }
+    }
+
+/*-------------------------------------*/
+@media screen and (max-width: 479px) { /* 320<width<479 main 320*/
+html {width:100%; min-width:307px;}
+.SlideToggle { width:300px;}
+#BlockSerch { width:300px;}
+#BlockSerch p { font-size:16px; padding-left:30px;}
+.menu_list { width:150px;}
+.menu_head { width:150px; font-size:14px; padding-left:35px;}
+.menu_body { width:140px; margin-left:10px;}
+.menu_body>li>a { width:140px;}
+.drop-block { width:auto; margin-left:0;}
+.drop-block li a { width:130px; overflow:hidden;}
+#AllSearch #SearchingBlock { width:250px; margin:0 auto 15px auto;}
+#firstpane #ButtonN { margin-left:0;}
+#Offer #offerblock p { text-align: center; }
+#Offer #offerblock p span { margin-top: 25px; }
+#Offer #offerblock input {width: 90%; margin-top: 15px;}
+#Offer #offerblock {width: 100%;}
+#Offer #ButtonOffer {margin: 15px 25%;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

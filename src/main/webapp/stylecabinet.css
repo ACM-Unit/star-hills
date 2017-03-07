@@ -1,0 +1,368 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, big, em, font, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit;  font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
+:focus { outline: 0;}
+ol, ul { list-style: none;}
+table { border-collapse: separate; border-spacing: 0;}
+caption, th, td { text-align: left; font-weight: normal;}
+strong,b{font-weight:bold}
+em{font-style:italic}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+/*-------------------------------------*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans.eot');
+    src: url('fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans.woff') format('woff'),
+         url('fonts/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*-------------------------------------*/
+*{-moz-box-sizing: border-box; box-sizing: border-box;}
+html {width:100%;}
+body {font-size:14px; color: #7e7e7e; background: #fff; line-height:1.3;  font-family: 'OpenSans', sans-serif;}
+a {color: #6a9b9a; }
+a:hover {text-decoration:none;}
+.clr,#clr,.Clr {clear: both;}
+/*-------------------------------------*/
+section { width:1140px; margin:0 auto;}
+#AllBody { background:url(./images/Cabinet/BgCBody.jpg) bottom left repeat-x; background-size: contain; padding-bottom:30px; margin-bottom:5px;}
+#AllBody #TitleCabinet { padding-top:25px; padding-bottom:35px;}
+#AllBody #TitleCabinet h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(./images/Cabinet/BgTitle.png) left top no-repeat; padding-left:46px;}
+#AllBody #TitleCabinet h1 span {color:#e32026}
+#AllBody #TitleCabinet #BelowH1 {text-transform:uppercase; font-weight:bold; padding-left:46px; font-size:12px; color:#2f9cd0;}
+#AllBody #CenterCabinet {}
+#AllBody #CenterCabinet #LeftCabinet { float:left; width:25.5%; margin-right:1.5%;}
+#AllBody #CenterCabinet #LeftCabinet #BlockFoto { width:290px; height:auto; overflow:hidden;}
+#AllBody #CenterCabinet #LeftCabinet #BlockFoto img { width:100%;} 
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto {line-height:30px; background:url(./images/Cabinet/BgLogin.png) 91% center no-repeat; text-transform:uppercase; font-weight:bold; font-size:13px; width:232px; height:32px; text-decoration:none; color:#262626 ; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; margin:17px auto 30px auto;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo{position: absolute; background:url(./images/Cabinet/BgLogin.png) 91% center no-repeat; height:32px; padding-left:15px;padding-right: 30px; }
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo input {position: absolute; border:1px solid #f9f9f9; display:block; width:100%; height:30px;  border-radius:3px; letter-spacing: 10em;  opacity: 0;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo input:hover {background:url(./images/Cabinet/BgLogin.png) 91% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#AllBody #CenterCabinet #LeftCabinet p { text-align:center; font-family:Georgia, "Times New Roman", Times, serif; font-size:18px; font-weight:bold; font-style:italic; color:#444444; margin-bottom:15px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonMoney {width:225px; height:40px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonMoney a {text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:24px; text-align:center; text-shadow:0 -1px 1px #0d4067;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonMoney a:hover {background:linear-gradient(to bottom, #d5433a, #ec6137);}
+#AllBody #CenterCabinet #LeftCabinet #ButtonInput {width:225px; height:40px;  margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonInput input {text-decoration:none; border:1px solid #c27073; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:24px; text-align:center; text-shadow:0 -1px 1px #0d4067;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonOrders {width:225px; height:40px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonOrders a {text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonOrders a span {}
+#AllBody #CenterCabinet #LeftCabinet #ButtonOrders a:hover {background:linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#AllBody #RightCabinet #BottomDescr #BlockSkype #ButtonSkype {width:140px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; margin:0 auto; margin-bottom:12px; display: inline-block}
+#AllBody #RightCabinet #BottomDescr #BlockSkype #ButtonSkype a {text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:33px; line-height:35px; border-radius:3px; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #RightCabinet #BottomDescr #BlockSkype #ButtonSkype a span {}
+#AllBody #RightCabinet #BottomDescr #BlockSkype #ButtonSkype a:hover {background:linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOf {width:225px; height:40px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOf a {text-decoration:none; color:#262626 ; border:1px solid #c27073; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOf a:hover {background:linear-gradient(to bottom, #d5433a, #ec6137);}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOn {width:225px; height:40px; background: linear-gradient(to top, #00d556, #44ec19); border-radius:3px; border:1px solid #44ec19;  box-shadow: 0 1px 0 #00d556; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOn a {text-decoration:none; color:#262626 ; border:1px solid #8ec29a; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOn a:hover {background:linear-gradient(to bottom, #00d541, #95ec86);}
+#AllBody #CenterCabinet #LeftCabinet #ButtonActiveOf {width:225px; height:40px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonActiveOf a {text-decoration:none; color:#262626 ; border:1px solid #c27073; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonActiveOf a:hover {background:linear-gradient(to bottom, #d5433a, #ec6137);}
+#AllBody #CenterCabinet #LeftCabinet #ButtonActiveOn {width:225px; height:40px; background: linear-gradient(to top, #00d556, #44ec19); border-radius:3px; border:1px solid #44ec19;  box-shadow: 0 1px 0 #00d556; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonActiveOn a {text-decoration:none; color:#262626 ; border:1px solid #8ec29a; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonActiveOn a:hover {background:linear-gradient(to bottom, #00d541, #95ec86);}
+
+
+#AllBody #CenterCabinet #LeftCabinet #ButtonHelp {width:225px; height:40px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonHelp a {text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonHelp a:hover {background:linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#AllBody #CenterCabinet #RightCabinet {float:left; width:73%;}
+#AllBody #CenterCabinet #RightCabinet #TopDescr { background:url(./images/Cabinet/BgBlockSlider.jpg) center bottom repeat-x; padding:30px 28px 21px 28px;}
+#AllBody #CenterCabinet #RightCabinet #TopDescr p { color:#2f9cd0; font-size:12px; font-weight:bold; text-transform:uppercase; line-height:2.2; padding-right:30px;}
+#AllBody #CenterCabinet #RightCabinet #TopDescr p span { color:#e31f25;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr { padding-top:15px;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr label {float:left;}
+
+input[type="checkbox"] {position: absolute; left: -9999px;}
+input[type="checkbox"] + label { background: url(./images/i-checked.png) 0 0 no-repeat; padding-left: 32px; padding-top:10px;}
+input[type="checkbox"]:checked + label {background-position: 0 -30px;}
+#BlockMyProjects input {position: relative; left: 0}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr label p { margin-top:-6px; padding-bottom:6px; line-height:1.4; color:#444444; text-transform:none; font-weight:100; font-size:14px; padding-right:0;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr #ButtonLoading{width:198px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; float:right;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr #ButtonLoading a{text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; padding-left:5%; background: url(./images/Cabinet/BgReg.png) 91% center no-repeat;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr #ButtonLoading a:hover{background:url(./images/Cabinet/BgReg.png) 91% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock { border:1px solid #d8d8d8; padding:23px; margin-top:15px; background:#FFF;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockName { height:45px; margin-bottom:12px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockName p { width:17%; float:left; text-transform:uppercase; line-height:20px; text-align:right; padding-right:3%; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockName input { float:right; width:83%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px; margin-bottom: 10px;}
+#AllBody #RightCabinet #BottomDescr #BlockSkype { height:35px; margin-bottom:12px;}
+#AllBody #RightCabinet #BottomDescr #BlockSkype p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444;}
+#AllBody #RightCabinet #BottomDescr #BlockSkype input { width: 140px; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAlias { height:45px; margin-bottom:12px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAlias p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAlias input { float:left; width:33%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail { height:45px; margin-bottom:12px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; line-height:20px; float:left; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail p:first-child {line-height:45px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail input { float:left; width:33%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAboutMe { height:175px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAboutMe p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAboutMe textarea { float:right; width:83%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:15px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #AdminComment p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #AdminComment #Texteditor{ float:right; width:83%; height:100%;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant { margin-top:20px; padding-left:17%; }
+input[type="AboutMe"] {position: absolute; left: -9999px;}
+input[type="AboutMe"] + label { background: url(./images/i-checked.png) 0 0 no-repeat; padding-left: 32px; padding-top:10px;}
+input[type="AboutMe"]:checked + label {background-position: 0 -30px;}
+input[type="AboutMe"]:checked + label p {}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant label { float:left;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant label p { margin-top:-6px; padding-bottom:6px; line-height:1.4; color:#444444; text-transform:none; font-weight:100; font-size:14px; padding-right:0;}
+::-moz-placeholder { height:25px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory { height:45px; margin-bottom:12px; margin-top:37px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; line-height:45px; float:left; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory select { float:left; width:33%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:16px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory input { float: left; margin-left: 30px; width:33%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos { height:45px; margin-bottom:12px; margin-top:37px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; float:left; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos input { float:left; width:33%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:16px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo { height:45px; margin-bottom:12px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; line-height:25px; float:left; color:#e31e24;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo input { float:left; width:33%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects { height:45px; margin-bottom:12px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects p { width:100%; float:left; text-transform:uppercase; text-align:left; padding-right:3%; float:left; color:#e31e24; margin-bottom:12px; margin-top:12px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects select { float:right; width:83%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #Button {float:right; width:135px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin-top:25px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #Button a {text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:30px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; text-align:center; text-shadow:0 -1px 1px #0d4067;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #Button a:hover {background:linear-gradient(to bottom, #d5433a, #ec6137);}
+
+#SliderCabinet { background:#f9f3f3; padding:18px 0 53px 0; margin-bottom:5px;}
+#SliderCabinet #SliderBclock { width:100%; background:url(./images/Cabinet/BgBlockSlider.jpg) left center repeat-x; padding:35px 25px 45px 25px; margin-bottom:23px;}
+#SliderCabinet #SliderBclock #TitleTopSlider {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(./images/Cabinet/BgTitle.png) 100px top no-repeat; padding-left:155px; margin-bottom:75px;}
+#SliderCabinet #SliderBclock #TitleTopSlider span {color:#e32026}
+#SliderCabinet #SliderBclock #ListSlider { width:85%; margin:0 auto; position: relative;}
+#SliderCabinet #SliderBclock #ListSlider div { padding-left:0.4%; padding-right:0.4%; }
+#SliderCabinet #SliderBclock #ListSlider #FotoSlider { width:100%; height:116px; overflow:hidden;}
+#SliderCabinet #SliderBclock #ListSlider #FotoSlider img { width:100%; height:100%; overflow:hidden;}
+.owl-prev {position: absolute; width:40px; height:40px; background:url(./images/Cabinet/LeftSlider.png) center center no-repeat; margin-top:-180px; margin-left:-80px;}
+.owl-next {position: absolute; width:40px; height:40px; background:url(./images/Cabinet/RightSlider.png) center center no-repeat; margin-top:-180px; margin-left:103%;}
+#SliderCabinet #SliderBclock #ListSlider #Txt {display: table; width:100%; height:75px;}
+#SliderCabinet #SliderBclock #ListSlider #Txt p { overflow:hidden; display: table-cell; vertical-align: middle; text-align:center; color:#444444; font-weight:bold; font-style:italic; font-family:Georgia, "Times New Roman", Times, serif; font-size:18px;}
+
+#SliderCabinet #SliderBclock #ListSlider #BottomSlider {width:95%; height:32px; background: linear-gradient(to top, #377ead, #479bd1); border-radius:3px; border:1px solid #265e84;  box-shadow: 0 1px 0 #1a4a6f; margin:0 auto; }
+#SliderCabinet #SliderBclock #ListSlider #BottomSlider a {text-decoration:none; color:#fff ; border:1px solid #5098c8; display:block; width:100%; height:30px; line-height:30px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; text-align:center; text-shadow:0 -1px 1px #0d4067;}
+#SliderCabinet #SliderBclock #ListSlider #BottomSlider a:hover {background:linear-gradient(to bottom, #377ead, #479bd1);}
+
+#SliderCabinet #ButtonCabinetBottom {width:390px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; }
+#SliderCabinet #ButtonCabinetBottom a {text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:30px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; text-shadow:0 -1px 1px #0d4067; background: url(./images/Cabinet/BgReg.png) 96% center no-repeat; padding-left:3%;}
+#SliderCabinet #ButtonCabinetBottom a:hover {background:url(./images/Cabinet/BgReg.png) 96% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+#vidfile {float: right;  width: 100%;  text-align: right;}
+#videorecord {width: 550px}
+#videorecord #loadvideos video{width: 360px}
+#videorecord #loadvideos audio{width: 360px}
+
+#SliderCabinet #SliderBclock #ListSlider #Txt a {text-decoration: none; color:#444444;}
+#SliderCabinet #SliderBclock #ListSlider #Txt a:hover {text-decoration: none; color: #52084a;}
+
+
+#AddNews #BlockEmail { height:45px; margin-bottom:12px; width:50%}
+#AddNews #BlockEmail p { width:34%; float:left; text-transform:uppercase; text-align:right; padding-right:6%; line-height:20px; float:left; color:#444444;}
+#AddNews #BlockEmail p:first-child {line-height:45px;}
+#AddNews #BlockEmail input { float:left; width:66%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#AddNews{height: 550px; margin-top: 40px}
+#AddNews #AdminComment{height: 300px}
+#AddNews #AdminComment p { width:17%; float:left; margin-top: 20px; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444;}
+#AddNews #AdminComment #Texteditor{ float:right; width:83%; height:100%;}
+#AddNews input { background:none; font-size:16px; border:none;}
+#AddNews #Button {float:right; width:135px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin-top:25px;}
+#AddNews #Button a {text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:30px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; text-align:center; text-shadow:0 -1px 1px #0d4067;}
+#AddNews #Button a:hover {background:linear-gradient(to bottom, #d5433a, #ec6137);}
+
+
+/*-------------------------------------*/
+@media screen and (max-width: 1334px) { /* 1200<width<1334 main 1200*/
+
+
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1199px) { /* 980<width<1199 main 980*/
+section { width:98%;}
+#AllBody #CenterCabinet #LeftCabinet #BlockFoto { width:100%; height:100%;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr label { width:100%; }
+#AllBody #CenterCabinet #RightCabinet #BottomDescr #ButtonLoading { margin:0 auto !important;}
+
+#SliderCabinet #SliderBclock #TitleTopSlider { font-size:26px; font-weight:bold; color:#444444; background-position:70px top; padding-left:125px; margin-bottom:45px;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 979px) { /* 768<width<979 main 768*/
+#AllBody #TitleCabinet { padding-top:20px; padding-bottom:20px;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonFoto { width:100%;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo{font-size:11px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo input { }
+#AllBody #CenterCabinet #LeftCabinet #ButtonMoney {width:100%;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonInput {width:100%;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonOrders { width:100%;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOn { width:100%;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonTurneOf { width:100%;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonActiveOn { width:100%;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonActiveOf { width:100%;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonHelp { width:100%;}
+#AllBody #CenterCabinet #RightCabinet #TopDescr { width:99%;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr label p { font-size:12px; margin-top:-4px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock { padding:5px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock p { font-size:12px; text-align:center !important;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory select {width:83%; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory input {width:83%;  margin-left: 17%;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos input {width:83%;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo input {width:83%;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects select { width:100%;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #Button { margin-bottom:15px;}
+#SliderCabinet #SliderBclock #TitleTopSlider { font-size:22px; background-position:50px top; padding-left:105px; margin-bottom:45px;}
+.owl-prev {margin-left:-10%;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 767px) { /* 480<width<767 main 480*/
+#AllBody #TitleCabinet h1 {font-size:20px; background-size:28px;}
+#AllBody #TitleCabinet { padding-top:10px;}
+    #AllBody #CenterCabinet #RightCabinet #TopDescr #BottomDescr input[type="checkbox"] + label { padding-top:30px;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant input[type="checkbox"] + label { padding-top:24px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo { height:auto;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo input { height:auto; line-height:1.3; background:none; padding-left:0; text-align:center; padding:7px 0;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo input:hover {background:linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#AllBody #CenterCabinet #LeftCabinet #ButtonMoney { height:auto;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonMoney a { font-size:18px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonInput { height:auto;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonInput input { font-size:18px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+
+    #AllBody #CenterCabinet #LeftCabinet #ButtonOrders { height:auto;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonOrders a { font-size:13px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+    #AllBody #RightCabinet #BottomDescr #BlockSkype #ButtonSkype { height:auto;}
+    #AllBody #RightCabinet #BottomDescr #BlockSkype #ButtonSkype a { font-size:14px; height:auto; line-height:1.1; text-align:center; padding-top: 5px; padding-bottom: 2px;}
+
+    #AllBody #CenterCabinet #LeftCabinet #ButtonTurneOn { height:auto;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOn a { font-size:13px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonTurneOf { height:auto;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonTurneOf a { font-size:13px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonActiveOn { height:auto;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonActiveOn a { font-size:13px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonActiveOf { height:auto;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonActiveOf a { font-size:13px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+
+    #AllBody #CenterCabinet #LeftCabinet #ButtonHelp { height:auto;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonHelp a { font-size:13px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+#AllBody #CenterCabinet #RightCabinet #TopDescr {padding:10px 8px 10px 8px;}
+#AllBody #CenterCabinet #RightCabinet #TopDescr p { padding-right:0; width:100%;}
+input[type="checkbox"] {position: static; left: 0;}
+input[type="checkbox"] + label { background:none; }
+input[type="checkbox"]:checked + label {background-position: 0;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr label p { margin-top:-28px;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr #ButtonLoading { width:100%;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr #ButtonLoading a { text-align:center;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockName { height:30px; }
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockName p { width:100%; }
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockName input { width:100%; margin-bottom:7px; font-size:14px;}
+    #AllBody #RightCabinet #BottomDescr #BlockSkype { height:30px; }
+    #AllBody #RightCabinet #BottomDescr #BlockSkype p { width:100%; }
+    #AllBody #RightCabinet #BottomDescr #BlockSkype input {margin-bottom:7px; font-size:14px;}
+    #AllBody #RightCabinet #BottomDescr #BlockAlias { height:30px; }
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAlias p { width:100%; line-height:1.5;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAlias input { width:100%; font-size:14px; margin-bottom:7px; }
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail { height:30px; }
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail p { width:100%; line-height:1.5;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail input { width:100%; font-size:14px; margin-bottom:7px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAboutMe { }
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAboutMe p { width:100%; line-height:1.5;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAboutMe textarea {width:100%; font-size:14px; margin-bottom:7px;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #AdminComment { }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #AdminComment p { width:100%; line-height:1.5;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #AdminComment #Texteditor {width:100%; font-size:14px; margin-bottom:7px;}
+input[type="AboutMe"] {position: static; left: 0;}
+input[type="AboutMe"] + label { background:none;}
+input[type="AboutMe"]:checked + label {background-position: 0;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant { width:100%; padding-left:0; margin-top:2px; }
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant label p { margin-top:-20px; text-align:left !important; padding-left:25px;}
+/*#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant label { float: none; padding-left:0;}*/
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory { height:30px; }
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory p { width:100%; line-height:1.5;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory select { width:100%;  font-size:14px; margin-bottom:7px; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory input { width:100%; margin-left: 0px; font-size:14px; margin-bottom:7px; }
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos { height:30px; }
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos p { width:100%; line-height:1.5;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos input { width:100%; font-size:14px; margin-bottom:7px; }
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo { height:30px; }
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo p { width:100%; line-height:1.5;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo input { width:100%; font-size:14px; margin-bottom:7px; }
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects { height:30px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects p { width:100%; line-height:1;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects select { width:100%; font-size:14px; height:30px;}
+
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #Button { width:100%;}
+#SliderCabinet { padding:18px 0 33px 0; }
+#SliderCabinet #SliderBclock #TitleTopSlider { font-size:18px; background-position:10px top; padding-left:65px; margin-bottom:45px;}
+.owl-prev {margin-left:-15%;}
+.owl-next {margin-left:102%;}
+#SliderCabinet #SliderBclock #ListSlider #Txt p { font-size:14px; }
+#SliderCabinet #SliderBclock #ListSlider #Txt a { font-size:14px; text-decoration: none;}
+#SliderCabinet #SliderBclock #ListSlider #BottomSlider { height:auto;}
+#SliderCabinet #SliderBclock #ListSlider #BottomSlider a { font-size:12px; height:auto; line-height:1.1; padding:3px 0;}
+
+    #AddNews #BlockEmail { height:30px; margin: auto;}
+    #AddNews #BlockEmail p { width:100%; line-height:1.5; text-align: center}
+    #AddNews #BlockEmail input { width:100%; font-size:14px; margin-bottom:7px;}
+    #AddNews #AdminComment { }
+    #AddNews #AdminComment p { width:100%; line-height:1.5; text-align: center}
+    #AddNews #AdminComment #Texteditor {width:100%; font-size:14px; margin-bottom:7px;}
+    #AddNews #Button {margin-top:50px;}
+
+}
+@media screen and (max-width: 640px) {
+    #AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo { font-size: 8px; }  #videorecord {width: 100%}
+    #AddNews { height: 600px}
+    #AddNews #Button {margin-top:120px;}}
+/*-------------------------------------*/
+@media screen and (max-width: 479px) { /* 320<width<479 main 320*/
+html {width:100%; min-width:307px;}
+#AllBody #TitleCabinet h1 { background:none; text-align:center; padding-left:0;}
+#AllBody #TitleCabinet #BelowH1 {text-align:center; padding-left:0;}
+#AllBody #CenterCabinet #LeftCabinet { width:100%;}
+#AllBody #CenterCabinet #LeftCabinet #BlockFoto { width:290px; height:auto; margin:0 auto; overflow:hidden;}
+#AllBody #CenterCabinet #LeftCabinet #BlockFoto img { width:100%;} 
+#AllBody #CenterCabinet #RightCabinet { width:100%;}
+#SliderCabinet #SliderBclock {padding:15px;}
+#SliderCabinet #SliderBclock #TitleTopSlider { font-size:15px;}
+#SliderCabinet #SliderBclock #ListSlider { width:100%;}
+.owl-prev { display:none;}
+.owl-next { display:none;}
+#SliderCabinet #ButtonCabinetBottom { width:96%; height: auto; }
+#SliderCabinet #ButtonCabinetBottom a { height:auto; text-align:center; background:none; line-height:1.2; padding:5px 0;}
+#SliderCabinet #ButtonCabinetBottom a:hover {background:linear-gradient(to bottom, #d5433a, #ec6137);}
+    #videorecord {width: 100%}
+    #videorecord #loadvideos video{width: 290px}
+    #videorecord #loadvideos audio{width: 290px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1835 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, big, em, font, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit;  font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
+:focus { outline: 0;}
+ol, ul { list-style: none;}
+table { border-collapse: separate; border-spacing: 0;}
+caption, th, td { text-align: left; font-weight: normal;}
+strong,b{font-weight:bold}
+em{font-style:italic}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+/*-------------------------------------*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans.eot');
+    src: url('fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+    url('fonts/OpenSans.woff') format('woff'),
+    url('fonts/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+#tooltip {
+    background: #FFFFFF;
+    border: 1px solid #666666;
+    color: #333333;
+    margin: 0px;
+    padding: 3px 5px;
+    position: absolute;
+    visibility: hidden;
+}
+/*-------------------------------------*/
+*{-moz-box-sizing: border-box; box-sizing: border-box;}
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {/* */
+    border: none;
+}
+.background-progress {display: none; position: fixed; z-index:9999; top:0; left:0; height:100%; width:100%; background: rgba( 255, 255, 255, .8 )}
+#progress-wrp {
+    display: none;
+    border: 1px solid #0099CC;
+    width: 16%;
+    padding: 1px;
+    position: fixed;
+    right:42%;
+    bottom: 50%;
+    border-radius: 3px;
+    margin: 0px;
+    text-align: left;
+    background: #fff;
+    box-shadow: inset 1px 3px 6px rgba(0, 0, 0, 0.12);
+    z-index: 9999999;
+}
+#progress-text {
+    display: none;
+    width: 16%;
+    padding: 1px;
+    position: fixed;
+    right:42%;
+    bottom: 60%;
+    margin: 0px;
+    text-align: left;
+    z-index: 9999999;
+    color: red;
+    font-style: normal;
+}
+#progress-wrp .progress-bar{
+    height: 20px;
+    border-radius: 3px;
+    background-color: #00f323;
+    width: 0;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.11);
+}
+#progress-wrp .status{
+    top:3px;
+    left:50%;
+    position:absolute;
+    display:inline-block;
+    color: #000000;
+}
+input.invalidform::-moz-placeholder {height:18px; color: #dc0007; font-family: 'OpenSans', sans-serif; font-style: inherit ; text-transform: uppercase; font-size: 14px;}
+input.invalidform::-webkit-input-placeholder {height:18px; color: #dc0007;  font-family: 'OpenSans', sans-serif; font-style: inherit; text-transform: uppercase; font-size: 14px;}
+
+input.validform::-moz-placeholder {height:18px; color: #d8d7dc; font-family: 'OpenSans', sans-serif; font-style: normal; text-transform: uppercase; font-size: 14px;}
+input.validform::-webkit-input-placeholder {height:18px; color: #d8d7dc;  font-family: 'OpenSans', sans-serif; font-style: normal; text-transform: uppercase; font-size: 14px;}
+#validEmail{  margin-top: 15px;  margin-left: -29px;  position: absolute;  width: 16px;  height: 16px;  z-index: 1060;  }
+#validPassword{  margin-top: 15px;  margin-left: -29px;  position: absolute;  width: 16px;  height: 16px;  z-index: 1060;  }
+#validPassword1{  margin-top: 15px;  margin-left: -29px;  position: absolute;  width: 16px;  height: 16px;  z-index: 1060;  }
+#validLogin{  margin-top: 15px;  margin-left: -29px;  position: absolute;  width: 16px;  height: 16px;  z-index: 1060;  }
+
+html {width:100%;}
+body {font-size:14px; color: #7e7e7e; background: #fff; line-height:1.3;  font-family: 'OpenSans', sans-serif;}
+a {color: #6a9b9a; }
+a:hover {text-decoration:none;}
+.clr,#clr,.Clr {clear: both;}
+/*-------------------------------------*/
+.modalWaiting {display: none; position: fixed; z-index:9999; top:0; left:0; height:100%; width:100%; background: rgba( 255, 255, 255, .8 ) url('/js/owl-carousel/AjaxLoader.gif') 50% 50% no-repeat; }
+.modalWaitingSearсh {display: none; position: fixed; z-index:9999; top:0; left:0; height:100%; width:100%; background: rgba( 255, 255, 255, .8 ) url('/js/owl-carousel/AjaxLoader.gif') 50% 50% no-repeat; }
+section { width:1140px; margin:0 auto;}
+#Top {background: linear-gradient(to top, #2796ca, #3ea9db); width:100%; border-top:1px solid #82c7e8; position: fixed; z-index: 999}
+#Home { background:url(images/BgDorder.jpg) left center repeat-y, linear-gradient(to top, #2677aa, #3795cf); width:57px; height:43px; margin-top:-1px; float:left;}
+#Home a {background:url(images/Home.png) center center no-repeat, url(images/HomeBgTop.jpg) top center repeat-x, url(images/HomeBgBottom.jpg) bottom center repeat-x; display:block; width:55px; height:43px; margin: 0 auto;}
+nav { float:left; height:43px;}
+nav ul {}
+nav ul li { float:left; }
+
+nav ul li a { text-transform: uppercase; text-decoration:none; color:#FFF; height:43px; line-height:43px; display:block; font-size:13px; font-weight:600; padding:0 20px; background:url(images/BgDorder.jpg) left top repeat-y;}
+nav ul li:last-child a{ background:url(images/BgDorder.jpg) right top repeat-y, url(images/BgDorder.jpg) left top repeat-y;}
+nav ul li a:hover {background:url(images/BgDorder.jpg) left top repeat-y, linear-gradient(to top, #2677aa, #3795cf);}
+nav ul li:last-child a:hover { background:url(images/BgDorder.jpg) left top repeat-y, url(images/BgDorder.jpg) right top repeat-y, linear-gradient(to top, #2677aa, #3795cf);}
+#Phone1 { float:right; height:43px; line-height:43px; font-size:18px; color: #fff;}
+#Phone1 #BgPhone { background:url(images/Phone.png) center center no-repeat, url(images/BgDorder.jpg) left top repeat-y, url(images/BgDorderRightPhone.jpg) right top repeat-y; width:42px; height:43px; display:block; float:right; margin-left:17px;}
+
+#Header { margin-bottom:5px; background:url(/images/Cabinet/BgBlockSlider.jpg) 50px center repeat-x; width:100%; margin-top:46px;}
+#Header #Logo { width:29.2%; height:92px; float:left; margin:20px 0 12px 0; margin-right:14%;}
+#Header #Logo a { display:block; background:url(images/Logo.png) center center no-repeat;width:333px; height:92px;}
+
+#Header #Searching {float:left; margin-top:37px; width:31%;}
+#Header #Searching p { color:#8a8988; font-size:18px; margin-bottom:3px;}
+#Header #Searching .search {width:100%; position: relative;}
+#Header #Searching .search input { border: none;}
+#Header #Searching .search .input { width: 100%; padding: 8px 37px 9px 15px; border: 1px solid #e4e4e4; border-top:1px solid #bfbfbf; border-radius: 5px; background: #e9e9e9; color:#000; outline: none; text-transform:uppercase; font-size:12px; font-weight:bold;}
+#Header #Searching .search .input:focus { box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4); background: #E8E8E8; color: #333;}
+#Header #Searching .search .submit {position: absolute; top:3px; right: 3px; cursor: pointer; background:url(images/Search.png) center center no-repeat, linear-gradient(to top, #e6e6e6, #f5f5f5); display:inline-block; width:28px; height:27px; border:1px solid #bdbdbd; border-bottom:2px solid #bdbdbd;}
+#Header #Searching .search .submit:hover {opacity: 0.8;}
+#Header #Searching input[type="search"] {-webkit-appearance: none;}
+#Header #Searching .search .submit:active { border:2px solid #bdbdbd; border-radius:2px;}
+#Header #ButtonBlock { float:left; width:25.8%; font-size:14px; text-transform:uppercase;  text-align:center;}
+
+#Header #ButtonBlock #ButtonUser {text-transform: none; font-size: 14px; min-width: 155px; height:25px; margin-top:5px; float:right;}
+#Header #ButtonBlock #ButtonLogin {width:155px; height:32px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; float:right;}
+#Header #ButtonBlock #ButtonLogin a { text-decoration:none; color:#262626; border:1px solid #f9f9f9; display:block; width:153px; height:30px; line-height:30px; border-radius:3px; background:url(images/BgLogin.png) 95% center no-repeat;}
+#Header #ButtonBlock #ButtonLogin a:hover {background:url(images/BgLogin.png) 95% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+
+#Header #ButtonCheckIn {width:155px; height:32px; background: linear-gradient(to top, #387fad, #489cd1); border-radius:3px; border:1px solid #275f85; float:right; margin-top:8px; box-shadow: 0 1px 0 #1b4b6f;}
+#Header #ButtonCheckIn a {text-decoration:none; color:#fff; border:1px solid #4E97C5; display:block; width:153px; height:30px; line-height:30px; border-radius:3px; background:url(images/BgReg.png) 95% center no-repeat;}
+#Header #ButtonCheckIn a:hover {background:url(images/BgReg.png) 95% center no-repeat, linear-gradient(to bottom, #387fad, #489cd1)}
+
+#BlockImgAll { width:100%; background:url(images/BgTop.jpg) center top no-repeat; background-size: cover;}
+#BlockImgAll #BlockImg { width:1335px; margin:0 auto;}
+#BlockImgAll #BlockImg #LeftBlock { float: left; width:12.6%; margin-right:5px;}
+#BlockImgAll #BlockImg #LeftBlock .box {width:100%; height:116px; margin-bottom:5px; position:relative; z-index:10}
+#BlockImgAll #BlockImg #LeftBlock .box img { height:100%; width:100%; -moz-transition: all 1s ease-out; -o-transition: all 0.5s ease-out; -webkit-transition: all 0.5s ease-out; transition: all 0.5s ease-out; opacity:0.5;}
+#BlockImgAll #BlockImg #LeftBlock .box img:hover {-webkit-transform: scale(1.1); -moz-transform: scale(1.1); -o-transform: scale(1.1); transform: scale(1.1); opacity:1;}
+#BlockImgAll #BlockImg #SliderBlock {float: left; width:74%; margin-right:5px; margin-bottom:35px;}
+#BlockImgAll #BlockImg #RightBlock {float: left; width:12.6%;}
+#BlockImgAll #BlockImg #RightBlock .box { width:100%; height:116px; margin-bottom:5px; position:relative; z-index:10}
+#BlockImgAll #BlockImg #RightBlock .box1 {overflow:hidden; width:100%; height:237px; margin-bottom:5px; border:1px solid #e5dfdc; padding:23px 0; background:url(images/Pig1.png) 30% 85% no-repeat;}
+#BlockImgAll #BlockImg #RightBlock .box1 p { color:#262626; text-align:center; line-height:0.95; font-weight:bold;}
+#BlockImgAll #BlockImg #RightBlock .box1 p.boxTop { color:#262626; font-family: 'OpenSans', sans-serif; font-size:25px; }
+#BlockImgAll #BlockImg #RightBlock .box1 p.boxTop2 {font-family:Georgia, "Times New Roman", Times, serif; font-size:28px; font-style:italic;}
+#BlockImgAll #BlockImg #RightBlock .box1 p.boxTop2 span { color:#e99800; font-size:30px;}
+#BlockImgAll #BlockImg #RightBlock .box img {  height:100%; width:100%; -moz-transition: all 1s ease-out; -o-transition: all 0.5s ease-out; -webkit-transition: all 0.5s ease-out; transition: all 0.5s ease-out; opacity:0.5;}
+#BlockImgAll #BlockImg #RightBlock .box img:hover {-webkit-transform: scale(1.1); -moz-transform: scale(1.1); -o-transform: scale(1.1); transform: scale(1.1); opacity:1;}
+#BlockImgAll #BlockImg #RightBlock .box1 .delimiter { height:4px; width:70%; border-top:1px solid #cccccc; border-bottom:1px solid #cccccc; margin:0 auto; margin-top:5px; margin-bottom:10px;}
+#BlockImgAll #BlockImg #RightBlock .box1 a { background:url(images/RightSlider.png) center center no-repeat; width:40px; height:40px; display:block; margin-left:auto; margin-top:25%;}
+#BlockImgAll #BlockImgBottom { width:1167px; height:77px; background:#fff; margin:0 auto;}
+
+#VideoCongratulations {}
+#VideoCongratulations h1 { text-transform:uppercase; text-align:center; font-size:30px; font-weight:bold; color:#444444; margin-top:-30px; background:url(images/BgTitle.png) 0% top no-repeat; margin-bottom: 50px;}
+#VideoCongratulations h1 span {    padding-left: 50px; color:#e32026}
+#VideoCongratulations h2 { text-transform:uppercase; text-align:center; font-size:30px; font-weight:bold; color:#444444; margin-top:-30px; margin-bottom: 50px;}
+#VideoCongratulations h2 span {color:#e32026}
+#VideoCongratulations #CenterP { text-align:center; text-transform:uppercase; font-weight:bold; font-size:12px; color:#2f9cd0; margin-top:7px; margin-bottom:30px;}
+#VideoCongratulations #VideoBlock { background:url(images/Video.jpg) center center no-repeat; height:318px; width:100%;}
+#VideoCongratulations #BlockVideoBottom {width:1167px; height:70px; background:#f9f3f3; margin:0 auto; margin-top:60px; z-index:2; position:relative; }
+#VideoCongratulations #BlockVideoBottom #TitleOurMission {text-transform:uppercase; text-align:center; font-size:30px; font-weight:bold; color:#444444;  background:url(images/BgTitle.png) 27% bottom no-repeat; padding-top:40px; margin-bottom: 50px; text-align: center;}
+#VideoCongratulations #BlockVideoBottom #TitleOurMission span {color:#e32026}
+
+#OurMission {background:#f9f3f3; z-index:1; margin-bottom:5px;}
+#OurMission #OurMissionBlock { background:url(images/Girl1.png) right top no-repeat; padding-top:106px; padding-bottom:40px;}
+#OurMission #OurMissionBlock #TextOurMission { width:47.9%; color:#757373; font-size:14px; padding-left:80px;}
+#OurMission #OurMissionBlock #TextOurMission p { margin-bottom:25px;}
+
+#BottomNavAll { background:url(/images/Cabinet/BgBlockSlider.jpg) left center repeat-x; padding:35px 0 22px 0; margin-top: 5px;}
+#BottomNavAll #ListMenu { width:50%; float:left;}
+#BottomNavAll #ListMenu ul { width:100%;}
+#BottomNavAll #ListMenu ul li { float:left; padding-bottom:12px;}
+#BottomNavAll #ListMenu ul li a { color:#444444; text-transform:uppercase; font-size:14px; text-decoration:none; padding:0 13px; border-left:1px solid #c5c4c6; border-right:1px solid #fff;}
+#BottomNavAll #ListMenu ul li:first-child a { padding-left:0; border-left:none;}
+#BottomNavAll #ListMenu ul li:last-child a { border-right:none; padding-right:0;}
+#BottomNavAll #ListMenu ul li a:hover { color:#329fd2}
+
+#BottomNavAll #PhoneBottom { background:url(images/PhoneFooter1.png) right center no-repeat; width:25.2%; color:#444444; font-size:18px; padding:15px 0; padding-left:6%; float:left;}
+#BottomNavAll #Soc { float:left; width:24.8%;}
+#BottomNavAll #Soc ul { padding-top:7px;}
+#BottomNavAll #Soc ul li { float:right; margin-left:10px;}
+#BottomNavAll #Soc ul li a { display:block; width:36px; height:38px; margin-left:auto;}
+#BottomNavAll #Soc ul li:nth-child(3) a { background:url(images/Facebook.jpg) center center no-repeat;}
+#BottomNavAll #Soc ul li:nth-child(2) a { background:url(images/Twitter.jpg) center center no-repeat; border-radius:50%;}
+#BottomNavAll #Soc ul li:nth-child(1) a { background:url(images/instagram.png) center center no-repeat;}
+
+#ChekInAll {width:100%; background: url(images/CheckIn/BgCheckIn.jpg) center top no-repeat; background-size: cover; padding-top:20px; padding-bottom:10px; margin-bottom:5px;}
+#ChekInAll h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/CheckIn/BgTitle.png) left top no-repeat; padding-left:50px;}
+#ChekInAll h1 span {color:#e32026; }
+#ChekInAll #CenterPChek {padding-left:50px; text-transform:uppercase; font-weight:bold; font-size:12px; color:#2f9cd0;   margin-bottom:35px;}
+#ChekInAll #ChekBlock { border:1px solid #f3f2f5; padding:40px 18px; width:67%; background:#fff; float:left;}
+#ChekInAll #regSuchess { height: 300px; border:1px solid #f3f2f5; padding:40px 18px; width:67%; background:#fff; float:left;}
+#ChekInAll #regSuchess p {text-align: center; font-size: 26px; margin-top: 40px;}
+#regSuchess { height: 300px; border:1px solid #f3f2f5; padding:40px 18px; width:67%; background:#fff; margin: 0 auto;}
+#regSuchess p {text-align: center; font-size: 26px; margin-top: 40px;}
+#ChekInAll #ChekBlock #BlockName1 { height:45px; margin-bottom:14px;}
+#ChekInAll #ChekBlock #BlockName1 p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#ChekInAll #ChekBlock #BlockName1 input { float:right; width:71%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#ChekInAll #ChekBlock #BlockAlias1 { height:45px; margin-bottom:14px;}
+#ChekInAll #ChekBlock #BlockAlias1 p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#ChekInAll #ChekBlock #BlockAlias1 input { margin-right: 4px; width:40%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#VideoCongratulations #Celebrities { height:45px; margin-bottom:14px; text-align: center;}
+#VideoCongratulations #Celebrities p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#VideoCongratulations #Celebrities input { margin-right: 4px; width:30%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#VideoCongratulations #CelebritiesEmail { height:45px; margin-bottom:14px; text-align: center;}
+#VideoCongratulations #CelebritiesEmail p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#VideoCongratulations #CelebritiesEmail input { margin-right: 4px; width:30%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+
+#ChekInAll #ChekBlock #Phone { height:45px; margin-bottom:14px;}
+#ChekInAll #ChekBlock #Phone p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#ChekInAll #ChekBlock #Phone input {margin-right: 4px; float:left; width:40%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+
+#ChekInAll #ChekBlock #Login { height:45px; margin-bottom:14px;}
+#ChekInAll #ChekBlock #Login p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#ChekInAll #ChekBlock #Login input {margin-right: 4px; float:left; width:40%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#ChekInAll #ChekBlock #Password { height:45px; margin-bottom:14px;}
+#ChekInAll #ChekBlock #Password p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#ChekInAll #ChekBlock #Password input { margin-right: 4px; float:left; width:40%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#ChekInAll #ChekBlock #PasswordReply { height:45px; margin-bottom:40px;}
+#ChekInAll #ChekBlock #PasswordReply p { width:29%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444; line-height:45px;}
+#ChekInAll #ChekBlock #PasswordReply input { margin-right: 4px; float:left; width:40%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+
+
+#ChekInAll #ChekBlock #Agreement input[type="checkbox"] {position: absolute; left: -9999px;}
+#ChekInAll #ChekBlock #Agreement input[type="checkbox"] + label { background: url(images/i-checked.png) 0 0 no-repeat; padding-left: 32px; padding-top:10px;}
+#ChekInAll #ChekBlock #Agreement input[type="checkbox"]:checked + label {background-position: 0 -30px;}
+#ChekInAll #ChekBlock #Agreement label { float:left;}
+#ChekInAll #ChekBlock #Agreement label p {margin-top:-11px; padding-bottom:6px; line-height:0.9; color:#444444; text-transform:none; font-weight:100; font-size:14px; padding-right:0; width: 300px}
+
+#ChekInAll #ChekBlock #Agreement #ButtonLoading{width:230px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; float:right; margin-top:-3px; margin-right:5%;}
+#ChekInAll #ChekBlock #Agreement #ButtonLoading a{text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; padding-left:5%; background: url(images/CheckIn/BgReg.png) 91% center no-repeat;}
+#ChekInAll #ChekBlock #Agreement #ButtonLoading a:hover{background:url(images/CheckIn/BgReg.png) 91% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+#VideoCongratulations #ButtonSaveStar{width:30%; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; }
+#VideoCongratulations #ButtonSaveStar a{text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; padding-left:5%; background: url(images/CheckIn/BgReg.png) 91% center no-repeat; text-align: center;}
+#VideoCongratulations #ButtonSaveStar a:hover{background:url(images/CheckIn/BgReg.png) 91% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+
+#ChekInAll #regSuchess #ButtonSuchess{width:230px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; margin-top:55px;}
+#ChekInAll #regSuchess #ButtonSuchess a{text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; text-align: center;}
+#ChekInAll #regSuchess #ButtonSuchess a:hover{background: linear-gradient(to bottom, #d5433a, #ec6137);}
+
+#ChekInAll #BoxIcon { float:left; width:32%; margin-left:1%;}
+#ChekInAll #BoxIcon ul {}
+#ChekInAll #BoxIcon ul li { float:left; margin-bottom:35px; width:33%}
+#ChekInAll #BoxIcon ul li:nth-child(1) { background:url(images/CheckIn/Time.png) center top no-repeat;}
+#ChekInAll #BoxIcon ul li:nth-child(2) { background:url(images/CheckIn/Easily.png) center top no-repeat;}
+#ChekInAll #BoxIcon ul li:nth-child(3) { background:url(images/CheckIn/Prezentr.png) center top no-repeat;}
+#ChekInAll #BoxIcon ul li:nth-child(4) { background:url(images/CheckIn/Smile.png) center top no-repeat;}
+#ChekInAll #BoxIcon ul li:nth-child(5) { background:url(images/CheckIn/Just.png) center top no-repeat;}
+#ChekInAll #BoxIcon ul li:nth-child(6) { background:url(images/CheckIn/Profitably.png) center top no-repeat; }
+#ChekInAll #BoxIcon ul li p { color:#2f9cd0; font-size:20px; font-weight:bold; text-transform:uppercase; text-align:center; padding-top:100px;}
+#ChekInAll #ChekBlock #BlockName1 p { font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #BlockAlias1 p {font-size:11px; text-align:center;}
+#VideoCongratulations #Celebrities p {font-size:11px; text-align:center;}
+#VideoCongratulations #CelebritiesEmail p {font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #Phone p {font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #Login p {font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #Password p {font-size:11px; text-align:center;}
+#ChekInAll #ChekBlock #PasswordReply p {font-size:11px; text-align:center;}
+
+#Advantages { background:#f9f3f3; background:url(images/CheckIn/BgBottomChekIn1.jpg) top center no-repeat; margin-bottom: 5px;}
+#Advantages #BgAdvantages { margin:0 auto; padding-top:65px; padding-bottom:130px;}
+#Advantages #BgAdvantages ul {}
+#Advantages #BgAdvantages ul li { background:url(images/CheckIn/BgTitle.png) left top no-repeat; font-size:20px; font-weight:bold; color:#e32026; text-transform:uppercase; padding:5px 0 5px 60px; margin-bottom:10px;}
+.validmessage{ color: red; padding-top: 14px; width: 30%;  float: right;}
+#AllBody { padding-bottom:30px; margin-bottom:5px;}
+#AllBody #TitleCabinet { padding-top:25px; padding-bottom:35px;}
+#AllBody #TitleCabinet h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/Cabinet/BgTitle.png) left top no-repeat; padding-left:46px;}
+#AllBody #TitleCabinet h1 span {color:#e32026}
+#AllBody #TitleCabinet #BelowH1 {text-transform:uppercase; font-weight:bold; padding-left:46px; font-size:12px; color:#2f9cd0;}
+
+#BodyBlock {background:url(images/Cabinet/BgCBody.jpg) bottom left repeat-x; background-size: contain; padding-bottom:70px;}
+#BodyBlock #BlockCenter { border:2px solid #CCC; border-radius:10px; width:90%; margin:0 auto; padding-bottom:25px; background:#f0eeed;}
+#BodyBlock #BlockCenter #TitleBlockCenter { width:100%; text-align:center; border-bottom:2px solid #CCC; font-size:34px; color:#000; font-weight:bold; padding:10px 0; margin-bottom:25px;}
+#BodyBlock #BlockCenter p { text-align:center; font-size:18px; font-weight:bold; color:#444;}
+#BodyBlock #BlockCenter #BlockOrderAlli { width:100%; padding:0 5%; margin-top:25px;}
+#BodyBlock #BlockCenter #BlockOrderAlli p { text-align:left; font-size:18px; color:#000;}
+#BodyBlock #BlockCenter #BlockOrderAlli #Time { width:100%; border:2px solid #CCC; border-radius:5px; padding:7px; background:#FFF;}
+#BodyBlock #BlockCenter #BlockOrderAlli #Time p { float:left; margin-right:25px;}
+
+#BodyBlock #BlockCenter #DescrOrd { width:60%; padding:0 5%; margin-top:25px;}
+#BodyBlock #BlockCenter #DescrOrd p {text-align:left; font-size:18px; color:#000;}
+#BodyBlock #BlockCenter #DescrOrd #DeskrBlock {width:100%; border:2px solid #CCC; border-radius:5px; padding:7px; background:#FFF;  padding-bottom:15px;}
+#BodyBlock #BlockCenter #DescrOrd #DeskrBlock p { margin-top:10px;}
+#AllBody { background:url(./images/Cabinet/BgCBody.jpg) bottom left repeat-x; background-size: contain; padding-bottom:30px; margin-bottom:5px;}
+#AllBody #TitleCabinet { padding-top:25px; padding-bottom:35px;}
+#AllBody #TitleCabinet h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(./images/Cabinet/BgTitle.png) left top no-repeat; padding-left:46px;}
+#AllBody #TitleCabinet h1 span {color:#e32026}
+#AllBody #TitleCabinet #BelowH1 {text-transform:uppercase; font-weight:bold; padding-left:46px; font-size:12px; color:#2f9cd0;}
+#AllBody #CenterCabinet {}
+#AllBody #CenterCabinet #LeftCabinet { float:left; width:25.5%; margin-right:1.5%;}
+#AllBody #CenterCabinet #LeftCabinet #BlockFoto { width:290px; height:auto; overflow:hidden;}
+#AllBody #CenterCabinet #LeftCabinet #BlockFoto img { width:100%;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto {cursor: pointer; line-height:30px; background:url(./images/Cabinet/BgLogin.png) 91% center no-repeat; text-transform:uppercase; font-weight:bold; font-size:13px; width:232px; height:32px; text-decoration:none; color:#262626 ; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; margin:17px auto 30px auto;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo{position: absolute; background:url(./images/Cabinet/BgLogin.png) 91% center no-repeat; height:32px; padding-left:15px;padding-right: 30px; }
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo input { cursor: pointer; position: absolute; border:1px solid #f9f9f9; display:none; width:232px; left:-3px; height:31px;  border-radius:3px; letter-spacing: 10em;  opacity: 0;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo label {cursor: pointer}
+#AllBody #CenterCabinet #LeftCabinet #ButtonFoto:hover { background: linear-gradient(to top, #f5f5f5, #e6e6e6);}
+#AllBody #CenterCabinet #LeftCabinet p { text-align:center; font-family:Georgia, "Times New Roman", Times, serif; font-size:18px; font-weight:bold; font-style:italic; color:#444444; margin-bottom:15px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonMoney {width:225px; height:40px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonMoney a {text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:24px; text-align:center; text-shadow:0 -1px 1px #0d4067;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonMoney a:hover {background:linear-gradient(to bottom, #d5433a, #ec6137);}
+#AllBody #CenterCabinet #LeftCabinet #ButtonInput {width:225px; height:40px;  margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonInput input {text-decoration:none; border:1px solid #c27073; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:24px; text-align:center; text-shadow:0 -1px 1px #0d4067;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonOrders {width:225px; height:40px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonOrders a {text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonOrders a span {}
+#AllBody #CenterCabinet #LeftCabinet #ButtonOrders a:hover {background:linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#AllBody #RightCabinet #BottomDescr #BlockSkype #ButtonSkype {width:140px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; margin:0 auto; margin-bottom:12px; display: inline-block}
+#AllBody #RightCabinet #BottomDescr #BlockSkype #ButtonSkype a {text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:33px; line-height:35px; border-radius:3px; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #RightCabinet #BottomDescr #BlockSkype #ButtonSkype a span {}
+#AllBody #RightCabinet #BottomDescr #BlockSkype #ButtonSkype a:hover {background:linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOf {width:225px; height:40px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOf a {text-decoration:none; color:#262626 ; border:1px solid #c27073; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOf a:hover {background:linear-gradient(to bottom, #d5433a, #ec6137);}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOn {width:225px; height:40px; background: linear-gradient(to top, #00d556, #44ec19); border-radius:3px; border:1px solid #44ec19;  box-shadow: 0 1px 0 #00d556; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOn a {text-decoration:none; color:#262626 ; border:1px solid #8ec29a; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonTurneOn a:hover {background:linear-gradient(to bottom, #00d541, #95ec86);}
+#AllBody #CenterCabinet #LeftCabinet #ButtonActiveOf {width:225px; height:40px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonActiveOf a {text-decoration:none; color:#262626 ; border:1px solid #c27073; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonActiveOf a:hover {background:linear-gradient(to bottom, #d5433a, #ec6137);}
+#AllBody #CenterCabinet #LeftCabinet #ButtonActiveOn {width:225px; height:40px; background: linear-gradient(to top, #00d556, #44ec19); border-radius:3px; border:1px solid #44ec19;  box-shadow: 0 1px 0 #00d556; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonActiveOn a {text-decoration:none; color:#262626 ; border:1px solid #8ec29a; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonActiveOn a:hover {background:linear-gradient(to bottom, #00d541, #95ec86);}
+
+
+#AllBody #CenterCabinet #LeftCabinet #ButtonHelp {width:225px; height:40px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; margin:0 auto; margin-bottom:12px;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonHelp a {text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; font-weight:bold; font-size:18px; text-align:center;}
+#AllBody #CenterCabinet #LeftCabinet #ButtonHelp a:hover {background:linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#AllBody #CenterCabinet #RightCabinet {float:left; width:73%;}
+#AllBody #CenterCabinet #RightCabinet #TopDescr { background:url(./images/Cabinet/BgBlockSlider.jpg) center bottom repeat-x; padding:30px 28px 21px 28px;}
+#AllBody #CenterCabinet #RightCabinet #TopDescr p { color:#2f9cd0; font-size:12px; font-weight:bold; text-transform:uppercase; line-height:2.2; padding-right:30px;}
+#AllBody #CenterCabinet #RightCabinet #TopDescr p span { color:#e31f25;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr { padding-top:15px;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr label {float:left;}
+
+input[type="checkbox"] {position: absolute; left: -9999px;}
+input[type="checkbox"] + label { background: url(./images/i-checked.png) 0 0 no-repeat; padding-left: 32px; padding-top:10px;}
+input[type="checkbox"]:checked + label {background-position: 0 -30px;}
+#BlockMyProjects input {position: relative; left: 0}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr label p { margin-top:-6px; padding-bottom:6px; line-height:1.4; color:#444444; text-transform:none; font-weight:100; font-size:14px; padding-right:0;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr #ButtonLoading{width:198px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; float:right;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr #ButtonLoading a{text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; padding-left:5%; background: url(./images/Cabinet/BgReg.png) 91% center no-repeat;}
+#AllBody #CenterCabinet #RightCabinet #BottomDescr #ButtonLoading a:hover{background:url(./images/Cabinet/BgReg.png) 91% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock { border:1px solid #d8d8d8; padding:23px; margin-top:15px; background:#FFF;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockName { height:45px; margin-bottom:12px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockName p { width:17%; float:left; text-transform:uppercase; line-height:20px; text-align:right; padding-right:3%; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockName input { float:right; width:83%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px; margin-bottom: 10px;}
+#AllBody #RightCabinet #BottomDescr #BlockSkype { height:35px; margin-bottom:12px;}
+#AllBody #RightCabinet #BottomDescr #BlockSkype p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444;}
+#AllBody #RightCabinet #BottomDescr #BlockSkype input { width: 140px; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAlias { height:45px; margin-bottom:12px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAlias p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAlias input { float:left; width:33%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail { height:45px; margin-bottom:12px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; line-height:20px; float:left; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail p:first-child {line-height:45px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail input { float:left; width:33%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAboutMe { height:175px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAboutMe p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAboutMe textarea { float:right; width:83%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:15px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #AdminComment p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #AdminComment #Texteditor{ float:right; width:83%; height:100%;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant { margin-top:20px; padding-left:17%; }
+input[type="AboutMe"] {position: absolute; left: -9999px;}
+input[type="AboutMe"] + label { background: url(./images/i-checked.png) 0 0 no-repeat; padding-left: 32px; padding-top:10px;}
+input[type="AboutMe"]:checked + label {background-position: 0 -30px;}
+input[type="AboutMe"]:checked + label p {}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant label { float:left;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant label p { margin-top:-6px; padding-bottom:6px; line-height:1.4; color:#444444; text-transform:none; font-weight:100; font-size:14px; padding-right:0;}
+::-moz-placeholder { height:25px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory { height:45px; margin-bottom:12px; margin-top:37px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; line-height:45px; float:left; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory select { float:left; width:33%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:16px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory input { float: left; margin-left: 30px; width:33%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos { height:45px; margin-bottom:12px; margin-top:37px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; float:left; color:#444444;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos input { float:left; width:33%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:16px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo { height:45px; margin-bottom:12px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo p { width:17%; float:left; text-transform:uppercase; text-align:right; padding-right:3%; line-height:25px; float:left; color:#e31e24;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo input { float:left; width:33%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects { height:45px; margin-bottom:12px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects p { width:100%; float:left; text-transform:uppercase; text-align:left; padding-right:3%; float:left; color:#e31e24; margin-bottom:12px; margin-top:12px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects select { float:right; width:83%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #Button {float:right; width:135px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin-top:25px;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #Button a {text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:30px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; text-align:center; text-shadow:0 -1px 1px #0d4067;}
+#AllBody #CenterCabinet #RightCabinet #FormsBlock #Button a:hover {background:linear-gradient(to bottom, #d5433a, #ec6137);}
+
+#SliderCabinet { background:#f9f3f3; padding:18px 0 53px 0; margin-bottom:5px;}
+#SliderCabinet #SliderBclock { width:100%; background:url(./images/Cabinet/BgBlockSlider.jpg) left center repeat-x; padding:35px 25px 45px 25px; margin-bottom:23px;}
+#SliderCabinet #SliderBclock #TitleTopSlider {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(./images/Cabinet/BgTitle.png) 100px top no-repeat; padding-left:155px; margin-bottom:75px;}
+#SliderCabinet #SliderBclock #TitleTopSlider span {color:#e32026}
+#SliderCabinet #SliderBclock #ListSlider { width:85%; margin:0 auto; position: relative;}
+#SliderCabinet #SliderBclock #ListSlider div { padding-left:0.4%; padding-right:0.4%; }
+#SliderCabinet #SliderBclock #ListSlider #FotoSlider { width:100%; height:116px; overflow:hidden;}
+#SliderCabinet #SliderBclock #ListSlider #FotoSlider img { width:100%; height:100%; overflow:hidden;}
+.owl-prev {position: absolute; width:40px; height:40px; background:url(./images/Cabinet/LeftSlider.png) center center no-repeat; margin-top:-180px; margin-left:-80px;}
+.owl-next {position: absolute; width:40px; height:40px; background:url(./images/Cabinet/RightSlider.png) center center no-repeat; margin-top:-180px; margin-left:103%;}
+#SliderCabinet #SliderBclock #ListSlider #Txt {display: table; width:100%; height:75px;}
+#SliderCabinet #SliderBclock #ListSlider #Txt p { overflow:hidden; display: table-cell; vertical-align: middle; text-align:center; color:#444444; font-weight:bold; font-style:italic; font-family:Georgia, "Times New Roman", Times, serif; font-size:18px;}
+
+#SliderCabinet #SliderBclock #ListSlider #BottomSlider {width:95%; height:32px; background: linear-gradient(to top, #377ead, #479bd1); border-radius:3px; border:1px solid #265e84;  box-shadow: 0 1px 0 #1a4a6f; margin:0 auto; }
+#SliderCabinet #SliderBclock #ListSlider #BottomSlider a {text-decoration:none; color:#fff ; border:1px solid #5098c8; display:block; width:100%; height:30px; line-height:30px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; text-align:center; text-shadow:0 -1px 1px #0d4067;}
+#SliderCabinet #SliderBclock #ListSlider #BottomSlider a:hover {background:linear-gradient(to bottom, #377ead, #479bd1);}
+
+#SliderCabinet #ButtonCabinetBottom {width:390px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin:0 auto; }
+#SliderCabinet #ButtonCabinetBottom a {text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:30px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; text-shadow:0 -1px 1px #0d4067; background: url(./images/Cabinet/BgReg.png) 96% center no-repeat; padding-left:3%;}
+#SliderCabinet #ButtonCabinetBottom a:hover {background:url(./images/Cabinet/BgReg.png) 96% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+#vidfile {float: right;  width: 100%;  text-align: right;}
+#videorecord {width: 550px}
+#videorecord #loadvideos video{width: 360px}
+#videorecord #loadvideos audio{width: 360px}
+
+#SliderCabinet #SliderBclock #ListSlider #Txt a {text-decoration: none; color:#444444;}
+#SliderCabinet #SliderBclock #ListSlider #Txt a:hover {text-decoration: none; color: #52084a;}
+
+
+#AddNews #BlockEmail { height:45px; margin-bottom:12px; width:50%}
+#AddNews #BlockEmail p { width:34%; float:left; text-transform:uppercase; text-align:right; padding-right:6%; line-height:20px; float:left; color:#444444;}
+#AddNews #BlockEmail p:first-child {line-height:45px;}
+#AddNews #BlockEmail input { float:left; width:66%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#AddNews{height: 550px; margin-top: 40px}
+#AddNews #AdminComment{height: 300px}
+#AddNews #AdminComment p { width:17%; float:left; margin-top: 20px; text-transform:uppercase; text-align:right; padding-right:3%; color:#444444;}
+#AddNews #AdminComment #Texteditor{ float:right; width:83%; height:100%;}
+#AddNews input { background:none; font-size:16px; border:none;}
+#AddNews #Button {float:right; width:135px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin-top:25px;}
+#AddNews #Button a {text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:30px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; text-align:center; text-shadow:0 -1px 1px #0d4067;}
+#AddNews #Button a:hover {background:linear-gradient(to bottom, #d5433a, #ec6137);}
+footer { font-size:14px; color:#a2a2a2; text-align:center; padding:18px 0;}
+footer a { text-decoration:none; color:#a2a2a2;}
+#MyOrdersAll {padding:25px 0;}
+#MyOrdersAll h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/CheckIn/BgTitle.png) left top no-repeat; padding-left:50px;}
+#MyOrdersAll h1 span {color:#e32026;}
+#MyOrdersAll #BelowH1Bottom {padding-left:50px; text-transform:uppercase; font-weight:bold; font-size:12px; color:#2f9cd0;}
+
+#ButtonBlock { padding:15px 0; background:url(images/BgBlockSlider.jpg) left bottom repeat; margin-bottom:20px;}
+#ButtonBlock .One { float:left; margin-right:15px;}
+#ButtonBlock .Two { float:left; margin-right:15px;}
+#ButtonBlock .One a { text-align:center; width:165px; height:40px; text-decoration:none; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31; display:block;  box-shadow: 0 1px 0 #a70f27;}
+#ButtonBlock .One a p {color:#fff ; border:1px solid #c27073; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:17px; text-shadow:0 -1px 1px #0d4067;}
+#ButtonBlock .One a:hover {background: linear-gradient(to bottom, #d5433a, #ec6137);}
+#ButtonBlock .Two a { text-align:center; width:175px; height:40px; text-decoration:none; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd; display:block;  box-shadow: 0 1px 0 #a8a8a8;}
+#ButtonBlock .Two a p {color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:17px;}
+#ButtonBlock .Two a:hover {background: linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#BlockAllVideo {width:100%; background: url(images/MyOrders/BgAll.jpg)center bottom no-repeat;}
+#BlockAllVideo #BlockVideo{ overflow:auto;}
+#BlockAllVideo #BlockVideo .OneVideo { border-bottom:1px solid #cccccc; padding:20px 0;}
+#BlockAllVideo #BlockVideo .OneVideo:last-child { border-bottom:none;}
+#BlockAllVideo #BlockVideo .OneVideo .BlVideo { float:left; overflow:hidden;}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes { float:left; padding-left:15px; width:40%;}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .TitleOneVideo { font: italic bold 20px Georgia, "Times New Roman", Times, serif; color:#444444; margin-bottom:10px;}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .TitleOneVideo p {}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .NameDate {}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .NameDate p { float:left;}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .Confirmation { margin-top:20px;}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .Confirmation img { float:left; width:28px; height:28px; border-radius:50%; margin-right:10px;}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .Confirmation p { float:left; line-height:28px;}
+.OneVideo .One { float:left; margin-left:15px;}
+.OneVideo .One div { cursor: pointer; text-align:center; width:165px; height:30px; text-decoration:none; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31; display:block;  box-shadow: 0 1px 0 #a70f27;}
+.OneVideo .One div p {color:#fff ; border:1px solid #c27073; display:block; width:100%; height:30px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:12px;}
+.OneVideo .One div:hover {background: linear-gradient(to bottom, #d5433a, #ec6137);}
+
+#BlockAllVideo #BlockVideo .OneVideo .ButtonMoreOneVideo {float:right; width:165px; height:32px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; margin:0 2% 0 0;}
+#BlockAllVideo #BlockVideo .OneVideo .ButtonMoreOneVideo a {text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:30px; line-height:32px; border-radius:3px; background:url(images/Cabinet/BgLogin.png) 91% center no-repeat; text-transform:uppercase; font-weight:bold; font-size:13px; padding-left:15px;}
+#BlockAllVideo #BlockVideo .OneVideo .ButtonMoreOneVideo a:hover {background:url(images/Cabinet/BgLogin.png) 91% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+
+/*Ordering start*/
+#buttonpay {margin-left: auto; margin-right: auto; width: 89%;}
+#blockpay1 {float: left;  margin-left: 10px;}
+#blockpay2  {float: left; margin-left: 10px;}
+#blockpay3  {float: left; margin-left: 10px;}
+
+
+#statusErrorOrderingModal p {margin-bottom: 15px;}
+
+section { width:1140px; margin:0 auto;}
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 12px 22px 12px 0; /* Отступы вокруг картинки */
+}
+
+.leftp {font-size: 14px;
+    font-weight: normal;
+    text-transform: none;
+
+}
+.leftp ul, ol{
+    margin-top: 20px; margin-left: 30px; list-style: circle;
+}
+.leftp ol{
+    margin-top: 20px; margin-left: 30px; list-style: lower-greek;
+}
+
+#FormalizationCabinet #LeftBlockForms #MethodUpOne { width: 650px; margin: 0 auto;}
+#MethodUpOne input { position: relative; left: 0}
+.NameNews {  color: #e31e24;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 10px;}
+.NameNews img{width: 20px; margin-left: 10px;}
+.NameNews p{font-family: 'OpenSans', sans-serif; margin-left: 10px; color: #7e7e7e; font-size: 14px; font-style: normal; font-weight: normal; text-transform: none; display: inline-block;}
+#Formalization { padding:25px 0;}
+
+#Formalization h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/CheckIn/BgTitle.png) left top no-repeat; padding-left:50px;}
+#Formalization h1 span {color:#e32026;}
+#Formalization #BelowH1Bottom {padding-left:50px; text-transform:uppercase; font-weight:bold; font-size:12px; color:#2f9cd0;}
+#BlockVideoFormaliz { width:100%; background:url(images/Formalization/BgBlock.jpg) left bottom repeat-x; padding:20px 0;}
+#BlockVideoFormaliz #VideoSlider { width:100%;}
+#BlockVideoFormaliz #VideoSlider div { padding:0 0.3%;}
+#BlockVideoFormaliz #VideoSlider div img { width:100%;}
+#FormalizationCabinet {width:100%; background: url(images/Formalization/BgFormalization.jpg) center bottom no-repeat; padding-top:35px; padding-bottom:35px; margin-bottom:5px;}
+#FormalizationCabinet p.formaliza { font-size:20px; font-weight:bold; color:#ffffff; padding:12px 0 12px 27px; width:262px; background:#000; margin: 12px 0 28px 0;}
+#FormalizationCabinet #LeftBlockForms { width:55.8%; float:left;}
+#FormalizationCabinet #LeftBlockForms #TitleTopForms { width:100%;}
+#FormalizationCabinet #LeftBlockForms #TitleTopForms p { float:left;}
+#FormalizationCabinet #LeftBlockForms #TitleTopForms #ButtonTopForms {width:188px; height:32px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 2px 0 #a8a8a8; margin:0 auto; float:left; margin-left:7%; margin-top:21px;}
+#FormalizationCabinet #LeftBlockForms #TitleTopForms #ButtonTopForms a{text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; padding-left:5%; background:url(images/Cabinet/BgLogin.png) 91% center no-repeat;}
+#FormalizationCabinet #LeftBlockForms #TitleTopForms #ButtonTopForms a:hover{background:url(images/Cabinet/BgLogin.png) 91% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#FormalizationCabinet #LeftBlockForms #BlockName2 { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #BlockName2 p { width:19.2%; float:left; text-transform:uppercase; color:#444444;}
+#FormalizationCabinet #LeftBlockForms #BlockName2 input { float:right; width:80.8%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #Email2 { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #Email2 p { width:19.2%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #Email2 input { float:right; width:80.8%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #Phone2 { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #Phone2 p { width:19.2%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #Phone2 input { float:left; width:41%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms p { float:left;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms{width:160px; height:32px; margin:0 auto; float:left; margin-left:4%; margin-top:21px;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms a{text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; padding-left:5%; background:url(images/Cabinet/BgLogin.png) 96% center no-repeat;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms a:hover{background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms1{width:174px; height:32px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 2px 0 #a8a8a8; margin:0 auto; float:left; margin-left:2%; margin-top:21px;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms1 a{text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; padding-left:5%; background:url(images/Cabinet/BgLogin.png) 96% center no-repeat;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms1 a:hover{background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2 {padding-left:15px; padding-top: 7px; background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to top, #e6e6e6, #f5f5f5); border: 1px solid #bdbdbd; border-radius: 3px;box-shadow: 0 1px 0 #a8a8a8; color: #262626; font-size: 14px; font-weight: bold; height: 32px; text-decoration: none; text-transform: uppercase; width: 160px;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2 input {margin-top: -10px; margin-left: -20px; position: absolute; border:1px solid #f9f9f9; display:block;  height:35px;  width: 160px; border-radius:3px; opacity: 0; }
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2:hover {background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+
+#photo3 {position: relative; cursor: pointer; padding-left:15px; background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to top, #e6e6e6, #f5f5f5); border: 1px solid #bdbdbd; border-radius: 3px;box-shadow: 0 1px 0 #a8a8a8; color: #262626; font-size: 12px; font-weight: bold; height: 32px; text-decoration: none; text-transform: uppercase; width: 190px;}
+#photo3 input { cursor: pointer; top: 0; left: 0; position: absolute; border:1px solid #f9f9f9; display:block;  height:35px;  width: 190px; border-radius:3px; opacity: 0; }
+#photo3 input[type="file"] {display:none}
+#photo3:hover {background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#ButtonTwoTitleForm{width:160px; height:32px; margin:0 auto; float:left; margin-bottom: 25px;}
+#ButtonTwoTitleForm a{text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; padding-left:5%; background:url(images/Cabinet/BgLogin.png) 96% center no-repeat;}
+#ButtonTwoTitleForm a:hover{background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+
+
+
+#FormalizationCabinet #LeftBlockForms #BlockName3 { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #BlockName3 p { width:19.2%; float:left; text-transform:uppercase; color:#444444;}
+#FormalizationCabinet #LeftBlockForms #BlockName3 input { float:right; width:80.8%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #Event { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #Event p { width:19.2%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #Event input { float:right; width:80.8%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #Email3 { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #Email3 p { width:19.2%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #Email3 input { float:right; width:80.8%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #Phone3 { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #Phone3 p { width:19.2%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #Phone3 input { float:left; width:41%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #CongratulatoryText3 { width:100%; margin-top:36px;}
+#FormalizationCabinet #LeftBlockForms #CongratulatoryText3 p { width:100%; float:left; text-transform:uppercase; color:#444444;}
+#FormalizationCabinet #LeftBlockForms #CongratulatoryText3 textarea { float:left; width:100%; height:155px; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:15px; margin-top:2px; resize: none;}
+#FormalizationCabinet #LeftBlockForms #DateCongratulations { height:45px; width:50%; margin-top:10px; margin-bottom: 50px; float:left; padding-right:1.8%;}
+#FormalizationCabinet #LeftBlockForms #DateCongratulations p { width:100%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #DateCongratulations input { float:left; width:100%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #TimeCongratulations { height:45px; width:50%; margin-top:28px; float:left; padding-left:5.2%;}
+#FormalizationCabinet #LeftBlockForms #TimeCongratulations p { width:100%; float:left; text-transform:uppercase; color:#e444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #TimeCongratulations input { float:left; width:100%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px; padding-bottom:50px;}
+#FormalizationCabinet #LeftBlockForms #MethodUp p {  color: #444444;
+    float: left;
+    text-transform: uppercase;
+    width: 100%;
+}
+#FormalizationCabinet #LeftBlockForms #RadioButton { height:45px; width:20%; margin-top:15px; float:left;}
+#FormalizationCabinet #LeftBlockForms #RadioButton p { width:auto;  float: left; text-transform:uppercase; color:#444444; padding-top: 3px }
+#FormalizationCabinet #LeftBlockForms #RadioButton input { float:left; margin-left: 17px}
+
+
+
+#FormalizationCabinet #RightBlockCabinet { float:left; width:44.2%; padding:0 20px;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson { margin:0 0.2%; border:1px solid #d7d7d7;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #FotoFamosPerson { width:290px; margin:20px auto 32px auto; height:316px; overflow:hidden;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #FotoFamosPerson img { width:100%;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson p {}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson p.Marker { height:100%; font-size:18px; color:#444444; text-align:center !important; width:68.7% !important; background:#cccccc; margin-left:2.3%;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson p.Marker span { font-size:24px;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #NamePerson { width:94%; height:50px; line-height:50px; margin:0 auto; margin-bottom:7px;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #NamePerson p { float:left; text-align:right; width:29%; font-weight:bold;
+    font-size:18px; color:#444444;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #PricePerson { width:100%; height:50px; line-height:50px; width:94%;  margin:0 auto; margin-bottom:7px;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #PricePerson p { float:left; text-align:right; width:29%; font-weight:bold; font-size:18px; color:#444444;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #VideoPerson { width:100%; height:50px; line-height:50px; width:94%;  margin:0 auto; margin-bottom:35px;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #VideoPerson p { float:left; text-align:right; width:29%; font-weight:bold; font-size:18px;color:#444444;}
+
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet {width:203px; height:56px; margin:0 45%; padding-top:5px; margin-top:27px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet .PrezentCabinet {float:left; background:url(images/Button/Prezent.png) left center no-repeat; width:54px; height:56px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet a {cursor: pointer; text-decoration:none; text-transform:uppercase; height:33px; line-height:33px; color:#fff; font-family: 'OpenSans', sans-serif; font-weight:bold; font-size:14px; display:block; background: url(images/Button/OlderButtonRight2.png) right center no-repeat, url(images/Button/BgList.png) 87% center no-repeat, url(images/Button/OlderButton.png) center center repeat-x; display:block; margin-top:15px; font-style:normal; padding-left:36%; margin-left:2px; border-radius:3px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet a:hover {background-color: rgba(0, 0, 0, .7);}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet a:active {box-shadow: inset 0 0 10px rgba(0,0,0,0.2), inset 0 5px 5px rgba(0,0,0,0.4);}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo {display: none; width:203px; height:56px; margin:0 45%; padding-top:5px; margin-top:27px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo .PrezentCabinet {float:left; background:url(images/Button/Prezent.png) left center no-repeat; width:54px; height:56px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo a {text-decoration:none; text-transform:uppercase; height:33px; line-height:33px; color:#fff; font-family: 'OpenSans', sans-serif; font-weight:bold; font-size:14px; display:block; background: url(images/Button/OlderButtonRight2.png) right center no-repeat, url(images/Button/BgList.png) 87% center no-repeat, url(images/Button/OlderButton.png) center center repeat-x; display:block; margin-top:15px; font-style:normal; padding-left:36%; margin-left:2px; border-radius:3px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo a:hover {background-color: rgba(0, 0, 0, .7);}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo a:active {box-shadow: inset 0 0 10px rgba(0,0,0,0.2), inset 0 5px 5px rgba(0,0,0,0.4);}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetOne {display: none; width:203px; height:56px; margin:0 45%; padding-top:5px; margin-top:27px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetOne .PrezentCabinet {float:left; background:url(images/Button/Prezent.png) left center no-repeat; width:54px; height:56px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetOne a {text-decoration:none; text-transform:uppercase; height:33px; line-height:33px; color:#fff; font-family: 'OpenSans', sans-serif; font-weight:bold; font-size:14px; display:block; background: url(images/Button/OlderButtonRight2.png) right center no-repeat, url(images/Button/BgList.png) 87% center no-repeat, url(images/Button/OlderButton.png) center center repeat-x; display:block; margin-top:15px; font-style:normal; padding-left:36%; margin-left:2px; border-radius:3px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetOne a:hover {background-color: rgba(0, 0, 0, .7);}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetOne a:active {box-shadow: inset 0 0 10px rgba(0,0,0,0.2), inset 0 5px 5px rgba(0,0,0,0.4);}
+
+#AddNews #DateCongratulations { height:45px; width:50%; margin-top:10px; margin-bottom: 50px; float:left; padding-right:1.8%;}
+#AddNews #DateCongratulations p { width:100%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#AddNews #DateCongratulations input { float:left; width:100%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+
+/*Ordering end*/
+#AllSearch {background: url(./images/Formalization/BgFormalization.jpg) bottom center no-repeat; background-size: cover; padding-bottom:200px; padding-top:50px; margin-bottom:5px; min-height:700px;}
+#Left { float:left;}
+.SlideToggle { width:530px; height:47px;}
+#BlockSerch {background:url(./images/SearckCat/Searchi.jpg) 3% center no-repeat, url(./images/SearckCat/List.jpg) 97% center no-repeat, #444343; width:530px; border-radius:5px; padding:10px 0; cursor:pointer;}
+#BlockSerch p { font-size:20px; font-weight:bold; color:#ffffff;  text-transform:uppercase; padding-left:50px;}
+#firstpane { display:none;}
+.menu_list {width: 325px; display: block; padding:0; margin:0; position:relative; list-style-type:none;}
+.menu_head {padding: 12px 10px 12px 50px;cursor: pointer;position: relative;margin:1px;font-weight:bold; background: #e7e6e9; width:325px; display: block; text-transform:uppercase; font-weight:bold; font-size:16px; color:#444343; border-radius:5px; margin-top:7px;}
+.menu_head:hover { background:#e32026; color:#ffffff}
+#Offer #offerblock p span { margin-top: 9px; }
+#Offer {background:url(/images/Cabinet/BgBlockSlider.jpg) 50px center repeat-x; width: 100%; height: auto; padding-bottom: 15px; padding-top: 15px;}
+#Offer #offerblock p { color: #444444; font-size: 15px;text-decoration: none;text-transform: uppercase;}
+#Offer #offerblock {width: 85%;  float: left;padding-left: 0;padding-right: 0px;margin-top: 4px;}
+#Offer #offerblock input {
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+    font-size: 15px;
+    height: 35px;
+    padding: 0 15px;
+    text-align: left;
+    text-transform: uppercase;
+    width: 170px;
+    margin-left: 10px;
+}
+
+#Offer #ButtonOffer {    font-size: 15px;
+    margin-top: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase; float: left; width:155px; height:32px; background: linear-gradient(to top, #387fad, #489cd1); border-radius:3px; border:1px solid #275f85; box-shadow: 0 1px 0 #1b4b6f;}
+#Offer #ButtonOffer a {text-decoration:none; color:#fff; border:1px solid #4E97C5; display:block; width:153px; height:30px; line-height:30px; border-radius:3px; background:url(images/BgReg.png) 91% center no-repeat;}
+#Offer #ButtonOffer a:hover {background:url(images/BgReg.png) 91% center no-repeat, linear-gradient(to bottom, #387fad, #489cd1)}
+
+
+.menu_body {display:none;margin-left:205px; width:325px; position:relative; }
+.menu_body>li {cursor: pointer; margin-top:8px; }
+.menu_body>li>a {border-radius:5px;padding-left:20px;}
+.menu_body a{display:block;color:#006699; background:#EFEFEF; padding-left:10px; font-weight:bold; text-decoration:none; position: relative; text-transform:uppercase; font-size:16px; padding:12px 10px; text-decoration:none; color:#444343;}
+.menu_body a:hover{ background:#e32026; color:#ffffff}
+.drop-link {position: relative;}
+.drop-block {display: block; position: absolute; z-index: 999; left: 100%; /*если меню справа - right: 100%;*/ top: -9999em; /*скрываем выпадающие блоки*/ border-radius: 10px; opacity: 0; padding: 0; width: 250px; /*обычная ширина*/ list-style-type:none;}
+.drop-block li { border-left: 4px solid #fff; padding:0; margin:0; position:relative; z-index: 1000; cursor: pointer;}
+.drop-block li a { width: 200px; display: inline-block; text-transform: none; font-size:14px; font-weight:normal; color:#444444; border-radius: none; margin:0; background:url(./images/SearckCat/Li.png) 5% center no-repeat, #EFEFEF; padding:7px 0 7px 35px;}
+.drop-block li img { display: inline-block; width: 7%;}
+.drop-block li a:hover {background:url(./images/SearckCat/LiHover.png) 5% center no-repeat, #EFEFEF; color:#e32026;}
+.drop-block li a:focus {background:url(./images/SearckCat/LiHover.png) 5% center no-repeat, #EFEFEF; color:#e32026;}
+.drop-block li:first-child a { border-top-left-radius:5px; border-top-right-radius:5px;}
+.drop-block li:last-child a { border-bottom-left-radius:5px; border-bottom-right-radius:5px;}
+
+.drop-link:hover > .drop-block { top: 0; /*показываем выпадающие блоки*/ opacity: 1;}
+
+
+#AllSearch #SearchingBlock { width:400px; height:33px; float:right;}
+
+#AllSearch #SearchingBlock .search {width:100%; position: relative;}
+#AllSearch #SearchingBlock .search input { border: none;}
+#AllSearch #SearchingBlock .search .input { width: 100%; padding: 8px 37px 9px 15px; border: 1px solid #e4e4e4; border-top:1px solid #bfbfbf; border-radius: 5px; background: #e9e9e9; color:#000; outline: none; text-transform:uppercase; font-size:12px; font-weight:bold;}
+#AllSearch #SearchingBlock .search .input:focus { box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4); background: #E8E8E8; color: #333;}
+#AllSearch #SearchingBlock .search .submit {position: absolute; top:3px; right: 3px; cursor: pointer; background:url(./images/Search.png) center center no-repeat, linear-gradient(to top, #e6e6e6, #f5f5f5); display:inline-block; width:28px; height:27px; border:1px solid #bdbdbd; border-bottom:2px solid #bdbdbd;}
+#AllSearch #SearchingBlock .search .submit:hover {opacity: 0.8;}
+#AllSearch #SearchingBlock input[type="search"] {-webkit-appearance: none;}
+#AllSearch #SearchingBlock .search .submit:active { border:2px solid #bdbdbd; border-radius:2px;}
+
+#AllSearch #FotoBLockAll { width:290px; margin-right:25px; margin-top:50px; position: absolute; margin-left:auto; right:0;}
+#AllSearch #FotoS { width:100%; text-align:center;}
+#AllSearch #FotoS img { width:100%;}
+#AllSearch #NameS { width:100%; text-align:center; font-size:28px; color:#000; font-weight:bold;}
+
+#AllSearch #FotoBLockAll #ButtonN { width:130px; height:32px; border-radius:3px; margin:20px auto; }
+#AllSearch #FotoBLockAll #ButtonN a {text-decoration:none; color:#fff ; border:1px solid #c27073; border:1px solid #e10f31; box-shadow: 0 1px 0 #a70f27; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; padding-left:15%; background: url(./images/Cabinet/BgReg.png) 91% center no-repeat, linear-gradient(to top, #d5433a, #ec6137);}
+#AllSearch #FotoBLockAll #ButtonN p {text-decoration:none; color:#fff ;  border:1px solid #с4с4с4; display:block; width:100%; box-shadow: 0 1px 0 #ccc;  height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; padding-left:15%; background: url(./images/Cabinet/BgReg.png) 91% center no-repeat, linear-gradient(to top, #e4e4e4, #bfbfbf);cursor: pointer}
+#AllSearch #FotoBLockAll #ButtonN a:hover {background:url(./images/Cabinet/BgReg.png) 91% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+#carousel-home {margin-left: auto; margin-right: auto;}
+#Formalization { padding:25px 0;}
+#Formalization h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/CheckIn/BgTitle.png) left top no-repeat; padding-left:50px;}
+#Formalization h1 span {color:#e32026;}
+#Formalization #BelowH1Bottom {padding-left:50px; text-transform:uppercase; font-weight:bold; font-size:12px; color:#2f9cd0;}
+#BlockVideoFormaliz { width:100%; background:url(images/Formalization/BgBlock.jpg) left bottom repeat-x; padding:20px 0;}
+#BlockVideoFormaliz #VideoSlider { width:100%;}
+#BlockVideoFormaliz #VideoSlider div { padding:0 0.3%;}
+#BlockVideoFormaliz #VideoSlider div img { width:100%;}
+
+#BlockPerson {width:100%; background: url(images/Formalization/BgFormalization.jpg) center bottom no-repeat; padding-bottom:240px; padding-bottom:80px; margin-bottom:5px;}
+#BlockPerson #LeftBlock {float:left; width:290px;}
+#BlockPerson #LeftBlock #Photo { width:100%; height:375px; margin-top:32px; }
+#BlockPerson #LeftBlock #Photo img { width:100%; height:auto;}
+
+#BlockPerson #But { width:74.5%; float:right; margin-top:14px; margin-bottom:30px;}
+#BlockPerson #But #ButtonAgo {width:210px; height:32px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 2px 0 #a8a8a8; margin-left:auto; margin-top:21px;}
+#BlockPerson #But #ButtonAgo a{text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; padding-left:5%; background:url(images/Cabinet/BgLogin.png) 91% center no-repeat;}
+#BlockPerson #But #ButtonAgo a:hover{background:url(images/Cabinet/BgLogin.png) 91% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+
+#BlockPerson #Descr { float:left; width:45%; padding:0 10px 0 15px; }
+#BlockPerson #Descr #Topi { width:100%; padding:12px 17px 12px 18px; background:url(images/MyOrders2/Star.png) 15px center no-repeat, #444343; }
+#BlockPerson #Descr #Topi p { width:330px; float:left; font-size:22px; font-weight:bold; color:#ffffff; margin-left:10%;}
+#BlockPerson #Descr #Topi #Flip { float:left; margin-top:5px;}
+#BlockPerson #Descr #Topi #On { float:left; text-transform:uppercase; font-size:18px; color:#ffffff; font-weight:bold; margin-top:4px; margin-left:8px;}
+
+.onoffswitch {
+    position: relative; width: 30px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    height: 20px; padding: 0; line-height: 20px;
+    border: 2px solid #E32026; border-radius: 20px;
+    background-color: #3B3B3B;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch-label:before {
+    content: "";
+    display: block; width: 16px; margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 8px;
+    border: 2px solid #E32026; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #e32026;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    border-color: #e32026;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px;
+}
+
+#BlockPerson #Descr #Description {}
+#BlockPerson #Descr #Description p { font-size:14px; color:#444444; margin-top:22px;}
+#BlockPerson #Descr #Description ul { margin-top:20px; font-size:14px; color:#444444;}
+#BlockPerson #Descr #Description ul li {font-size:14px; color:#444444; list-style-type: decimal !important; list-style-position:inside;}
+#BlockPerson #Info { float:left; width:25.5%;}
+#BlockPerson #Info p { width:100%; background:#cccccc; font-weight:bold; font-size:18px; color:#444444; text-align:center; height:54px; line-height:55px; margin-bottom:12px;}
+#BlockPerson #Info #SocProject {width:100%; font-weight:bold; font-size:18px; color:#444444; text-align:center; height:54px; line-height:55px; margin-bottom:12px; background:url(images/MyOrders2/Lis.jpg) 95% center no-repeat;}
+
+#BlockPerson #Info #ButtonOrderCabinetPerson {width:203px; height:56px; margin:0 15%; padding-top:5px; margin-top:12px;}
+#BlockPerson #Info #ButtonOrderCabinetPerson .PrezentCabinet {float:left; background:url(images/Button/Prezent.png) left center no-repeat; width:54px; height:56px;}
+#BlockPerson #Info #ButtonOrderCabinetPerson a {text-decoration:none; text-transform:uppercase; height:33px; line-height:33px; color:#fff; font-family: 'OpenSans', sans-serif; font-weight:bold; font-size:14px; display:block; background: url(images/Button/OlderButtonRight2.png) right center no-repeat, url(images/Button/BgList.png) 87% center no-repeat, url(images/Button/OlderButton.png) center center repeat-x; display:block; margin-top:15px; font-style:normal; padding-left:36%; margin-left:2px; border-radius:3px;}
+#BlockPerson #Info #ButtonOrderCabinetPerson a:hover {background-color: rgba(0, 0, 0, .7);}
+#BlockPerson #Info #ButtonOrderCabinetPerson a:active {box-shadow: inset 0 0 10px rgba(0,0,0,0.2), inset 0 5px 5px rgba(0,0,0,0.4);}
+#AllBodyCheck { padding-bottom:30px; margin-bottom:5px;}
+#AllBodyCheck #TitleCheckIn2 { padding-top:25px; padding-bottom:35px;}
+#AllBodyCheck #TitleCheckIn2 h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/Cabinet/BgTitle.png) left top no-repeat; padding-left:46px;}
+#AllBodyCheck #TitleCheckIn2 h1 span {color:#e32026}
+#AllBodyCheck #TitleCheckIn2 #BelowlH1 {text-transform:uppercase; font-weight:bold; padding-left:46px; font-size:12px; color:#2f9cd0;}
+
+#CouruselCheckIn { width:100%; height:170px; border:1px solid #900}
+
+#BlockCheckInaAll { background: url(images/CheckIn/BgCheckIn.jpg) center bottom no-repeat; padding-top:35px; padding-bottom:80px; margin-bottom:5px;}
+#BlockCheckInaAll #CenterCheckIn { background:#9E0310; color:#fff; font-size:28px; padding:10px; text-align:center; width:70%; margin:0 auto;}
+#BlockCheckInaAll #BlockNamePr { width:100%; height:40px; border:1px solid #999; border-radius:5px; margin-top:15px; margin-bottom:15px;}
+#BlockCheckInaAll #BlockNamePr p { float:left; height:38px; width:40%; background:#CCC; padding-top:10px; border-radius:5px 0 0 5px; color:#000;padding-left:15px;}
+#BlockCheckInaAll #BlockNamePr input { float:left; height:38px; width:60%; border: none; background:#fff; border-radius:0 5px 5px 0; padding-left:15px; font-size:18px;}
+#BlockCheckInaAll .BlockNameAll {height: 40px; width:46%; float:left; border:1px solid #999; border-radius:5px; margin:15px 2% 0 2%;}
+#BlockCheckInaAll .BlockNameAll p { float:left; height:38px; width:50%; background:#CCC; padding-top:10px; border-radius:5px 0 0 5px; color:#000; padding-left:15px;}
+#BlockCheckInaAll .BlockNameAll input { float:left; height:38px; width:50%; border: none; background:#fff; border-radius:0 5px 5px 0; font-size:18px; padding-left:15px;}
+#BlockCheckInaAll .BlockNameAll1  { width:46%; float:left; border:1px solid #999; border-radius:5px; margin:15px 2% 0 2%;}
+#BlockCheckInaAll .BlockNameAll1 p { float:left; height:40px; width:50%; background:#CCC; padding-top:2px; border-radius:5px 0 0 5px; color:#000; padding-left:15px;}
+#BlockCheckInaAll .BlockNameAll1 input { float:left; height:40px; width:50%; border: none; background:#fff; border-radius:0 5px 5px 0; font-size:18px; padding-left:15px;}
+#BlockCheckInaAll .BlockNameAll2 {height: 154px; width:46%; float:left; border:1px solid #999; border-radius:5px; margin:15px 2% 0 2%;}
+#BlockCheckInaAll .BlockNameAll2 p { float:left; height:152px; width:50%; background:#CCC; padding-top:10px; border-radius:5px 0 0 5px; color:#000; padding-left:15px;}
+#BlockCheckInaAll .BlockNameAll2 textarea { float:left; height:151px; width:50%; border: none; background:#fff; border-radius:0 5px 5px 0; font-size:18px; padding-left:15px;}
+
+#BlockCheckInaAll #BlockProject { width:100%; height:308px; border:1px solid #999; border-radius:5px; margin-top:30px;}
+#BlockCheckInaAll #BlockProject p { float:left; width:40%; background:#CCC; height:308px; border-radius:5px 0 0 5px; padding:15px; color:#000;}
+#BlockCheckInaAll #BlockProject #Texteditor { float:left; width:60%; height:197px; resize:none; border:none;}
+#BlockCheckInaAll input { background:none; font-size:16px; border:none;}
+#BlockCheckInaAll input::-moz-placeholder {height:14px; color: #727375; font-family: 'OpenSans', sans-serif; font-style: inherit ; text-transform: uppercase; font-size: 12px;}
+#BlockCheckInaAll input::-webkit-input-placeholder {height:14px; color: #727375;  font-family: 'OpenSans', sans-serif; font-style: inherit; text-transform: uppercase; font-size: 12px;}
+
+.mask-wrapper {height: 40px; float:left; margin-right:30px; border:1px solid #999; margin-top:30px; width:250px; border-radius:5px;}
+.mask-wrapper .send-file { padding: 3px 20px; color: #fff; background-color: #ccc; height: 38px; border:none; background: linear-gradient(to top, #d5433a, #ec6137); text-shadow:0 -1px 1px #0d4067; text-transform:uppercase; font-weight:bold; font-size:15px; margin-top:3px; width:130px; }
+.mask-wrapper .fileInputText { position: relative; width: 114px; height: 40px; padding-left:5px; color:#000; }
+.custom-file-input { width: 300px; opacity: 0; filter: alpha(opacity=0); position: relative; top: -40px; z-index: 999; cursor: pointer; height: 40px;}
+.mask { margin-top:-3px;}
+#BlockCheckInaAll #ButtonSendAll {width:198px; height:40px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin-left: auto;  margin-top:30px;}
+#BlockCheckInaAll #ButtonSendAll a {text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:39px; line-height:40px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; background: url(images/Cabinet/BgReg.png) 91% center no-repeat; text-align:center;}
+#BlockCheckInaAll #ButtonSendAll a:hover {background:url(images/Cabinet/BgReg.png) 91% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+
+.remodal #cropbutton {background: linear-gradient(to top, #d5433a, #ec6137); text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:39px; line-height:40px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; text-align:center;}
+.remodal #cropbutton:hover {background: 91% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+
+.remodal #ok {background: linear-gradient(to top, #d5433a, #ec6137); text-decoration:none; color:#fff ; border:1px solid #c27073; display:none; width:200px; height:39px; line-height:40px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; text-align:center;}
+.remodal #ok:hover {background: 91% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+/*-------------------------------------*/
+#AboutAss {width:100%; background: url(images/Formalization/BgFormalization.jpg) center bottom no-repeat; background-size:cover; padding-bottom:20px;}
+#Block { width:1145px; margin:0 auto; font-size:11.5px; color:#444343; text-transform:uppercase; line-height:2;}
+#Block span { color:#e31f25;}
+#AboutAss #AllBlock {position:relative;}
+#AboutAss #BlockVideo { width:522px; height:354; position:absolute; left:50%; margin-left:-265px; top:110px; }
+#AboutAss #BlockVideo img { width:100%;}
+#AboutAss #BlockOne { width:279px; height:216px; background:url(images/AboutUs/Bl1.png) center center no-repeat; float:left; margin-top:50px; padding-top:57px; padding-left:30px;}
+#AboutAss #BlockOne p {}
+#AboutAss #BlockTwo { width:311px; height:199px; background:url(images/AboutUs/Bl2.png) center center no-repeat; float:right; margin-top:41px; padding-left:48px; padding-top:25px; padding-right:15px;}
+#AboutAss #BlockThree {  width:338px; height:376px; background:url(images/AboutUs/Bl3.png) center center no-repeat; float:left; margin-top:15px; padding-left:45px; padding-top:40px; padding-right:75px;}
+#AboutAss #BlockFor {  width:300px; height:437px; background:url(images/AboutUs/Bl4.png) center center no-repeat; float:right; margin-top:-8px; padding-top:30px; padding-left:28px;}
+#AboutAss #BlockFor p { padding-left:25px; line-height:1.2;}
+#AboutAss #BlockFor ul { padding-top:10px;}
+#AboutAss #BlockFor ul li { background: url(images/AboutUs/BgLi.png) left 5px no-repeat; padding-left:18px;}
+#Txt { font-size:14px; color:#000; line-height:1.4;}
+#Txt p.Punkt { font-size:20px; margin:10px 0 20px 0;}
+#Txt p.List { margin-left:5%;}
+#Txt p.List span { margin-right:15px;}
+#Txt p.Last { margin-top:20px;}
+#AllBodyKont { padding-bottom:30px; margin-bottom:5px;}
+#AllBodyKont #TitleKont { padding-top:25px;}
+#AllBodyKont #TitleKont h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/Cabinet/BgTitle.png) left top no-repeat; padding-left:46px;}
+#AllBodyKont #TitleKont h1 span {color:#e32026}
+#AllBodyKont #TitleKont #BelowlH1Kont {text-transform:uppercase; font-weight:bold; padding-left:46px; font-size:12px; color:#2f9cd0;}
+#BlockKotnAll { background: url(images/CheckIn/BgCheckIn.jpg) center bottom no-repeat; padding-top:35px; padding-bottom:50px; margin-bottom:5px;}
+#BlockKotnAll span{ float: right; color: red; font-size:12px}
+#BlockKotnAll #FirstName { width:30%; float:left; margin-left:15%;}
+#BlockKotnAll #FirstName p { padding-left:15px; font-size:18px; color:#000; font-weight:bold;}
+#BlockKotnAll #FirstName input { width:100%; border:1px solid #999; border-radius:5px; height:40px; font-size:16px; padding-left:15px;}
+#BlockKotnAll #LastName { width:30%; float:left; margin-left:10%;}
+#BlockKotnAll #LastName p {padding-left:15px; font-size:18px; color:#000; font-weight:bold;}
+#BlockKotnAll #LastName input {width:100%; border:1px solid #999; border-radius:5px; height:40px; font-size:16px; padding-left:15px;}
+#BlockKotnAll #EmailBlock {margin-left:15%; width:30%; margin-top:20px;}
+#BlockKotnAll #EmailBlock p {padding-left:15px; font-size:18px; color:#000; font-weight:bold;}
+#BlockKotnAll #EmailBlock input { width:100%; border:1px solid #999; border-radius:5px; height:40px; font-size:16px; padding-left:15px;}
+#BlockKotnAll #BetreffBlock {margin-left:15%; width:30%; margin-top:20px;}
+#BlockKotnAll #BetreffBlock p {padding-left:15px; font-size:18px; color:#000; font-weight:bold;}
+#BlockKotnAll #BetreffBlock input { width:100%; border:1px solid #999; border-radius:5px; height:40px; font-size:16px; padding-left:15px;}
+#BlockKotnAll #TxtBlock {margin-left:15%; width:70%; margin-top:20px;}
+#BlockKotnAll #TxtBlock p {padding-left:15px; font-size:18px; color:#000; font-weight:bold;}
+#BlockKotnAll #TxtBlock textarea { width:100%; resize:none; border:1px solid #999; border-radius:5px; height:120px; font-size:16px; padding:15px;}
+#BlockKotnAll #ButtonKont {width:198px; height:40px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; margin-left: auto;  margin-top:30px;}
+#BlockKotnAll #ButtonKont a {text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:39px; line-height:40px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; text-align:center;}
+#BlockKotnAll #ButtonKont a:hover {background:linear-gradient(to bottom, #d5433a, #ec6137);}
+#AllBodyImpressum { padding-bottom:30px; margin-bottom:5px;}
+#AllBodyImpressum #TitleImpres { padding-top:25px;}
+#AllBodyImpressum #TitleImpres h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/Cabinet/BgTitle.png) left top no-repeat; padding-left:46px;}
+#AllBodyImpressum #TitleImpres h1 span {color:#e32026}
+#BlockImpresAll {background: url(images/CheckIn/BgCheckIn.jpg) center bottom no-repeat; padding-bottom:80px; margin-bottom:5px;}
+#BlockImpresAll #AllPreson { width:100%; text-align:center;}
+#BlockImpresAll #AllPreson .OnePerson { display:inline-block; height:470px; width:357px; margin:0 10px;}
+#BlockImpresAll #AllPreson .OnePerson .Foto { max-width:80%; height:230px; overflow:hidden;}
+#BlockImpresAll #AllPreson .OnePerson .Foto img { width:100%; height:230px;}
+#BlockImpresAll #AllPreson .OnePerson p { color:#000; border-bottom:1px solid #999}
+#BlockImpresAll #AllPreson .OnePerson p.FoolNamePers { font-weight:bold; font-size:20px; margin-top:10px;}
+#BlockImpresAll #AllPreson .OnePerson .Pos { width:100%; margin-top:15px; padding-left:10px;}
+#BlockImpresAll #AllPreson .OnePerson .Pos p { float: left;font-size:18px;}
+#BlockImpresAll #AllPreson .OnePerson .Email { width:100%; margin-top:15px;padding-left:10px;}
+#BlockImpresAll #AllPreson .OnePerson .Email p { float: left;font-size:18px;}
+#BlockImpresAll #AllPreson .OnePerson .Telef { width:100%; margin-top:15px;padding-left:10px;}
+#BlockImpresAll #AllPreson .OnePerson .Telef p { float: left;font-size:18px;}
+#BlockImpresAll #AllPreson .OnePerson .And { width:100%; margin-top:15px;padding-left:10px;}
+#BlockImpresAll #AllPreson .OnePerson .And p { float: left; font-size:18px;}
+#BlockImpresAll #AllPreson .OnePerson p.Onls { font-weight:bold; margin-right:15px; border:none;}
+#AllBodyDaten { padding-bottom:30px; margin-bottom:5px;}
+#AllBodyDaten #TitleDaten { padding-top:25px;}
+#AllBodyDaten #TitleDaten h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/Cabinet/BgTitle.png) left top no-repeat; padding-left:46px;}
+#AllBodyDaten #TitleDaten h1 span {color:#e32026}
+#AllBodyDaten #TitleDaten #BelowH1Daten {text-transform:uppercase; font-weight:bold; padding-left:46px; font-size:12px; color:#2f9cd0;}
+#AllDaten {background: url(images/CheckIn/BgCheckIn.jpg) center bottom no-repeat; padding-bottom:50px; margin-bottom:5px;}
+#AllDaten p { font-size:24px; font-weight:bold; color:#000; margin-bottom:15px;}
+#AllDaten textarea { resize:none; width:100%; height:500px; border:1px solid #999; border-radius:5px; font-size:19px; color:#000; padding:15px;}
+.NameProject .Name img {
+    width: 20px;
+    margin-left: 10px;
+}
+.NameProject .Name span {
+    margin-left: 10px;
+    float: right;
+    font-size: 14px;
+    color: black;
+    font-family: OpenSans;
+    font-style: normal;
+    text-transform: none;
+}
+#pageable a{text-decoration:none;  color: darkblue}
+#pageable a:hover{text-decoration: underline;  color: red}
+
+#CharitableProjectsTop { padding-top:25px;}
+#CharitableProjectsTop h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/CheckIn/BgTitle.png) left top no-repeat; padding-left:50px;}
+#CharitableProjectsTop h1 span {color:#e32026;}
+#CharitableProjectsTop #BelowH1Bottom {padding-left:50px; text-transform:uppercase; font-weight:bold; font-size:12px; color:#2f9cd0;}
+#BlockSlider { margin-top:25px; background:url(images/Cabinet/BgBlockSlider.jpg) left bottom repeat; padding-top:10px; padding-bottom:5px;}
+#DescrCharitable { padding-top:35px;}
+#DescrCharitable p { font-size:14px; color:#444444; word-spacing:3px; margin-bottom:22px;}
+#ButtonBlockCharit { padding:15px 0; background:url(images/BgBlockSlider.jpg) left bottom repeat;}
+#ButtonBlockCharit .Two { float:left; margin-right:15px;}
+#ButtonBlockCharit .One { float:left; margin-right:15px;}
+#ButtonBlockCharit .One a { text-align:center; width:265px; height:40px; text-decoration:none; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31; display:block;  box-shadow: 0 1px 0 #a70f27;}
+#ButtonBlockCharit .One a p {color:#fff ; border:1px solid #c27073; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:17px; text-shadow:0 -1px 1px #0d4067;}
+#ButtonBlockCharit .One a:hover {background: linear-gradient(to bottom, #d5433a, #ec6137);}
+#ButtonBlockCharit .Two a { text-align:center; width:265px; height:40px; text-decoration:none; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd; display:block;  box-shadow: 0 1px 0 #a8a8a8;}
+#ButtonBlockCharit .Two a p {color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:17px;}
+#ButtonBlockCharit .Two a:hover {background: linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+
+
+#Block { width:100%; background: url(images/CharitableProjects/BgCharitable.jpg) center bottom no-repeat; background-size: cover; padding-bottom:30px;}
+#Block .OneBlock { border-bottom:1px solid #cccccc}
+#Block .GeneralUnit { float:left; width:57.8%; margin-top:55px; }
+#Block .GeneralUnit .ImgBlock { width:220px; height:160px; border:1px solid #b9b9b9; float:left; margin-bottom:30px; margin-right:18px;}
+#Block .GeneralUnit .ImgBlock img { width:100%; height:100%;}
+#Block .GeneralUnit .NameProject { float:left;}
+#Block .GeneralUnit .NameProject .Name { font-size:20px; font-style:italic; font-family:Georgia, "Times New Roman", Times, serif; font-weight:bold; color:#e31e24; margin-bottom:10px;}
+#Block .GeneralUnit .NameProject p { font-weight:bold; font-size:20px; color:#444444; float:left; text-transform:uppercase;}
+#Block .GeneralUnit .NameProject p .Collected { margin-left:15px;}
+#Block .GeneralUnit .NameProject p .Currency { margin-left:5px;}
+#Block .GeneralUnit .DescrGener { font-size:14px; color:#444444;text-transform: none;  font-weight: normal;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 250px;
+
+}
+/*#Block .GeneralUnit .DescrGener {background:url(images/more.png) center bottom no-repeat; background-size: 20px;}*/
+#Block .GeneralUnit .DescrGener p { margin-bottom:15px;}
+#Block .GeneralUnit .DescrGener ul p { margin-bottom:0;}
+#Block .GeneralUnit .DescrGener ul li { margin-left:18px; margin-top:4px;}
+#Block .GeneralUnit .ButtonBlockGener { width:100%; margin-top:20px; margin-bottom: 10px;}
+#Block .GeneralUnit .ButtonBlockGener .Doc {width:165px; height:32px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; float:left;}
+#Block .GeneralUnit .ButtonBlockGener .Doc a {text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:30px; line-height:30px; border-radius:3px; background:url(images/Cabinet/BgLogin.png) 91% center no-repeat; text-transform:uppercase; font-weight:bold; font-size:13px; padding-left:15px;}
+#Block .GeneralUnit .ButtonBlockGener .Doc a:hover {background:url(images/Cabinet/BgLogin.png) 91% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#Block .GeneralUnit .ButtonBlockGener .Support {width:200px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; float:right;}
+#Block .GeneralUnit .ButtonBlockGener .Support a {text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; padding-left:5%; background: url(images/Cabinet/BgReg.png) 91% center no-repeat;}
+#Block .GeneralUnit .ButtonBlockGener .Support a:hover {background:url(images/Cabinet/BgReg.png) 91% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+#Block .VideoUnit { float:left; width:23%; padding-top:42px; margin-left:25px;}
+#Block .VideoUnit .Video { width:260px; overflow:hidden; margin-top:14px;}
+#Block .VideoUnit .Video video { width:100%; height:auto;}
+#Block .SlidUnit { float:right; width:17%; margin-top:10px; margin-bottom:35px;}
+.Vwidget{margin: 0;padding: 0;width: 200px;}
+a.up, a.down{display: block; width:40px; height:40px; margin: 0 auto;}
+a.up{ padding-bottom: 2px; background: url(images/CharitableProjects/Up.png);}
+a.down { padding-top: 2px; background: url(images/CharitableProjects/Doun.png); }
+.VjCarouselLite{ margin: 0; padding: 0;}
+.VjCarouselLite li{ overflow: hidden; float: none; display: block; padding: 0; text-align: center;}
+.VjCarouselLite li div{ margin: 0 auto; margin-top: 5px; margin-bottom: 5px; height: 115px; width: 165px;}
+.VjCarouselLite li div{ background-size: cover; opacity:0.5;}
+.VjCarouselLite li div:hover { opacity:1;}
+.flexslider .slides > li {  display: none;  -webkit-backface-visibility: hidden;  }
+.flexslider .slides img {  width: 100%;  display: block;  -webkit-border-radius: 2px;  -moz-border-radius: 2px;  border-radius: 2px;  }
+.slides:after {  content: ".";  display: block;  clear: both;  visibility: hidden;  line-height: 0;  height: 0;  }
+html[xmlns] .slides { display: block; }
+* html .slides { height: 1%; }
+.flexslider {  position: relative;  zoom: 1;  background: #ffffff;  }
+.flex-container {  min-width: 150px;  max-width: 100%;  }
+.flex-direction-nav a {display: block; font-size:0px;  }
+.flex-direction-nav a:before {  display: block;  position: absolute;  content: '';  width: 40px;  height: 40px;  top: 42%;  left:20px;  }
+.flex-direction-nav a:after {  display: block;  position: absolute;  content: '';  width: 40px;  height: 40px;  top: 42%;  }
+.flex-direction-nav .flex-next {  right: -5px;  }
+.flex-direction-nav .flex-prev {  }
+.flex-direction-nav .flex-next:before { background-position: 0 0;}
+.flex-direction-nav .flex-prev:before { background-position: 0 0; }
+.flex-direction-nav .flex-next:after {  right: 20px; background:url(images/RightSlider.png) no-repeat; width:40px; height:40px;  }
+.flex-direction-nav .flex-prev:after {  left: 20px; background: url(images/LeftSlider.png) no-repeat; width:40px; height:40px;  }
+.flexslider .flex-control-nav {  display:none;  position: absolute;  width: 100%;  bottom: -40px;  text-align: center;  margin: 0 0 0 -10px;  }
+.flex-control-nav li {  display: inline-block;  zoom: 1;  }
+.flex-control-paging li a {  display: block;  cursor: pointer;  text-indent: -9999px;  width: 12px;  height: 12px;  margin: 0 3px;  background-color: #b6b6b6 \9;  -webkit-border-radius: 12px;  -moz-border-radius: 12px;  border-radius: 12px;  -webkit-box-shadow: inset 0 0 0 2px #b6b6b6;  -moz-box-shadow: inset 0 0 0 2px #b6b6b6;  box-shadow: inset 0 0 0 2px #b6b6b6;  }
+.flex-control-paging li a.flex-active {  background-color: #ff9900;  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9900), to(#e78b00));  background-image: -webkit-linear-gradient(top, #ff9900, #e78b00);  background-image: -moz-linear-gradient(top, #ff9900, #e78b00);  background-image: -o-linear-gradient(top, #ff9900, #e78b00);  background-image: linear-gradient(to bottom, #ff9900, #e78b00);  -webkit-box-shadow: none;  -moz-box-shadow: none;  box-shadow: none;  }
+.flexslider .slides .descr {  display: block;  position: absolute;  left: 20px;  top: 51%;  padding: 0 5px;  margin: 0;  padding:28px 30px 28px 20px;  font-family: Georgia, "Times New Roman", Times, serif;  font-size: 28px;  font-style:italic;  color: #fdfefc;  background-color: rgba(0, 0, 0, .5);  }
+.flexslider .slides .descr p.FisrtText {font-weight: bold; font-size:34px ;  }
+.flexslider .slides .descr p.FisrtText span {color:#e99800;}
+.flexslider .slides .descr .ButtonOrder {width:176px; height:56px; margin:0 auto; padding-top:5px;}
+.flexslider .slides .descr .ButtonOrder .Prezent {float:left; background: url(images/Button/Prezent.png) left center no-repeat; width:54px; height:56px;}
+.flexslider .slides .descr .ButtonOrder a { text-decoration:none; text-transform:uppercase; height:33px; line-height:33px; color:#fff; font-family: 'OpenSans', sans-serif; font-weight:bold; font-size:14px; display:block; background: url(images/Button/OlderButtonRight.png) right center no-repeat, url(images/Button/BgList.png) 87% center no-repeat, url(images/Button/OlderButton.png) center center repeat-x; display:block; margin-top:15px; font-style:normal; padding-left:36%; margin-left:2px; border-radius:3px;}
+.flexslider .slides .descr .ButtonOrder a:hover {background-color: rgba(0, 0, 0, .7);}
+.flexslider .slides .descr .ButtonOrder a:active {box-shadow: inset 0 0 10px rgba(0,0,0,0.2), inset 0 5px 5px rgba(0,0,0,0.4);}
+.ms-parent {  display: inline-block;  position: relative;  vertical-align: middle;  }
+.ms-choice {  display: block;  width: 100%;  height: 45px;  padding: 0;  overflow: hidden;  cursor: pointer;  border: 1px solid #d7d7d7;  text-align: left;  white-space: nowrap;  line-height: 45px;  color: #444;  text-decoration: none;  -webkit-border-radius: 4px;  -moz-border-radius: 4px;  border-radius: 4px;  background-color: #fff;  font-size: 19px;  }
+.ms-choice.disabled {  background-color: #f4f4f4;  background-image: none;  border: 1px solid #ddd;  cursor: default;  }
+.ms-choice > span {  position: absolute;  top: 0;  left: 0;  right: 20px;  white-space: nowrap;  overflow: hidden;  text-overflow: ellipsis;  display: block;  padding-left: 8px;  }
+.ms-choice > span.placeholder {  color: #999;  }
+.ms-choice > div {  position: absolute;  top: 0;  right: 0;  width: 20px;  height: 25px;  background: url('multiple-select.png') left top no-repeat;  }
+.ms-choice > div.open {  background: url('multiple-select.png') right top no-repeat;  }
+.ms-drop {  width: 100%;  overflow: hidden;  display: none;  margin-top: -1px;  padding: 0;  position: absolute;  z-index: 10;  background: #fff;  color: #000;  border: 1px solid #aaa;  -webkit-border-radius: 4px;  -moz-border-radius: 4px;  border-radius: 4px;  }
+.ms-drop.bottom {  top: 100%;  -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);  -moz-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);  box-shadow: 0 4px 5px rgba(0, 0, 0, .15);  }
+.ms-drop.top {  bottom: 100%;  -webkit-box-shadow: 0 -4px 5px rgba(0, 0, 0, .15);  -moz-box-shadow: 0 -4px 5px rgba(0, 0, 0, .15);  box-shadow: 0 -4px 5px rgba(0, 0, 0, .15);  }
+.ms-search {  display: inline-block;  margin: 0;  min-height: 26px;  padding: 4px;  position: relative;  white-space: nowrap;  width: 100%;  z-index: 10000;  }
+.ms-search input {  width: 100%;  height: auto !important;  min-height: 24px;  padding: 0 20px 0 5px;  margin: 0;  outline: 0;  font-family: sans-serif;  font-size: 1em;  border: 1px solid #aaa;  -webkit-border-radius: 0;  -moz-border-radius: 0;  border-radius: 0;  -webkit-box-shadow: none;  -moz-box-shadow: none;  box-shadow: none;  background: #fff url('multiple-select.png') no-repeat 100% -22px;  background: url('multiple-select.png') no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));  background: url('multiple-select.png') no-repeat 100% -22px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);  background: url('multiple-select.png') no-repeat 100% -22px, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);  background: url('multiple-select.png') no-repeat 100% -22px, -o-linear-gradient(bottom, white 85%, #eeeeee 99%);  background: url('multiple-select.png') no-repeat 100% -22px, -ms-linear-gradient(top, #ffffff 85%, #eeeeee 99%);  background: url('multiple-select.png') no-repeat 100% -22px, linear-gradient(top, #ffffff 85%, #eeeeee 99%);  }
+.ms-search, .ms-search input {  -webkit-box-sizing: border-box;  -khtml-box-sizing: border-box;  -moz-box-sizing: border-box;  -ms-box-sizing: border-box;  box-sizing: border-box;  }
+.ms-drop ul {  overflow: auto;  margin: 0;  padding: 5px 8px;  }
+.ms-drop ul > li {  list-style: none;  display: list-item;  background-image: none;  position: static;  }
+.ms-drop ul > li .disabled {  opacity: .35;  filter: Alpha(Opacity=35);  }
+.ms-drop ul > li.multiple {  display: block;  float: left;  }
+.ms-drop ul > li.group {  clear: both;  }
+.ms-drop ul > li.multiple label {  width: 100%;  display: block;  white-space: nowrap;  overflow: hidden;  text-overflow: ellipsis;  }
+.ms-drop ul > li label {  font-weight: normal;  display: block;  white-space: nowrap;  }
+.ms-drop ul > li label.optgroup {  font-weight: bold;  }
+.ms-drop input[type="checkbox"] {  vertical-align: middle;  }
+.ms-drop .ms-no-results {  display: none;  }
+
+/*-------------------------------------*/
+
+@media screen and (max-width: 1334px) { /* 1200<width<1334 main 1200*/
+
+    #BlockImgAll #BlockImg { width:1200px; margin:0 auto;}
+    #BlockImgAll #BlockImg #LeftBlock {width:12.5%;}
+    #BlockImgAll #BlockImg #LeftBlock .box {height:104px;}
+    #BlockImgAll #BlockImg #SliderBlock { width:74%;}
+    #BlockImgAll #BlockImg #RightBlock {width:12.5%;}
+    #BlockImgAll #BlockImg #RightBlock .box {height:104px;}
+    #BlockImgAll #BlockImg #RightBlock .box1 { height:213px; padding:15px 0; background-size:65px;}
+    #FormalizationCabinet #LeftBlockForms #MethodUpOne { width: 600px; margin: 0 auto;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1199px) { /* 980<width<1199 main 980*/
+    section { width:98%;}
+    #BlockImgAll #BlockImg {width:98%;}
+    #BlockImgAll #BlockImg #LeftBlock { width:100%;}
+    #BlockImgAll #BlockImg #LeftBlock .box { float:left; width:19.58%; margin-bottom:5px; margin-right:5px;}
+    #BlockImgAll #BlockImg #LeftBlock .box:last-child {margin-right:0;}
+    #BlockImgAll #BlockImg #SliderBlock { width:100%; margin-bottom:5px;}
+    #BlockImgAll #BlockImg #RightBlock { width:100%;}
+    #BlockImgAll #BlockImg #RightBlock .box { float:left; width:19.6%; margin-bottom:0; margin-right:5px;}
+    #BlockImgAll #BlockImg #RightBlock .box:last-child {margin-right:0;}
+    #BlockImgAll #BlockImg #RightBlock .box img {height:100%; width:100%;}
+    #BlockImgAll #BlockImg #RightBlock .box1 {height:104px; width:39.4%; padding:3px 0; float:left; margin-right:5px; background-position: 75% center; padding-left:1%; background-size:75px;}
+    #BlockImgAll #BlockImg #RightBlock .box1 p { width:50%;}
+    #BlockImgAll #BlockImg #RightBlock .box1 .delimiter { width:50%; margin:0; margin-bottom:3px; margin-top:3px;}
+    #BlockImgAll #BlockImg #RightBlock .box1 a { margin:0; padding:0; float:right; margin-top:-7%;}
+    #BlockImgAll #BlockImgBottom { width:100%; height:0; }
+    #VideoCongratulations { margin-top:15px;}
+    #VideoCongratulations h1 { background:none; margin-top:0;}
+    #VideoCongratulations h2 { background:none; margin-top:0;}
+    #VideoCongratulations #CenterP { margin-bottom:15px;}
+    #VideoCongratulations #VideoBlock { background-size: contain; height:300px;}
+    #VideoCongratulations #BlockVideoBottom { width:100%; height:0; margin-top:20px; padding-top:15px;}
+    #VideoCongratulations #BlockVideoBottom #TitleOurMission {background-position:21% bottom; padding:0;}
+    #OurMission {margin-bottom:0; }
+    #OurMission #OurMissionBlock #TextOurMission {padding-left:2%;}
+    #BottomNavAll { padding:25px 0 15px 0;}
+    #OurMission #OurMissionBlock { background-size:contain; margin-bottom:5px;}
+    #BottomNavAll #ListMenu ul li a {font-size:12px; padding:0 7px;}
+    #BottomNavAll #PhoneBottom { padding-left:2%;}
+    footer {padding:14px 0;}
+    section { width:98%;}
+    #ChekInAll h1 {font-size:26px; background-size:35px;}
+    #ChekInAll #ChekBlock #BlockName1 p { font-size:11px; text-align:center;}
+    #ChekInAll #ChekBlock #BlockAlias1 p {font-size:11px; text-align:center;}
+    #VideoCongratulations #Celebrities p {font-size:11px; text-align:center;}
+    #VideoCongratulations #CelebritiesEmail p {font-size:11px; text-align:center;}
+    #ChekInAll #ChekBlock #Phone p {font-size:11px; text-align:center;}
+    #ChekInAll #ChekBlock #Login p {font-size:11px; text-align:center;}
+    #ChekInAll #ChekBlock #Password p {font-size:11px; text-align:center;}
+    #ChekInAll #ChekBlock #Agreement label  { width:100%;}
+    #ChekInAll #ChekBlock #Agreement #ButtonLoading { margin-top:10px;}
+    #VideoCongratulations #ButtonSaveStar { margin-top:10px;}
+    #ChekInAll #BoxIcon ul li { background-size: contain;}
+    #ChekInAll #BoxIcon ul li p { font-size:16px;}
+    #AllBody #CenterCabinet #LeftCabinet #BlockFoto { width:100%; height:100%;}
+    #AllBody #CenterCabinet #RightCabinet #BottomDescr label { width:100%; }
+    #AllBody #CenterCabinet #RightCabinet #BottomDescr #ButtonLoading { margin:0 auto !important;}
+    #SliderCabinet #SliderBclock #TitleTopSlider { font-size:26px; font-weight:bold; color:#444444; background-position:70px top; padding-left:125px; margin-bottom:45px;}
+    #MyOrdersAll h1 {font-size:26px; background-size:35px;}
+    #BlockAllVideo #BlockVideo .OneVideo .RightDes {width:42%;}
+    #BlockAllVideo #BlockVideo .OneVideo .ButtonMoreOneVideo { width:18%;}
+    #Formalization h1 {font-size:26px; background-size:35px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #NamePerson p {font-size:14px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #PricePerson p {font-size:14px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #VideoPerson p {font-size:14px;}
+    #FormalizationCabinet #LeftBlockForms #TimeCongratulations input { padding-bottom:0;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms { width:180px; margin-top:5px; margin-left:7%}
+    #ButtonTwoTitleForm { width:180px; margin-top:5px; margin-left:7%}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms1 { width:180px; margin-top:5px; margin-left:7%}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2 { width: 180px;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2 input {width: 180px;  }
+    #FormalizationCabinet #LeftBlockForms #MethodUpOne { width: 585px; margin: 0 auto;}
+    #photo3 { width: 180px;}
+    #photo3 input {width: 180px;  }
+    .drop-block li a { width:140px;}
+    #AllSearch #FotoBLockAll { width:220px;}
+    #Offer #offerblock p { text-align: center; padding-left: 10px; padding-right: 10px;}
+    #Offer #offerblock input {width: 42%; margin-top: 15px;}
+    #Offer #offerblock {width: 100%;}
+    #Offer #ButtonOffer {margin: 15px 40%;}
+    #Offer #offerblock p span { margin-top: 25px; }
+    #Formalization h1 {font-size:26px; background-size:35px;}
+    #BlockPerson #LeftBlock { width:240px;}
+    #BlockPerson #LeftBlock #Photo { height:auto;}
+    #BlockPerson #Descr { width:48%;}
+    #BlockPerson #Descr #Topi p { width:73%;}
+    #BlockPerson #Info #SocProject { text-align:left; }
+    #Block { width:98%; font-size:11px; line-height:2;}
+    #AllBlock { width:960px; margin:0 auto; }
+    #AboutAss #BlockVideo { width:350px; margin-left:-175px;}
+    #AboutAss #BlockOne { margin-top:0; background-size:contain; margin-left:20px; padding-right:20px; padding-left:45px; width:270px}
+    #AboutAss #BlockTwo { margin-top:0; background-size:contain; padding-left:50px; width:270px; margin-right:20px;}
+    #AboutAss #BlockThree {margin-top:0; background-size:contain; width:310px; padding-top:50px;}
+    #AboutAss #BlockFor {background-size:contain; width:300px;}
+    #AboutAss #BlockFor p {}
+    #Block { width:100%; }
+    #BlockSlider #SliderCharitable { width:98%; margin:0 auto;}
+    #BlockSlider #SliderCharitable div { padding-left:3px;}
+    #Block .GeneralUnit {width:53%;}
+    #Block .GeneralUnit .ImgBlock { width:180px; height:145px;}
+    #Block .VideoUnit {}
+    #Block .VideoUnit .Video { width:230px;}
+    #Block .SlidUnit { width:180px;}
+    .Vwidget { margin:0 auto; width:180px;}
+}
+@media screen and (max-width: 1139px) { /* 980<width<1139 main 980*/
+    section { width:98%;}
+    #BlockCheckInaAll #BlockProject p {display:none}
+    #BlockCheckInaAll #BlockProject #Texteditor {width:100%;}
+    .mask-wrapper { margin-right:2%;}
+    #BlockKotnAll #ButtonKont { margin-right:15%;}
+
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 979px) { /* 768<width<979 main 768*/
+    nav ul li a {font-size:12px; font-weight:200; padding:0 15px;}
+    #Phone1 {font-size:15px;}
+    #Header #Logo { margin:6px 0 7px 0; margin-right:7%; width:250px; height:82px;}
+    #Header #Logo a { background-size:230px; width:100%; height:100%;}
+    #Header #Searching { margin-top:15px;}
+    #Header #ButtonBlock #ButtonLogin { margin-top:15px;}
+    #BlockImgAll #BlockImg #LeftBlock .box { width:19.2%; margin-left:0.3%; margin-right:0.6%}
+    #BlockImgAll #BlockImg #RightBlock .box {width:19.2%; margin-left:0.3%; margin-right:0.6%}
+    #BlockImgAll #BlockImg #RightBlock .box1 {width:100%; width:39.4%;}
+    #BlockImgAll #BlockImg #RightBlock .box1 a {margin-top:-10%;}
+    #VideoCongratulations h1 { background-position:0% top; font-size:25px; background-size:30px;}
+    #VideoCongratulations h2 { background-position:0% top; font-size:25px; background-size:30px;}
+    #VideoCongratulations #BlockVideoBottom #TitleOurMission {background-position:20% top; font-size:25px; background-size:30px;}
+    #VideoCongratulations #VideoBlock { height:250px;}
+    #BottomNavAll {padding:10px 0 10px 0;}
+    #BottomNavAll #ListMenu { width:500px; padding-top:7px;}
+    #BottomNavAll #ListMenu ul li a { font-size:12px;}
+    #BottomNavAll #PhoneBottom { padding:0; background:none; float:right; text-align:right; padding-right:3%;}
+    #BottomNavAll #Soc {float:right; width:30%; padding-right:3%;}
+    #BottomNavAll #Soc ul { padding-top:0;}
+    #VideoCongratulations h1 span {    padding-left: 0px;}
+    #ChekInAll #ChekBlock { width:100%;}
+    #ChekInAll #BoxIcon { width:100%;}
+    #ChekInAll #BoxIcon ul { margin-top:15px;}
+    #ChekInAll #BoxIcon ul li { width:16.5%; margin-bottom:0;}
+    #Advantages #BgAdvantages { padding-bottom:50px;}
+    #ChekInAll #regSuchess { width: 100%;  }
+    #regSuchess { width: 100%;}
+    #AllBody #TitleCabinet { padding-top:20px; padding-bottom:20px;}
+    #BodyBlock #BlockCenter #DescrOrd { width:100%;}
+    #AllBody #TitleCabinet { padding-top:20px; padding-bottom:20px;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonFoto { width:100%;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo{font-size:11px;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo input { }
+    #AllBody #CenterCabinet #LeftCabinet #ButtonMoney {width:100%;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonInput {width:100%;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonOrders { width:100%;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonTurneOn { width:100%;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonTurneOf { width:100%;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonActiveOn { width:100%;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonActiveOf { width:100%;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonHelp { width:100%;}
+    #AllBody #CenterCabinet #RightCabinet #TopDescr { width:99%;}
+    #AllBody #CenterCabinet #RightCabinet #BottomDescr label p { font-size:12px; margin-top:-4px;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock { padding:5px;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock p { font-size:12px; text-align:center !important;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory select {width:83%; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory input {width:83%;  margin-left: 17%;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos input {width:83%;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo input {width:83%;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects select { width:100%;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #Button { margin-bottom:15px;}
+    #SliderCabinet #SliderBclock #TitleTopSlider { font-size:22px; background-position:50px top; padding-left:105px; margin-bottom:45px;}
+    .owl-prev {margin-left:-10%;}
+    #BlockAllVideo #BlockVideo .OneVideo .RightDes { width:52%;}
+    #BlockAllVideo #BlockVideo .OneVideo .ButtonMoreOneVideo { float:left; margin-top:25px; width:180px; margin-left:15px;}
+    #FormalizationCabinet { padding-top:15px;}
+    #FormalizationCabinet #LeftBlockForms #BlockName2 p, #FormalizationCabinet #LeftBlockForms #MethodUp p, #FormalizationCabinet #LeftBlockForms #Email2 p, #FormalizationCabinet #LeftBlockForms #Phone2 p, #FormalizationCabinet #LeftBlockForms #BlockName3 p, #FormalizationCabinet #LeftBlockForms #Email3 p, #FormalizationCabinet #LeftBlockForms #Phone3 p, #FormalizationCabinet #LeftBlockForms #CongratulatoryText3 p, #FormalizationCabinet #LeftBlockForms #DateCongratulations p, #FormalizationCabinet #LeftBlockForms #TimeCongratulations p { font-size:12px;}
+    #FormalizationCabinet #LeftBlockForms #TitleTopForms .formaliza {margin-bottom:0; float:none;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms .formaliza {margin-bottom:0; float:none;}
+    #FormalizationCabinet #LeftBlockForms #TitleTopForms #ButtonTopForms {margin-bottom:20px; }
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms {margin-bottom:20px; margin-top:20px;}
+    #ButtonTwoTitleForm {margin-bottom:20px; margin-top:20px;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms1 {margin-bottom:20px; margin-top:20px;}
+    #FormalizationCabinet #LeftBlockForms #DateCongratulations, #FormalizationCabinet #LeftBlockForms #TimeCongratulations { margin-top:15px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #FotoFamosPerson { width:250px; height:276px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson p.Marker { width:57% !important;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #NamePerson p, #FormalizationCabinet #RightBlockCabinet #BlockPerson #PricePerson p, #FormalizationCabinet #RightBlockCabinet #BlockPerson #VideoPerson p { width:40%;}
+    #FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet { margin:0 auto;}
+    #FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo { margin:0 auto;}
+    #FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTOne { margin:0 auto;}
+    #FormalizationCabinet #LeftBlockForms #RadioButton p {font-size: 10px;}
+    #FormalizationCabinet #LeftBlockForms #RadioButton input { float:left; margin-left: 4px}
+    #FormalizationCabinet #LeftBlockForms #MethodUpOne { width: 445px; margin: 0 auto;}
+    #AllSearch #SearchingBlock {float:none; margin:0 auto; margin-bottom:15px;}
+    #AllSearch #FotoBLockAll { position:inherit; margin:0 auto; margin-bottom:5px;}
+    .drop-block li a { width:200px;}
+    #Offer #offerblock p { text-align: center; padding-left: 10px; padding-right: 10px;}
+    #Offer #offerblock input {width: 40%; margin-top: 15px;}
+    #Offer #offerblock {width: 100%;}
+    #Offer #ButtonOffer {margin: 15px 40%;}
+    #Offer #offerblock p span { margin-top: 25px; }
+    #BlockPerson #LeftBlock { width:30%;}
+    #BlockPerson #Info #ButtonOrderCabinetPerson { margin:0 auto; margin-top:146px}
+    #BlockPerson #But { width:auto;}
+    #BlockPerson #Descr { width:70%;}
+    #BlockPerson #Descr #Topi p { width:75%; margin-left:6%;}
+    #BlockPerson #Info { width:100%; margin-top:15px;}
+    #BlockPerson #Info p { width:40%; margin-left:5%; float:left;}
+    #BlockPerson #Info #SocProject { width:40%; float:left; margin-left:5%;}
+    #AllBodyCheck #TitleCheckIn2 { padding-top:20px; padding-bottom:20px;}
+    .mask-wrapper  { float:none;}
+    #BlockCheckInaAll .BlockNameAll1 p { font-size:13px; padding-top:3px;}
+    #BlockCheckInaAll .BlockNameAll2 p { font-size:13px; padding-top:3px;}
+    #BlockCheckInaAll #BlockProject { width:100%; height: 343px; border-radius: 0px; border:none;  box-shadow: none;}
+    #AllBlock { width:auto;}
+    #AboutAss #AllBlock { position:static;}
+    #AboutAss #BlockVideo { position:static; margin:0 auto; margin-top:15px;}
+    #AboutAss #BlockOne { background:none; width:50%; margin:0; height:auto;}
+    #AboutAss #BlockTwo { background:none; float:left; width:50%; margin:0; height:auto;}
+    #AboutAss #BlockThree { background:none; float:left; width:50%; margin:0; padding-top:20px;}
+    #AboutAss #BlockFor { background:none; float:left; width:50%; padding-top:30px;}
+    #AboutAss #BlockFor p { font-size:12px;}
+    #AllBodyKont #TitleKont { padding-top:20px; padding-bottom:20px;}
+    #BlockKotnAll #FirstName { width:40%; margin-left:5%;}
+    #BlockKotnAll #LastName {width:40%; margin-left:10%;}
+    #BlockKotnAll #EmailBlock { width:40%; margin-left:5%;}
+    #BlockKotnAll #BetreffBlock { width:40%; margin-left:5%;}
+    #BlockKotnAll #TxtBlock { margin-left:5%; width:90%;}
+    #BlockKotnAll #ButtonKont { margin-right:5%;}
+    #AllBodyImpressum #TitleImpres { padding-top:20px; padding-bottom:20px;}
+    #AllBodyDaten #TitleDaten { padding-top:20px; padding-bottom:20px;}
+    #CharitableProjectsTop h1 {font-size:20px; background-size:28px;}
+    #BlockSlider #SliderCharitable { width:760px; margin:0 auto;}
+    #BlockSlider #SliderCharitable div { padding-left:3px;}
+    #Block .OneBlock { padding-bottom:20px;}
+    #Block .GeneralUnit { width:70%; }
+    #ButtonBlockCharit .Two { width:31%;}
+    #ButtonBlockCharit .One { width:31%;}
+    #ButtonBlockCharit .Two a, #ButtonBlockCharit .One a { width:auto;}
+    #ButtonBlockCharit .Two a p, #ButtonBlockCharit .One a p { font-size:15px;}
+    #Block .VideoUnit {float:right; width:30%; margin-left:0;}
+    #Block .VideoUnit .Video { margin-left:auto; padding-right:5px;}
+    #Block .GeneralUnit .ButtonBlockGener .Support { margin-right:15px;}
+    #Block .SlidUnit { display:none;}
+    .Vwidget {display:none;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 767px) { /* 480<width<767 main 480*/
+    #Header #ButtonBlock #ButtonUser {text-decoration: none; font-size: 14px; text-align: left; width:500px; height:25px; margin-top:5px; float: left; margin-left: 3%;}
+    #Home { width:12%;}
+    #Home a { width:100%;}
+    nav { width:88%; height:40px;}
+    nav ul { width:100%;}
+    nav ul li { text-align:center; width:50%;}
+    nav ul li a { background:none;  margin:0; padding:0; height:20px; line-height:20px; border-bottom:1px solid #83adf5; width:95%; margin-left:2%;}
+    nav ul li:last-child a { background:none;}
+    nav ul li a:hover { background:none; color:#ccc;}
+    nav ul li:last-child a:hover {background:none;}
+    #Phone1 { width:100%; text-align:center;}
+    #Phone1 #BgPhone { background:none;}
+    #Header { margin:0;}
+    #Header #Logo {margin:0;}
+    #Header #Logo a { width:90%; background-size:contain;}
+    #Header #Searching { margin-top:15px; width:45%; float:right;}
+    #Header #Searching p { font-size:14px;}
+    #Header #ButtonBlock { width:100%; margin:5px 0 12px 0;}
+    #Header #ButtonBlock #ButtonLogin { float:left; margin-top:0; width:45%; margin-left:3%;}
+    #Header #ButtonBlock #ButtonLogin a { width:100%;}
+    #Header #ButtonCheckIn { float:left; margin-top:0; width:45%; margin-left:3%;}
+    #Header #ButtonCheckIn a {width:100%;}
+    #BlockImgAll #BlockImg #LeftBlock .box { height:80px;}
+    #BlockImgAll #BlockImg #RightBlock .box { height:80px;}
+    #BlockImgAll #BlockImg #RightBlock .box1 { height:80px; margin-right:0.6%; background-size:42px; background-position: 95% top; padding-top:10px;}
+    #BlockImgAll #BlockImg #RightBlock .box1 p.boxTop { font-size:15px;}
+    #BlockImgAll #BlockImg #RightBlock .box1 p.boxTop2 { font-size:18px;}
+    #BlockImgAll #BlockImg #RightBlock .box1 p.boxTop2 span { font-size:17px;}
+    #BlockImgAll #BlockImg #RightBlock .box1 a { width:100%; height:80px; margin-top:-68px; background-position:95% bottom;}
+    #VideoCongratulations h1 { background-position:0% top; font-size:18px; background-size:30px;}
+    #VideoCongratulations h2 { background-position:0% top; font-size:25px; background-size:30px;}
+    #VideoCongratulations #VideoBlock { height:150px;}
+    #VideoCongratulations #BlockVideoBottom #TitleOurMission {background-position:10% top; font-size:18px; background-size:30px;}
+    #OurMission #OurMissionBlock { background:none; padding:50px 10px 5px 0;}
+    #OurMission #OurMissionBlock #TextOurMission { width:100%;}
+    #BottomNavAll #ListMenu { width:100%; margin:0 auto;}
+    #BottomNavAll #ListMenu ul { width:450px; margin:0 auto;}
+    #BottomNavAll #ListMenu ul:first-child li {}
+    #BottomNavAll #PhoneBottom { width:50%; float:left; margin:0; padding:0; margin-top:7px; text-align:left; }
+    #BottomNavAll #Soc { width:50%; float:left; padding-right:2%;}
+    #BottomNavAll #Soc ul li { margin-left:10px;}
+    #VideoCongratulations h1 span {    padding-left: 0px;}
+    #ChekInAll h1 {font-size:20px; background-size:28px; padding-left:40px;}
+    #ChekInAll #CenterPChek {font-size:11px; padding-left:40px; margin-bottom:15px;}
+    #ChekInAll #ChekBlock { padding:15px;}
+    #ChekInAll #ChekBlock #BlockName1 { height:35px;}
+    #ChekInAll #ChekBlock #BlockName1 p { line-height:1.5; padding-top:5px;}
+    #ChekInAll #ChekBlock #BlockName1 input {font-size:14px;}
+    #ChekInAll #ChekBlock #BlockAlias1 { height:35px;}
+    #ChekInAll #ChekBlock #BlockAlias1 p { line-height:35px;}
+    #ChekInAll #ChekBlock #BlockAlias1 input { width:40%; font-size:14px;}
+    #VideoCongratulations #Celebrities { height:35px;}
+    #VideoCongratulations #Celebrities p { line-height:35px;}
+    #VideoCongratulations #Celebrities input { width:40%; font-size:14px;}
+    #VideoCongratulations #CelebritiesEmail { height:35px;}
+    #VideoCongratulations #CelebritiesEmail p { line-height:35px;}
+    #VideoCongratulations #CelebritiesEmail input { width:40%; font-size:14px;}
+    #VideoCongratulations #ButtonSaveStar{width:40%;}
+    #VideoCongratulations #ButtonSaveStar a{font-size:12px;}
+    #ChekInAll #ChekBlock #Phone { height:35px;}
+    #ChekInAll #ChekBlock #Phone p { line-height:35px;}
+    #ChekInAll #ChekBlock #Phone input { width:40%;  font-size:14px;}
+    #ChekInAll #ChekBlock #Login { height:35px;}
+    #ChekInAll #ChekBlock #Login p { line-height:35px;}
+    #ChekInAll #ChekBlock #Login input { width:40%; font-size:14px;}
+    #ChekInAll #ChekBlock #Password { height:35px;}
+    #ChekInAll #ChekBlock #Password p { line-height:35px;}
+    #ChekInAll #ChekBlock #Password input { width:40%; font-size:14px;}
+    #ChekInAll #ChekBlock #PasswordReply { height:35px;}
+    #ChekInAll #ChekBlock #PasswordReply p {line-height:1.5; padding-top:5px;}
+    #ChekInAll #ChekBlock #PasswordReply input { width:40%; font-size:14px;}
+    #ChekInAll #BoxIcon ul li { background-size:45px !important;}
+    #ChekInAll #BoxIcon ul li p { padding-top:55px; font-size:12px;}
+    #Advantages {background:#f9f3f3;}
+    #Advantages #BgAdvantages  {padding-top:25px; padding-bottom:20px;}
+    #Advantages #BgAdvantages ul li { background-size:28px; padding:3px 0 3px 40px; font-size:16px;}
+    .validmessage{  font-size: 14px; text-decoration: none; width: 29%; float:right  }
+    input.invalidform::-moz-placeholder {font-size: 12px;}
+    input.invalidform::-webkit-input-placeholder { font-size: 12px;}
+    input.validform::-moz-placeholder {font-size: 12px;}
+    input.validform::-webkit-input-placeholder { font-size: 12px;}
+    #validEmail{  margin-top: 10px;  margin-left: -25px;  }
+    #validPassword{  margin-top: 10px;  margin-left: -25px;  }
+    #validPassword1{  margin-top: 10px;  margin-left: -25px;  }
+    #validLogin{  margin-top: 10px;  margin-left: -25px;  }
+    #AllBody #TitleCabinet h1 {font-size:20px; background-size:28px;}
+    #AllBody #TitleCabinet { padding-top:10px;}
+    #BodyBlock #BlockCenter #TitleBlockCenter { font-size:24px;}
+    #BodyBlock #BlockCenter p { font-size:14px;}
+    #AllBody #TitleCabinet h1 {font-size:20px; background-size:28px;}
+    #AllBody #TitleCabinet { padding-top:10px;}
+    #AllBody #CenterCabinet #RightCabinet #TopDescr #BottomDescr input[type="checkbox"] + label { padding-top:30px;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant input[type="checkbox"] + label { padding-top:24px;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo { height:auto;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo input { width: 280%; height:auto; line-height:1.3; background:none; padding-left:0; text-align:center; padding:7px 0;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo input:hover {background:linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonMoney { height:auto;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonMoney a { font-size:18px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonInput { height:auto;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonInput input { font-size:18px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonOrders { height:auto;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonOrders a { font-size:13px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+    #AllBody #RightCabinet #BottomDescr #BlockSkype #ButtonSkype { height:auto;}
+    #AllBody #RightCabinet #BottomDescr #BlockSkype #ButtonSkype a { font-size:14px; height:auto; line-height:1.1; text-align:center; padding-top: 5px; padding-bottom: 2px;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonTurneOn { height:auto;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonTurneOn a { font-size:13px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonTurneOf { height:auto;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonTurneOf a { font-size:13px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonActiveOn { height:auto;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonActiveOn a { font-size:13px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonActiveOf { height:auto;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonActiveOf a { font-size:13px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonHelp { height:auto;}
+    #AllBody #CenterCabinet #LeftCabinet #ButtonHelp a { font-size:13px; height:auto; line-height:1.3; text-align:center; padding:7px 0;}
+    #AllBody #CenterCabinet #RightCabinet #TopDescr {padding:10px 8px 10px 8px;}
+    #AllBody #CenterCabinet #RightCabinet #TopDescr p { padding-right:0; width:100%;}
+    input[type="checkbox"] {position: static; left: 0;}
+    input[type="checkbox"] + label { background:none; }
+    input[type="checkbox"]:checked + label {background-position: 0;}
+    #AllBody #CenterCabinet #RightCabinet #BottomDescr label p { margin-top:-28px;}
+    #AllBody #CenterCabinet #RightCabinet #BottomDescr #ButtonLoading { width:100%;}
+    #AllBody #CenterCabinet #RightCabinet #BottomDescr #ButtonLoading a { text-align:center;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockName { height:30px; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockName p { width:100%; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockName input { width:100%; margin-bottom:7px; font-size:14px;}
+    #AllBody #RightCabinet #BottomDescr #BlockSkype { height:30px; }
+    #AllBody #RightCabinet #BottomDescr #BlockSkype p { width:100%; }
+    #AllBody #RightCabinet #BottomDescr #BlockSkype input {margin-bottom:7px; font-size:14px;}
+    #AllBody #RightCabinet #BottomDescr #BlockAlias { height:30px; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAlias p { width:100%; line-height:1.5;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAlias input { width:100%; font-size:14px; margin-bottom:7px; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail { height:30px; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail p { width:100%; line-height:1.5;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockEmail input { width:100%; font-size:14px; margin-bottom:7px;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAboutMe { }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAboutMe p { width:100%; line-height:1.5;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockAboutMe textarea {width:100%; font-size:14px; margin-bottom:7px;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #AdminComment { }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #AdminComment p { width:100%; line-height:1.5;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #AdminComment #Texteditor {width:100%; font-size:14px; margin-bottom:7px;}
+    input[type="AboutMe"] {position: static; left: 0;}
+    input[type="AboutMe"] + label { background:none;}
+    input[type="AboutMe"]:checked + label {background-position: 0;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant { width:100%; padding-left:0; margin-top:2px; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant label p { margin-top:-20px; text-align:left !important; padding-left:25px;}
+    /*#AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockIwant label { float: none; padding-left:0;}*/
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory { height:30px; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory p { width:100%; line-height:1.5;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory select { width:100%;  font-size:14px; margin-bottom:7px; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockCategory input { width:100%; margin-left: 0px; font-size:14px; margin-bottom:7px; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos { height:30px; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos p { width:100%; line-height:1.5;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockNumberVideos input { width:100%; font-size:14px; margin-bottom:7px; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo { height:30px; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo p { width:100%; line-height:1.5;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockPriceVideo input { width:100%; font-size:14px; margin-bottom:7px; }
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects { height:30px;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects p { width:100%; line-height:1;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #BlockMyProjects select { width:100%; font-size:14px; height:30px;}
+    #AllBody #CenterCabinet #RightCabinet #FormsBlock #Button { width:100%;}
+    #SliderCabinet { padding:18px 0 33px 0; }
+    #SliderCabinet #SliderBclock #TitleTopSlider { font-size:18px; background-position:10px top; padding-left:65px; margin-bottom:45px;}
+    .owl-prev {margin-left:-15%;}
+    .owl-next {margin-left:102%;}
+    #SliderCabinet #SliderBclock #ListSlider #Txt p { font-size:14px; }
+    #SliderCabinet #SliderBclock #ListSlider #Txt a { font-size:14px; text-decoration: none;}
+    #SliderCabinet #SliderBclock #ListSlider #BottomSlider { height:auto;}
+    #SliderCabinet #SliderBclock #ListSlider #BottomSlider a { font-size:12px; height:auto; line-height:1.1; padding:3px 0;}
+    #AddNews #BlockEmail { height:30px; margin: auto;}
+    #AddNews #BlockEmail p { width:100%; line-height:1.5; text-align: center}
+    #AddNews #BlockEmail input { width:100%; font-size:14px; margin-bottom:7px;}
+    #AddNews #AdminComment { }
+    #AddNews #AdminComment p { width:100%; line-height:1.5; text-align: center}
+    #AddNews #AdminComment #Texteditor {width:100%; font-size:14px; margin-bottom:7px;}
+    #AddNews #Button {margin-top:50px;}
+    #MyOrdersAll h1 {font-size:20px; background-size:28px; padding-left:40px;}
+    #MyOrdersAll #BelowH1Bottom {padding-left:40px;}
+    #ButtonBlock .One { width:30%; margin-left:2.7%; margin-right:0;}
+    #ButtonBlock .Two { width:30%; margin-left:2.7%; margin-right:0;}
+    #ButtonBlock .One a { width:100%;}
+    #ButtonBlock .Two a {width:100%;}
+    #BlockAllVideo #BlockVideo .OneVideo .BlVideo { width:100%;}
+    #BlockAllVideo #BlockVideo .OneVideo .BlVideo .Center { margin:0 auto;}
+    #BlockAllVideo #BlockVideo .OneVideo .RightDes { width:100%;}
+    #BlockAllVideo #BlockVideo .OneVideo .ButtonMoreOneVideo { float:right;}
+    #blockpay1 {width: 100%; text-align: center; float: left; margin-top: 15px}
+    #blockpay1 input {text-align: center}
+    #blockpay2  {width: 100%; text-align: center; float: left; margin-top: 15px}
+    #blockpay2  input {text-align: center }
+    #blockpay3  {width: 100%; text-align: center; float: left; margin-top: 15px}
+    #blockpay3  input {text-align: center; margin-bottom: 15px}
+    #Formalization { padding:15px 0;}
+    #Formalization h1 {font-size:20px; background-size:28px; padding-left:40px;}
+    #Formalization #BelowH1Bottom { padding-left:40px;}
+    #BlockVideoFormaliz { padding:10px 0;}
+    #FormalizationCabinet { padding-top:20px;}
+    #FormalizationCabinet #LeftBlockForms #BlockName2 p, #FormalizationCabinet #LeftBlockForms #MethodUp p, #FormalizationCabinet #LeftBlockForms #Email2 p, #FormalizationCabinet #LeftBlockForms #Phone2 p, #FormalizationCabinet #LeftBlockForms #BlockName3 p, #FormalizationCabinet #LeftBlockForms #Event p, #FormalizationCabinet #LeftBlockForms #Email3 p, #FormalizationCabinet #LeftBlockForms #Phone3 p, #FormalizationCabinet #LeftBlockForms #CongratulatoryText3 p, #FormalizationCabinet #LeftBlockForms #DateCongratulations p, #FormalizationCabinet #LeftBlockForms #TimeCongratulations p { font-size:10px; width:22%;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms { margin-bottom:0;}
+    #ButtonTwoTitleForm { margin-bottom:0;}
+    #FormalizationCabinet #LeftBlockForms #BlockName2 input, #FormalizationCabinet #LeftBlockForms #Email2 input, #FormalizationCabinet #LeftBlockForms #Phone2 input, #FormalizationCabinet #LeftBlockForms #BlockName3 input, #FormalizationCabinet #LeftBlockForms #Email3 input, #FormalizationCabinet #LeftBlockForms #Phone3 input, #FormalizationCabinet #LeftBlockForms #CongratulatoryText3 textarea, #FormalizationCabinet #LeftBlockForms #DateCongratulations input, #FormalizationCabinet #LeftBlockForms #TimeCongratulations input {width:78%;}
+    #FormalizationCabinet #LeftBlockForms #CongratulatoryText3 p {width:100%;}
+    #FormalizationCabinet #LeftBlockForms #CongratulatoryText3  {margin-top: 60px}
+    #FormalizationCabinet #LeftBlockForms #CongratulatoryText3 textarea { width:100%;}
+    #FormalizationCabinet #LeftBlockForms #DateCongratulations, #FormalizationCabinet #LeftBlockForms #TimeCongratulations { width:100%;}
+    #FormalizationCabinet #LeftBlockForms #DateCongratulations { padding-right:0; margin-bottom:30px;}
+    #FormalizationCabinet #LeftBlockForms #TimeCongratulations { padding-left:0;}
+    #FormalizationCabinet #LeftBlockForms #DateCongratulations p, #FormalizationCabinet #LeftBlockForms #TimeCongratulations p { width:100%; line-height:1.5; }
+    #FormalizationCabinet #LeftBlockForms #DateCongratulations input, #FormalizationCabinet #LeftBlockForms #TimeCongratulations input { width:100%;}
+    #FormalizationCabinet #RightBlockCabinet { padding:0 10px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #FotoFamosPerson {margin:20px auto 15px auto;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #FotoFamosPerson { width:160px; height:186px; margin-top:10px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #NamePerson p, #FormalizationCabinet #LeftBlockForms #MethodUp p, #FormalizationCabinet #RightBlockCabinet #BlockPerson #PricePerson p, #FormalizationCabinet #RightBlockCabinet #BlockPerson #VideoPerson p { width:100%; text-align:center;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson p.Marker { width:100% !important; line-height:1.5; padding:10px 0; margin-left:0; margin-bottom:5px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson p.Marker span { font-size:15px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #NamePerson, #FormalizationCabinet #RightBlockCabinet #BlockPerson #PricePerson, #FormalizationCabinet #RightBlockCabinet #BlockPerson #VideoPerson { line-height:1.5; height:auto;}
+    #FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet { width:90%; max-width:203px;}
+    #FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo { width:90%; max-width:203px;}
+    #FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetOne { width:90%; max-width:203px;}
+    #FormalizationCabinet #LeftBlockForms #RadioButton p {font-size: 10px;}
+    #FormalizationCabinet #LeftBlockForms #RadioButton input { float:left; margin-left: 15px}
+    #FormalizationCabinet #LeftBlockForms #MethodUpOne { width: 285px; margin: 0 auto;}
+    #AllSearch { padding-top:20px;}
+    .SlideToggle { width:460px;}
+    #BlockSerch { width:460px;}
+    .menu_list { width:250px;}
+    .menu_head { width:250px;}
+    .menu_body { width:230px; margin-left:50px;}
+    .drop-block { width:150px; margin-left:0;}
+    .drop-block li a { width:150px;}
+    #firstpane #ButtonN { margin-left:50px;}
+    #Offer #offerblock p { text-align: center; padding-left: 10px; padding-right: 10px;}
+    #Offer #offerblock input {width: 90%; margin-top: 15px;}
+    #Offer #offerblock {width: 100%;}
+    #Offer #ButtonOffer {margin: 15px 35%;}
+    #Offer #offerblock p span { margin-top: 25px; }
+    #Formalization { padding:15px 0;}
+    #Formalization h1 {font-size:20px; background-size:28px; padding-left:40px;}
+    #Formalization #BelowH1Bottom { padding-left:40px;}
+    #BlockVideoFormaliz { padding:10px 0;}
+    #BlockPerson #Descr #Topi {background:url(images/MyOrders2/Star.png) 15px 20px no-repeat, #444343; padding:12px 3px 12px 18px;}
+    #BlockPerson #Descr #Topi p { width:66%; height:auto; margin-left:10%;}
+    #BlockPerson #Descr #Topi #On { margin-left:3px;}
+    #BlockPerson #Info p { width:45%; margin-left:2.5%; float:left;}
+    #BlockPerson #Info #SocProject { width:45%; float:left; margin-left:2.5%; font-size:14px;}
+    #AllBodyCheck #TitleCheckIn2 h1 {font-size:20px; background-size:28px;}
+    #AllBodyCheck #TitleCheckIn2 { padding-top:10px;}
+    #BlockCheckInaAll #BlockNamePr { width:80%; margin-left:10%;}
+    #BlockCheckInaAll #BlockNamePr p { width:50%;}
+    #BlockCheckInaAll #BlockNamePr input { width:50%;}
+    #BlockCheckInaAll .BlockNameAll { width:80%; margin-left:10%; margin-right:0;}
+    #BlockCheckInaAll .BlockNameAll1 {width:80%; margin-left:10%; margin-right:0;}
+    #BlockCheckInaAll .BlockNameAll1 p { font-size:14px;}
+    #BlockCheckInaAll .BlockNameAll2 {width:80%; margin-left:10%; margin-right:0;}
+    #BlockCheckInaAll .BlockNameAll2 p { font-size:14px;}
+    #BlockCheckInaAll #BlockProject {width:80%; margin-left:10%; margin-right:0; height: 400px;}
+    #BlockCheckInaAll #BlockProject p { width:50%;}
+    #BlockCheckInaAll #BlockProject #Texteditor { width:100%;}
+    #AboutAss #BlockOne { margin:0; padding:0;padding-right:20px;}
+    #AboutAss #BlockTwo {margin:0; padding:0; }
+    #AboutAss #BlockThree {margin:0; padding:0; padding-top:30px; padding-right:15px;}
+    #AboutAss #BlockFor {margin:0; padding:0; padding-top:30px;}
+    #AllBodyKont #TitleKont h1 {font-size:20px; background-size:28px;}
+    #AllBodyKont #TitleKont { padding-top:10px;}
+    #BlockKotnAll { padding-top:15px;}
+    #AllBodyImpressum #TitleImpres h1 {font-size:20px; background-size:28px;}
+    #AllBodyImpressum #TitleImpres { padding-top:10px;}
+    #AllBodyDaten #TitleDaten h1 {font-size:20px; background-size:28px;}
+    #AllBodyDaten #TitleDaten { padding-top:10px;}
+    #CharitableProjectsTop h1 {font-size:20px; background-size:28px;}
+    #BlockSlider #SliderCharitable { width:100%;}
+    #BlockSlider #SliderCharitable div {}
+    #BlockSlider #SliderCharitable div img {width:89%;}
+    #ButtonBlockCharit .Two {margin-right:10px;}
+    #ButtonBlockCharit .One {margin-right:10px;}
+    #ButtonBlockCharit .Two a p, #ButtonBlockCharit .One a p {font-size:11px;}
+    #Block .GeneralUnit {width:100%;}
+    #Block .VideoUnit {float:none; width:470px; margin-top:10px; padding-top:0; margin:0 auto;}
+    #Block .VideoUnit .Video {margin-left:0; float:left;}
+    .flexslider .slides .descr {font-size: 15px; padding:5px; top:58%;}
+    .flexslider .slides .descr p.FisrtText { font-size:15px;}
+    .flexslider .slides .descr .ButtonOrder {}
+    .ms-choice {  font-size: 14px;  height: 30px;  line-height: 26px;  }
+}
+
+@media screen and (max-width: 640px) {
+    #AllBody #CenterCabinet #LeftCabinet #ButtonFoto #photo { font-size: 8px; }  #videorecord {width: 100%}
+    #AddNews { height: 600px}
+    #AddNews #Button {margin-top:120px;}}
+/*-------------------------------------*/
+@media screen and (max-width: 479px) { /* 320<width<479 main 320*/
+    html {width:100%; min-width:307px;}
+    nav ul li a { font-size:11px;}
+    #Phone1 { padding-left:18%;}
+    #Header { background-size: cover; padding-top:10px;}
+    #Header #Logo { display:none;}
+    #Header #Searching { width:90%;  margin:0; margin-left:5%; float:none;}
+    #Header #Searching p { text-align:center;}
+    #Header #ButtonBlock { margin-top:15px;}
+    #BlockImgAll #BlockImg #LeftBlock .box { display:none;}
+    #BlockImgAll #BlockImg #RightBlock .box { display:none;}
+    #BlockImgAll #BlockImg #RightBlock .box1 { width:100%; background-position: 70% center; background-size:70px;}
+    #BlockImgAll #BlockImg #RightBlock .box1 p.boxTop { font-size:18px;}
+    #BlockImgAll #BlockImg #RightBlock .box1 p.boxTop2 { font-size:19px;}
+    #BlockImgAll #BlockImg #RightBlock .box1 p.boxTop2 span { font-size:18px;}
+    #BlockImgAll #BlockImg #RightBlock .box1 a {background-position:95% center;}
+    #VideoCongratulations h1 { background:none;}
+    #VideoCongratulations h2 { background:none;}
+    #VideoCongratulations #BlockVideoBottom #TitleOurMission { background:none;}
+    #BottomNavAll { background-size:cover; padding:0;}
+    #BottomNavAll #ListMenu {width:50%;}
+    #BottomNavAll #ListMenu ul { width:100%; margin:0; text-align:center;}
+    #BottomNavAll #ListMenu ul li { float:none;}
+    #BottomNavAll #ListMenu ul li a { border:none; padding-left:0; display:block}
+    #BottomNavAll #PhoneBottom { width:50%; font-size:15px; text-align:center;}
+    #BottomNavAll #Soc ul {}
+    #BottomNavAll #Soc ul li { float:none; }
+    #BottomNavAll #Soc ul li a {margin:0 auto; margin-top:15px;}
+    #VideoCongratulations h1 span {    padding-left: 0px;}
+    #ChekInAll h1 {background:none; text-align:center; font-size:15px; padding-left:0;}
+    #ChekInAll #CenterPChek { padding-left:0; text-align:center;}
+    #ChekInAll #ChekBlock #BlockName1 p { display: none}
+    #ChekInAll #ChekBlock #BlockName1 input { width:100%; margin-bottom:14px;}
+    #ChekInAll #ChekBlock #BlockAlias1 p { display: none}
+    #ChekInAll #ChekBlock #BlockAlias1 input { width:100%; margin-bottom:14px;}
+    #VideoCongratulations #Celebrities p { display: none}
+    #VideoCongratulations #Celebrities input { width:100%; margin-bottom:14px;}
+    #VideoCongratulations #CelebritiesEmail p { display: none}
+    #VideoCongratulations #CelebritiesEmail input { width:100%; margin-bottom:14px;}
+    #ChekInAll #ChekBlock #Phone p { display: none}
+    #ChekInAll #ChekBlock #Phone input { width:100%; margin-bottom:14px;}
+    #ChekInAll #ChekBlock #Login p { display: none}
+    #ChekInAll #ChekBlock #Login input { width:100%; margin-bottom:14px;}
+    #ChekInAll #ChekBlock #Password p { display: none}
+    #ChekInAll #ChekBlock #Password input { width:100%; margin-bottom:14px;}
+    #ChekInAll #ChekBlock #PasswordReply p { display: none}
+    #ChekInAll #ChekBlock #PasswordReply input { width:100%; margin-bottom:14px;}
+    #ChekInAll #ChekBlock #Agreement input[type="checkbox"] {position: static; left: 0;}
+    #ChekInAll #ChekBlock #Agreement input[type="checkbox"] + label { background:none;}
+    #ChekInAll #ChekBlock #Agreement input[type="checkbox"]:checked + label {background-position: 0;}
+    #ChekInAll #ChekBlock #Agreement label {float: none; padding-left:0;}
+    #ChekInAll #ChekBlock #Agreement label p {margin-top:-20px; text-align:left !important; padding-left:25px;}
+    #ChekInAll #ChekBlock #Agreement #ButtonLoading { width:100%; margin-right:0; float:none;}
+    #VideoCongratulations #ButtonSaveStar { width:100%; margin-right:0; float:none;}
+    #VideoCongratulations #ButtonSaveStar a{font-size:15px;}
+    #ChekInAll #BoxIcon ul { margin-bottom:0;}
+    #ChekInAll #BoxIcon ul li { background-size:35px !important; width:33%; margin-bottom:15px;}
+    #ChekInAll #BoxIcon ul li p { padding-top:40px; font-size:8px;}
+    #Advantages #BgAdvantages ul li { font-size:14px; padding:2px 0 7px 40px;}
+    .validmessage{ position: absolute; width: 100%; margin-top: 18px; }
+    input.validform::-moz-placeholder {color: #767479; }
+    input.validform::-webkit-input-placeholder { color: #767479;}
+    #AllBody #TitleCabinet h1 { background:none; text-align:center; padding-left:0;}
+    #AllBody #TitleCabinet #BelowH1 {text-align:center; padding-left:0;}
+    #BodyBlock #BlockCenter p { font-size:12px;}
+    #BodyBlock #BlockCenter #BlockOrderAlli p { font-size:14px;}
+    #BodyBlock #BlockCenter #DescrOrd p { font-size:14px;}
+    #AllBody #TitleCabinet h1 { background:none; text-align:center; padding-left:0;}
+    #AllBody #TitleCabinet #BelowH1 {text-align:center; padding-left:0;}
+    #AllBody #CenterCabinet #LeftCabinet { width:100%;}
+    #AllBody #CenterCabinet #LeftCabinet #BlockFoto { width:290px; height:auto; margin:0 auto; overflow:hidden;}
+    #AllBody #CenterCabinet #LeftCabinet #BlockFoto img { width:100%;}
+    #AllBody #CenterCabinet #RightCabinet { width:100%;}
+    #SliderCabinet #SliderBclock {padding:15px;}
+    #SliderCabinet #SliderBclock #TitleTopSlider { font-size:15px;}
+    #SliderCabinet #SliderBclock #ListSlider { width:100%;}
+    .owl-prev { display:none;}
+    .owl-next { display:none;}
+    #SliderCabinet #ButtonCabinetBottom { width:96%; height: auto; }
+    #SliderCabinet #ButtonCabinetBottom a { height:auto; text-align:center; background:none; line-height:1.2; padding:5px 0;}
+    #SliderCabinet #ButtonCabinetBottom a:hover {background:linear-gradient(to bottom, #d5433a, #ec6137);}
+    #videorecord {width: 100%}
+    #videorecord #loadvideos video{width: 290px}
+    #videorecord #loadvideos audio{width: 290px}
+    #MyOrdersAll h1 {background:none; text-align:center; font-size:15px; padding-left:0;}
+    #MyOrdersAll #BelowH1Bottom { padding-left:0; text-align:center;}
+    #ButtonBlock .One a p { font-size:12px;}
+    #ButtonBlock .Two a p { font-size:12px;}
+    #statusErrorOrderingModal p {margin-bottom: 15px; margin-top: 20px;}
+    #blockpay1 {width: 100%; text-align: center; float: left; margin-top: 15px}
+    #blockpay1 input {text-align: center}
+    #blockpay2  {width: 100%; text-align: center; float: left; margin-top: 15px}
+    #blockpay2  input {text-align: center }
+    #blockpay3  {width: 100%; text-align: center; float: left; margin-top: 15px}
+    #blockpay3  input {text-align: center; margin-bottom: 15px}
+    #Formalization h1 {background:none; text-align:center; font-size:15px; padding-left:0;}
+    #Formalization #BelowH1Bottom { padding-left:0; text-align:center;}
+    #FormalizationCabinet { padding-bottom:30px;}
+    #FormalizationCabinet p.formaliza { font-size:20px; padding:7px 0 7px 0; text-align:center; width:100%; margin: 5px 0 15px 0;}
+    #FormalizationCabinet #LeftBlockForms { width:98%; margin:0 auto;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms .formaliza {margin-bottom:15px;}
+    #FormalizationCabinet #LeftBlockForms #BlockName2 p, #FormalizationCabinet #LeftBlockForms #MethodUp p, #FormalizationCabinet #LeftBlockForms #Email2 p, #FormalizationCabinet #LeftBlockForms #Phone2 p, #FormalizationCabinet #LeftBlockForms #BlockName3 p, #FormalizationCabinet #LeftBlockForms #Event p, #FormalizationCabinet #LeftBlockForms #Email3 p,#FormalizationCabinet #LeftBlockForms #Phone3 p, #FormalizationCabinet #LeftBlockForms #CongratulatoryText3 p, #FormalizationCabinet #LeftBlockForms #DateCongratulations p, #FormalizationCabinet #LeftBlockForms #TimeCongratulations p { font-size:12px; width:100%; text-align:center; line-height:1.5;}
+    #FormalizationCabinet #LeftBlockForms #BlockName2 input, #FormalizationCabinet #LeftBlockForms #MethodUp p, #FormalizationCabinet #LeftBlockForms #Email2 input, #FormalizationCabinet #LeftBlockForms #Phone2 input, #FormalizationCabinet #LeftBlockForms #BlockName3 input, #FormalizationCabinet #LeftBlockForms #Event input, #FormalizationCabinet #LeftBlockForms #Event input, #FormalizationCabinet #LeftBlockForms #Email3 input, #FormalizationCabinet #LeftBlockForms #Phone3 input, #FormalizationCabinet #LeftBlockForms #CongratulatoryText3 textarea, #FormalizationCabinet #LeftBlockForms #DateCongratulations input, #FormalizationCabinet #LeftBlockForms #TimeCongratulations input {width:100%; margin-bottom:10px;}
+    #FormalizationCabinet #LeftBlockForms #CongratulatoryText3 textarea { margin-top:0;}
+    #FormalizationCabinet #LeftBlockForms #TitleTopForms #ButtonTopForms { margin-left:0; margin:0 auto; width:100%; text-align:center; margin-bottom:15px; margin-top:10px;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms { margin-left:0; margin:0 auto; width:100%; text-align:center; margin-bottom:15px;}
+    #ButtonTwoTitleForm { margin-left:0; margin:0 auto; width:100%; text-align:center; margin-bottom:15px;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms1 { margin-left:0; margin:0 auto; width:100%; text-align:center; margin-bottom:15px;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2 { width: 100%;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2 input {width: 100%;  }
+    #photo3 { width: 100%;}
+    #photo3 input {width: 100%;  }
+    #FormalizationCabinet #RightBlockCabinet { width:98%; margin-top:35px;}
+    #FormalizationCabinet #LeftBlockForms #RadioButton p {font-size: 11px;}
+    #FormalizationCabinet #LeftBlockForms #Phone2 { margin-bottom:70px; }
+    #FormalizationCabinet #LeftBlockForms #DateCongratulations { padding-right:0; margin-bottom:30px;}
+    #FormalizationCabinet #LeftBlockForms #RadioButton input { float:left; margin-left: 14px}
+    #FormalizationCabinet #LeftBlockForms #MethodUpOne { width: 320px; margin: 0 auto;}
+    .SlideToggle { width:300px;}
+    #BlockSerch { width:300px;}
+    #BlockSerch p { font-size:16px; padding-left:30px;}
+    .menu_list { width:150px;}
+    .menu_head { width:150px; font-size:14px; padding-left:35px;}
+    .menu_body { width:140px; margin-left:10px;}
+    .menu_body>li>a { width:140px;}
+    .drop-block { width:auto; margin-left:0;}
+    .drop-block li a { width:130px; overflow:hidden;}
+    #AllSearch #SearchingBlock { width:250px; margin:0 auto 15px auto;}
+    #firstpane #ButtonN { margin-left:0;}
+    #Offer #offerblock p { text-align: center; }
+    #Offer #offerblock p span { margin-top: 25px; }
+    #Offer #offerblock input {width: 90%; margin-top: 15px;}
+    #Offer #offerblock {width: 100%;}
+    #Offer #ButtonOffer {margin: 15px 25%;}
+    #Formalization h1 {background:none; text-align:center; font-size:15px; padding-left:0;}
+    #Formalization #BelowH1Bottom {padding-left:0; text-align:center;}
+    #BlockPerson #LeftBlock { width:100%;}
+    #BlockPerson #LeftBlock #Photo { width:70%; margin:0 auto; margin-top:15px;}
+    #BlockPerson #Info #ButtonOrderCabinetPerson { width:70%; margin:0 auto; margin-top:276px}
+    #BlockPerson #But { width:100%; float:left;}
+    #BlockPerson #But #ButtonAgo { width:70%; margin:0 auto;}
+    #BlockPerson #Descr { width:100%; margin:0; padding:0;}
+    #BlockPerson #Descr #Topi { width:100%;}
+    #BlockPerson #Info { width:100%;}
+    #BlockPerson #Info p { width:80%; margin-left:10%;}
+    #BlockPerson #Info #SocProject { width:80%; margin-left:10%; font-size:18px;}
+    #AllBodyCheck #TitleCheckIn2 h1 { background:none; text-align:center; padding-left:0;}
+    #AllBodyCheck #TitleCheckIn2 #BelowlH1 {text-align:center; padding-left:0;}
+    #BlockCheckInaAll #CenterCheckIn { width:98%; margin-left:1%; font-size:24px;}
+    #BlockCheckInaAll #BlockNamePr { width:98%; margin-left:1%;}
+    #BlockCheckInaAll #BlockNamePr p { font-size:12px; padding-top:12px; padding-left:2px;}
+    #BlockCheckInaAll .BlockNameAll {width:98%; margin-left:1%;}
+    #BlockCheckInaAll .BlockNameAll p { font-size:12px; padding-top:12px; padding-left:2px;}
+    #BlockCheckInaAll .BlockNameAll1 {width:98%; margin-left:1%;}
+    #BlockCheckInaAll .BlockNameAll1 p { font-size:12px; line-height:1; padding-left:2px; padding-top:7px;}
+    #BlockCheckInaAll .BlockNameAll2 {width:98%; margin-left:1%;}
+    #BlockCheckInaAll .BlockNameAll2 p { font-size:12px; line-height:1; padding-left:2px; padding-top:7px;}
+    #BlockCheckInaAll #BlockProject {width:98%; margin-left:1%;}
+    #BlockCheckInaAll #BlockProject p {font-size:12px; padding-top:12px; padding-left:2px;}
+    #AboutAss #BlockVideo { width:90%; margin:0 auto; margin-top:15px;}
+    #AboutAss #BlockOne { width:100%; padding:0; padding-left:10px; margin-top:15px;}
+    #AboutAss #BlockTwo { width:100%; padding:0; padding-left:10px; margin-top:15px;}
+    #AboutAss #BlockThree { width:100%; padding:0; height:auto; padding-left:10px; margin-top:15px;}
+    #AboutAss #BlockFor { width:100%; padding:0; padding-left:15px; margin-top:15px; height:auto;}
+    #AboutAss #BlockFor p { text-align:center; padding:0;}
+    #AllBodyKont #TitleKont h1 { background:none; text-align:center; padding-left:0;}
+    #AllBodyKont #TitleKont #BelowlH1Kont {text-align:center; padding-left:0;}
+    #BlockKotnAll #FirstName { width:90%; margin-left:5%;}
+    #BlockKotnAll #LastName {width:90%; margin-left:5%;}
+    #BlockKotnAll #EmailBlock { width:90%; margin-left:5%;}
+    #BlockKotnAll #BetreffBlock { width:90%; margin-left:5%;}
+    #BlockKotnAll #TxtBlock { margin-left:5%; width:90%;}
+    #BlockKotnAll #ButtonKont { margin:0 auto; margin-top:25px;}
+    #AllBodyImpressum #TitleImpres h1 { background:none; text-align:center; padding-left:0;}
+    #BlockImpresAll #AllPreson .OnePerson { width:300px; margin:0; margin-bottom:50px; height:auto;}
+    #BlockImpresAll #AllPreson .OnePerson .Foto { width:100px; height:100px;}
+    #BlockImpresAll #AllPreson .OnePerson .Foto img { width:270px; height:220px;}
+    #BlockImpresAll #AllPreson .OnePerson .Pos p,#BlockImpresAll #AllPreson .OnePerson .Email p,#BlockImpresAll #AllPreson .OnePerson .Telef p,#BlockImpresAll #AllPreson .OnePerson .And p { font-size:13px;}
+    #AllBodyDaten #TitleDaten h1 { background:none; text-align:center; padding-left:0;}
+    #AllBodyDaten #TitleDaten #BelowH1Daten {text-align:center; padding-left:0;}
+    #AllDaten p { text-align:center;}
+    #CharitableProjectsTop h1 {background:none; text-align:center; padding-left:0;}
+    #CharitableProjectsTop #BelowH1Bottom {text-align:center; padding-left:0;}
+    #ButtonBlockCharit .Two {width:45%; margin-right:2.5%; margin-left:2.5%;}
+    #ButtonBlockCharit .One {width:45%; margin-right:2.5%; margin-left:2.5%;}
+    #ButtonBlockCharit .Two:nth-child(3) {width:70%; margin-left:15%; margin-top:15px;}
+    #ButtonBlockCharit .Two:nth-child(3) a {}
+    #ButtonBlockCharit .One:nth-child(3) {width:70%; margin-left:15%; margin-top:15px;}
+    #ButtonBlockCharit .One:nth-child(3) a {}
+    #Block .GeneralUnit {margin-top:15px;}
+    #Block .GeneralUnit .ImgBlock {width:80%; margin-left:10%; height:auto; margin-right:10%;}
+    #Block .GeneralUnit .NameProject {text-align:center;  width:100%; float:none;}
+    #Block .GeneralUnit .NameProject .Name { text-align:center; float:none; font-size:24px;}
+    #Block .GeneralUnit .NameProject p { width:100%; text-align:center; margin-bottom:15px;}
+    #Block .GeneralUnit .ButtonBlockGener .Doc { width:80%; float:none; margin-left:10%;}
+    #Block .GeneralUnit .ButtonBlockGener .Support { width:80%; float:none; margin:10px 10%;}
+    #Block .VideoUnit { width:230px; float:none;}
+    #Block .VideoUnit .Video {float:none;}
+    .flex-direction-nav a:before {top: 22%;}
+    .flex-direction-nav a:after {top: 22%;}
+    .flexslider .slides .descr {top: 46%; margin:0 auto; padding-bottom:5px;}
+    .flexslider .slides .descr .ButtonOrder {height:40px;}
+    .flexslider .slides .descr .ButtonOrder .Prezent { background-size:40px; height:40px;}
+    .flexslider .slides .descr .ButtonOrder a {height:20px; line-height:20px; margin-top:15px;}
+}
+
+#box4 {
+
+    /*  background-color: #ccc;
+      color: #333;
+      padding: 1px;*/
+    text-align: center;
+    width: 67px;
+    height: auto;
+
+    text-indent: 0px;
+    /*  border: 1px solid #888;*/
+    -moz-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    -webkit-transition: all 2s ease-out;
+    cursor: pointer;}
+#box4:hover {
+    /*background-color: #33A0D3;
+    color: #000;*/
+    -webkit-transform: scale(3) translate(18px,10px);
+    -moz-transform: scale(3) translate(18px,10px);
+    -o-transform: scale(3) translate(18px,10px);
+
+}
+#box5 {
+
+    /*  background-color: #ccc;
+      color: #333;
+      padding: 1px;*/
+    text-align: center;
+    width: 67px;
+    height: auto;
+
+    text-indent: 0px;
+    /*  border: 1px solid #888;*/
+    -moz-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    -webkit-transition: all 2s ease-out;
+    cursor: pointer;}
+#box5:hover {
+    /*background-color: #33A0D3;
+    color: #000;*/
+    -webkit-transform: scale(3) translate(18px,-15px);
+    -moz-transform: scale(3) translate(18px,-15px);
+    -o-transform: scale(3) translate(18px,-15px);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

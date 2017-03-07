@@ -1,0 +1,199 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, big, em, font, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit;  font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
+:focus { outline: 0;}
+ol, ul { list-style: none;}
+table { border-collapse: separate; border-spacing: 0;}
+caption, th, td { text-align: left; font-weight: normal;}
+strong,b{font-weight:bold}
+em{font-style:italic}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+/*-------------------------------------*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans.eot');
+    src: url('fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans.woff') format('woff'),
+         url('fonts/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*-------------------------------------*/
+*{-moz-box-sizing: border-box; box-sizing: border-box;}
+html {width:100%;}
+body {font-size:14px; color: #7e7e7e; background: #fff; line-height:1.3;  font-family: 'OpenSans', sans-serif;}
+a {color: #6a9b9a; }
+a:hover {text-decoration:none;}
+.clr,#clr,.Clr {clear: both;}
+.NameProject .Name img {
+    width: 20px;
+    margin-left: 10px;
+}
+.NameProject .Name span {
+    margin-left: 10px;
+    float: right;
+    font-size: 14px;
+    color: black;
+    font-family: OpenSans;
+    font-style: normal;
+    text-transform: none;
+}
+#pageable a{text-decoration:none;  color: darkblue}
+#pageable a:hover{text-decoration: underline;  color: red}
+/*-------------------------------------*/
+section { width:1140px; margin:0 auto;}
+#CharitableProjectsTop { padding-top:25px;}
+#CharitableProjectsTop h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/CheckIn/BgTitle.png) left top no-repeat; padding-left:50px;}
+#CharitableProjectsTop h1 span {color:#e32026;}
+#CharitableProjectsTop #BelowH1Bottom {padding-left:50px; text-transform:uppercase; font-weight:bold; font-size:12px; color:#2f9cd0;}
+#BlockSlider { margin-top:25px; background:url(images/Cabinet/BgBlockSlider.jpg) left bottom repeat; padding-top:10px; padding-bottom:5px;}
+#DescrCharitable { padding-top:35px;}
+#DescrCharitable p { font-size:14px; color:#444444; word-spacing:3px; margin-bottom:22px;}
+#ButtonBlockCharit { padding:15px 0; background:url(images/BgBlockSlider.jpg) left bottom repeat;}
+#ButtonBlockCharit .Two { float:left; margin-right:15px;}
+#ButtonBlockCharit .One { float:left; margin-right:15px;}
+#ButtonBlockCharit .One a { text-align:center; width:265px; height:40px; text-decoration:none; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31; display:block;  box-shadow: 0 1px 0 #a70f27;}
+#ButtonBlockCharit .One a p {color:#fff ; border:1px solid #c27073; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:17px; text-shadow:0 -1px 1px #0d4067;}
+#ButtonBlockCharit .One a:hover {background: linear-gradient(to bottom, #d5433a, #ec6137);}
+#ButtonBlockCharit .Two a { text-align:center; width:265px; height:40px; text-decoration:none; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd; display:block;  box-shadow: 0 1px 0 #a8a8a8;}
+#ButtonBlockCharit .Two a p {color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:17px;}
+#ButtonBlockCharit .Two a:hover {background: linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+
+
+#Block { width:100%; background: url(images/CharitableProjects/BgCharitable.jpg) center bottom no-repeat; background-size: cover; padding-bottom:30px;}
+#Block .OneBlock { border-bottom:1px solid #cccccc}
+#Block .GeneralUnit { float:left; width:57.8%; margin-top:55px; }
+#Block .GeneralUnit .ImgBlock { width:220px; height:160px; border:1px solid #b9b9b9; float:left; margin-bottom:30px; margin-right:18px;}
+#Block .GeneralUnit .ImgBlock img { width:100%; height:100%;}
+#Block .GeneralUnit .NameProject { float:left;}
+#Block .GeneralUnit .NameProject .Name { font-size:20px; font-style:italic; font-family:Georgia, "Times New Roman", Times, serif; font-weight:bold; color:#e31e24; margin-bottom:10px;}
+#Block .GeneralUnit .NameProject p { font-weight:bold; font-size:20px; color:#444444; float:left; text-transform:uppercase;}
+#Block .GeneralUnit .NameProject p .Collected { margin-left:15px;}
+#Block .GeneralUnit .NameProject p .Currency { margin-left:5px;}
+#Block .GeneralUnit .DescrGener { font-size:14px; color:#444444;text-transform: none;  font-weight: normal;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 250px;
+
+}
+/*#Block .GeneralUnit .DescrGener {background:url(images/more.png) center bottom no-repeat; background-size: 20px;}*/
+
+#Block .GeneralUnit .DescrGener p { margin-bottom:15px;}
+#Block .GeneralUnit .DescrGener ul p { margin-bottom:0;}
+#Block .GeneralUnit .DescrGener ul li { margin-left:18px; margin-top:4px;}
+#Block .GeneralUnit .ButtonBlockGener { width:100%; margin-top:20px; margin-bottom: 10px;}
+#Block .GeneralUnit .ButtonBlockGener .Doc {width:165px; height:32px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; float:left;}
+#Block .GeneralUnit .ButtonBlockGener .Doc a {text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:30px; line-height:30px; border-radius:3px; background:url(images/Cabinet/BgLogin.png) 91% center no-repeat; text-transform:uppercase; font-weight:bold; font-size:13px; padding-left:15px;}
+#Block .GeneralUnit .ButtonBlockGener .Doc a:hover {background:url(images/Cabinet/BgLogin.png) 91% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#Block .GeneralUnit .ButtonBlockGener .Support {width:200px; height:32px; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31;  box-shadow: 0 1px 0 #a70f27; float:right;}
+#Block .GeneralUnit .ButtonBlockGener .Support a {text-decoration:none; color:#fff ; border:1px solid #c27073; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:15px; text-shadow:0 -1px 1px #0d4067; padding-left:5%; background: url(images/Cabinet/BgReg.png) 91% center no-repeat;}
+#Block .GeneralUnit .ButtonBlockGener .Support a:hover {background:url(images/Cabinet/BgReg.png) 91% center no-repeat, linear-gradient(to bottom, #d5433a, #ec6137);}
+#Block .VideoUnit { float:left; width:23%; padding-top:42px; margin-left:25px;}
+#Block .VideoUnit .Video { width:260px; overflow:hidden; margin-top:14px;}
+#Block .VideoUnit .Video video { width:100%; height:auto;}
+#Block .SlidUnit { float:right; width:17%; margin-top:10px; margin-bottom:35px;}
+
+.Vwidget{margin: 0;padding: 0;width: 200px;}
+a.up, a.down{display: block; width:40px; height:40px; margin: 0 auto;}
+a.up{ padding-bottom: 2px; background: url(images/CharitableProjects/Up.png);}
+a.down { padding-top: 2px; background: url(images/CharitableProjects/Doun.png); }
+.VjCarouselLite{ margin: 0; padding: 0;}
+.VjCarouselLite li{ overflow: hidden; float: none; display: block; padding: 0; text-align: center;}
+.VjCarouselLite li div{ margin: 0 auto; margin-top: 5px; margin-bottom: 5px; height: 115px; width: 165px;}
+.VjCarouselLite li div{ background-size: cover; opacity:0.5;}
+.VjCarouselLite li div:hover { opacity:1;}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1334px) { /* 1200<width<1334 main 1200*/
+
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1199px) { /* 980<width<1199 main 980*/
+section { width:98%;}
+#Block { width:100%; }
+#BlockSlider #SliderCharitable { width:98%; margin:0 auto;}
+#BlockSlider #SliderCharitable div { padding-left:3px;}
+#Block .GeneralUnit {width:53%;}
+#Block .GeneralUnit .ImgBlock { width:180px; height:145px;}
+#Block .VideoUnit {}
+#Block .VideoUnit .Video { width:230px;}
+#Block .SlidUnit { width:180px;}
+.Vwidget { margin:0 auto; width:180px;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 979px) { /* 768<width<979 main 768*/
+#CharitableProjectsTop h1 {font-size:20px; background-size:28px;}
+#BlockSlider #SliderCharitable { width:760px; margin:0 auto;}
+#BlockSlider #SliderCharitable div { padding-left:3px;}
+#Block .OneBlock { padding-bottom:20px;}
+#Block .GeneralUnit { width:70%; }
+#ButtonBlockCharit .Two { width:31%;}
+#ButtonBlockCharit .One { width:31%;}
+#ButtonBlockCharit .Two a, #ButtonBlockCharit .One a { width:auto;}
+#ButtonBlockCharit .Two a p, #ButtonBlockCharit .One a p { font-size:15px;}
+#Block .VideoUnit {float:right; width:30%; margin-left:0;}
+#Block .VideoUnit .Video { margin-left:auto; padding-right:5px;}
+#Block .GeneralUnit .ButtonBlockGener .Support { margin-right:15px;}
+#Block .SlidUnit { display:none;}
+.Vwidget {display:none;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 767px) { /* 480<width<767 main 480*/
+#CharitableProjectsTop h1 {font-size:20px; background-size:28px;}
+#BlockSlider #SliderCharitable { width:100%;}
+#BlockSlider #SliderCharitable div {}
+#BlockSlider #SliderCharitable div img {width:89%;}
+#ButtonBlockCharit .Two {margin-right:10px;}
+#ButtonBlockCharit .One {margin-right:10px;}
+#ButtonBlockCharit .Two a p, #ButtonBlockCharit .One a p {font-size:11px;}
+#Block .GeneralUnit {width:100%;}
+#Block .VideoUnit {float:none; width:470px; margin-top:10px; padding-top:0; margin:0 auto;}
+#Block .VideoUnit .Video {margin-left:0; float:left;}
+}
+/*-------------------------------------*/
+@media screen and (max-width: 479px) { /* 320<width<479 main 320*/
+html {width:100%; min-width:307px;}
+#CharitableProjectsTop h1 {background:none; text-align:center; padding-left:0;}
+#CharitableProjectsTop #BelowH1Bottom {text-align:center; padding-left:0;}
+#ButtonBlockCharit .Two {width:45%; margin-right:2.5%; margin-left:2.5%;}
+    #ButtonBlockCharit .One {width:45%; margin-right:2.5%; margin-left:2.5%;}
+#ButtonBlockCharit .Two:nth-child(3) {width:70%; margin-left:15%; margin-top:15px;}
+#ButtonBlockCharit .Two:nth-child(3) a {}
+    #ButtonBlockCharit .One:nth-child(3) {width:70%; margin-left:15%; margin-top:15px;}
+    #ButtonBlockCharit .One:nth-child(3) a {}
+#Block .GeneralUnit {margin-top:15px;}
+#Block .GeneralUnit .ImgBlock {width:80%; margin-left:10%; height:auto; margin-right:10%;}
+#Block .GeneralUnit .NameProject {text-align:center;  width:100%; float:none;}
+#Block .GeneralUnit .NameProject .Name { text-align:center; float:none; font-size:24px;}
+#Block .GeneralUnit .NameProject p { width:100%; text-align:center; margin-bottom:15px;}
+#Block .GeneralUnit .ButtonBlockGener .Doc { width:80%; float:none; margin-left:10%;}
+#Block .GeneralUnit .ButtonBlockGener .Support { width:80%; float:none; margin:10px 10%;}
+#Block .VideoUnit { width:230px; float:none;}
+#Block .VideoUnit .Video {float:none;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

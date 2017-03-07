@@ -1,0 +1,382 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, big, em, font, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit;  font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
+:focus { outline: 0;}
+ol, ul { list-style: none;}
+table { border-collapse: separate; border-spacing: 0;}
+caption, th, td { text-align: left; font-weight: normal;}
+strong,b{font-weight:bold}
+em{font-style:italic}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+/*--------------------------------------*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans.eot');
+    src: url('fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans.woff') format('woff'),
+         url('fonts/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*-------------------------------------*/
+*{-moz-box-sizing: border-box; box-sizing: border-box;}
+html {width:100%;}
+body {font-size:14px; color: #7e7e7e; background: #fff; line-height:1.3;  font-family: 'OpenSans', sans-serif;}
+a {color: #6a9b9a; }
+a:hover {text-decoration:none;}
+.clr,#clr,.Clr {clear: both;}
+/*-------------------------------------*/
+#buttonpay {margin-left: auto; margin-right: auto; width: 89%;}
+#blockpay1 {float: left;  margin-left: 10px;}
+#blockpay2  {float: left; margin-left: 10px;}
+#blockpay3  {float: left; margin-left: 10px;}
+
+
+#statusErrorOrderingModal p {margin-bottom: 15px;}
+
+section { width:1140px; margin:0 auto;}
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 12px 22px 12px 0; /* Отступы вокруг картинки */
+}
+
+.leftp {font-size: 14px;
+    font-weight: normal;
+    text-transform: none;
+
+}
+.leftp ul, ol{
+     margin-top: 20px; margin-left: 30px; list-style: circle;
+}
+.leftp ol{
+    margin-top: 20px; margin-left: 30px; list-style: lower-greek;
+}
+
+#FormalizationCabinet #LeftBlockForms #MethodUpOne { width: 650px; margin: 0 auto;}
+#MethodUpOne input { position: relative; left: 0}
+.NameNews {  color: #e31e24;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 10px;}
+.NameNews img{width: 20px; margin-left: 10px;}
+.NameNews p{font-family: 'OpenSans', sans-serif; margin-left: 10px; color: #7e7e7e; font-size: 14px; font-style: normal; font-weight: normal; text-transform: none; display: inline-block;}
+#Formalization { padding:25px 0;}
+
+#Formalization h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/CheckIn/BgTitle.png) left top no-repeat; padding-left:50px;}
+#Formalization h1 span {color:#e32026;}
+#Formalization #BelowH1Bottom {padding-left:50px; text-transform:uppercase; font-weight:bold; font-size:12px; color:#2f9cd0;}
+#BlockVideoFormaliz { width:100%; background:url(images/Formalization/BgBlock.jpg) left bottom repeat-x; padding:20px 0;}
+#BlockVideoFormaliz #VideoSlider { width:100%;}
+#BlockVideoFormaliz #VideoSlider div { padding:0 0.3%;}
+#BlockVideoFormaliz #VideoSlider div img { width:100%;}
+#FormalizationCabinet {width:100%; background: url(images/Formalization/BgFormalization.jpg) center bottom no-repeat; padding-top:35px; padding-bottom:35px; margin-bottom:5px;}
+#FormalizationCabinet p.formaliza { font-size:20px; font-weight:bold; color:#ffffff; padding:12px 0 12px 27px; width:262px; background:#000; margin: 12px 0 28px 0;}
+#FormalizationCabinet #LeftBlockForms { width:55.8%; float:left;}
+#FormalizationCabinet #LeftBlockForms #TitleTopForms { width:100%;}
+#FormalizationCabinet #LeftBlockForms #TitleTopForms p { float:left;}
+#FormalizationCabinet #LeftBlockForms #TitleTopForms #ButtonTopForms {width:188px; height:32px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 2px 0 #a8a8a8; margin:0 auto; float:left; margin-left:7%; margin-top:21px;}
+#FormalizationCabinet #LeftBlockForms #TitleTopForms #ButtonTopForms a{text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; padding-left:5%; background:url(images/Cabinet/BgLogin.png) 91% center no-repeat;}
+#FormalizationCabinet #LeftBlockForms #TitleTopForms #ButtonTopForms a:hover{background:url(images/Cabinet/BgLogin.png) 91% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#FormalizationCabinet #LeftBlockForms #BlockName2 { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #BlockName2 p { width:19.2%; float:left; text-transform:uppercase; color:#444444;}
+#FormalizationCabinet #LeftBlockForms #BlockName2 input { float:right; width:80.8%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #Email2 { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #Email2 p { width:19.2%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #Email2 input { float:right; width:80.8%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #Phone2 { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #Phone2 p { width:19.2%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #Phone2 input { float:left; width:41%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms p { float:left;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms{width:160px; height:32px; margin:0 auto; float:left; margin-left:4%; margin-top:21px;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms a{text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; padding-left:5%; background:url(images/Cabinet/BgLogin.png) 96% center no-repeat;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms a:hover{background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms1{width:174px; height:32px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 2px 0 #a8a8a8; margin:0 auto; float:left; margin-left:2%; margin-top:21px;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms1 a{text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; padding-left:5%; background:url(images/Cabinet/BgLogin.png) 96% center no-repeat;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms1 a:hover{background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2 {padding-left:15px; padding-top: 7px; background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to top, #e6e6e6, #f5f5f5); border: 1px solid #bdbdbd; border-radius: 3px;box-shadow: 0 1px 0 #a8a8a8; color: #262626; font-size: 14px; font-weight: bold; height: 32px; text-decoration: none; text-transform: uppercase; width: 160px;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2 input {margin-top: -10px; margin-left: -20px; position: absolute; border:1px solid #f9f9f9; display:block;  height:35px;  width: 160px; border-radius:3px; opacity: 0; }
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2:hover {background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+
+#photo3 {padding-left:15px; padding-top: 7px; background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to top, #e6e6e6, #f5f5f5); border: 1px solid #bdbdbd; border-radius: 3px;box-shadow: 0 1px 0 #a8a8a8; color: #262626; font-size: 14px; font-weight: bold; height: 32px; text-decoration: none; text-transform: uppercase; width: 190px;}
+#photo3 input {margin-top: -10px; margin-left: -20px; position: absolute; border:1px solid #f9f9f9; display:block;  height:35px;  width: 160px; border-radius:3px; opacity: 0; }
+#photo3:hover {background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#ButtonTwoTitleForm{width:160px; height:32px; margin:0 auto; float:left; margin-bottom: 25px;}
+#ButtonTwoTitleForm a{text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:31px; line-height:32px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:14px; padding-left:5%; background:url(images/Cabinet/BgLogin.png) 96% center no-repeat;}
+#ButtonTwoTitleForm a:hover{background:url(images/Cabinet/BgLogin.png) 96% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+
+
+
+#FormalizationCabinet #LeftBlockForms #BlockName3 { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #BlockName3 p { width:19.2%; float:left; text-transform:uppercase; color:#444444;}
+#FormalizationCabinet #LeftBlockForms #BlockName3 input { float:right; width:80.8%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #Event { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #Event p { width:19.2%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #Event input { float:right; width:80.8%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #Email3 { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #Email3 p { width:19.2%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #Email3 input { float:right; width:80.8%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #Phone3 { height:45px; margin-bottom:5px; width:100%;}
+#FormalizationCabinet #LeftBlockForms #Phone3 p { width:19.2%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #Phone3 input { float:left; width:41%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #CongratulatoryText3 { width:100%; margin-top:36px;}
+#FormalizationCabinet #LeftBlockForms #CongratulatoryText3 p { width:100%; float:left; text-transform:uppercase; color:#444444;}
+#FormalizationCabinet #LeftBlockForms #CongratulatoryText3 textarea { float:left; width:100%; height:155px; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:15px; margin-top:2px; resize: none;}
+#FormalizationCabinet #LeftBlockForms #DateCongratulations { height:45px; width:50%; margin-top:10px; margin-bottom: 50px; float:left; padding-right:1.8%;}
+#FormalizationCabinet #LeftBlockForms #DateCongratulations p { width:100%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #DateCongratulations input { float:left; width:100%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+#FormalizationCabinet #LeftBlockForms #TimeCongratulations { height:45px; width:50%; margin-top:28px; float:left; padding-left:5.2%;}
+#FormalizationCabinet #LeftBlockForms #TimeCongratulations p { width:100%; float:left; text-transform:uppercase; color:#e444444; line-height:45px;}
+#FormalizationCabinet #LeftBlockForms #TimeCongratulations input { float:left; width:100%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px; padding-bottom:50px;}
+#FormalizationCabinet #LeftBlockForms #MethodUp p {  color: #444444;
+    float: left;
+    text-transform: uppercase;
+    width: 100%;
+    }
+#FormalizationCabinet #LeftBlockForms #RadioButton { height:45px; width:20%; margin-top:15px; float:left;}
+#FormalizationCabinet #LeftBlockForms #RadioButton p { width:auto;  float: left; text-transform:uppercase; color:#444444; padding-top: 3px }
+#FormalizationCabinet #LeftBlockForms #RadioButton input { float:left; margin-left: 17px}
+
+
+
+#FormalizationCabinet #RightBlockCabinet { float:left; width:44.2%; padding:0 20px;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson { margin:0 0.2%; border:1px solid #d7d7d7;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #FotoFamosPerson { width:290px; margin:20px auto 32px auto; height:316px; overflow:hidden;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #FotoFamosPerson img { width:100%;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson p {}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson p.Marker { height:100%; font-size:18px; color:#444444; text-align:center !important; width:68.7% !important; background:#cccccc; margin-left:2.3%;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson p.Marker span { font-size:24px;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #NamePerson { width:94%; height:50px; line-height:50px; margin:0 auto; margin-bottom:7px;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #NamePerson p { float:left; text-align:right; width:29%; font-weight:bold;
+ font-size:18px; color:#444444;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #PricePerson { width:100%; height:50px; line-height:50px; width:94%;  margin:0 auto; margin-bottom:7px;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #PricePerson p { float:left; text-align:right; width:29%; font-weight:bold; font-size:18px; color:#444444;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #VideoPerson { width:100%; height:50px; line-height:50px; width:94%;  margin:0 auto; margin-bottom:35px;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #VideoPerson p { float:left; text-align:right; width:29%; font-weight:bold; font-size:18px;color:#444444;}
+
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet {width:203px; height:56px; margin:0 45%; padding-top:5px; margin-top:27px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet .PrezentCabinet {float:left; background:url(images/Button/Prezent.png) left center no-repeat; width:54px; height:56px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet a {text-decoration:none; text-transform:uppercase; height:33px; line-height:33px; color:#fff; font-family: 'OpenSans', sans-serif; font-weight:bold; font-size:14px; display:block; background: url(images/Button/OlderButtonRight2.png) right center no-repeat, url(images/Button/BgList.png) 87% center no-repeat, url(images/Button/OlderButton.png) center center repeat-x; display:block; margin-top:15px; font-style:normal; padding-left:36%; margin-left:2px; border-radius:3px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet a:hover {background-color: rgba(0, 0, 0, .7);}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet a:active {box-shadow: inset 0 0 10px rgba(0,0,0,0.2), inset 0 5px 5px rgba(0,0,0,0.4);}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo {display: none; width:203px; height:56px; margin:0 45%; padding-top:5px; margin-top:27px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo .PrezentCabinet {float:left; background:url(images/Button/Prezent.png) left center no-repeat; width:54px; height:56px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo a {text-decoration:none; text-transform:uppercase; height:33px; line-height:33px; color:#fff; font-family: 'OpenSans', sans-serif; font-weight:bold; font-size:14px; display:block; background: url(images/Button/OlderButtonRight2.png) right center no-repeat, url(images/Button/BgList.png) 87% center no-repeat, url(images/Button/OlderButton.png) center center repeat-x; display:block; margin-top:15px; font-style:normal; padding-left:36%; margin-left:2px; border-radius:3px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo a:hover {background-color: rgba(0, 0, 0, .7);}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo a:active {box-shadow: inset 0 0 10px rgba(0,0,0,0.2), inset 0 5px 5px rgba(0,0,0,0.4);}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetOne {display: none; width:203px; height:56px; margin:0 45%; padding-top:5px; margin-top:27px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetOne .PrezentCabinet {float:left; background:url(images/Button/Prezent.png) left center no-repeat; width:54px; height:56px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetOne a {text-decoration:none; text-transform:uppercase; height:33px; line-height:33px; color:#fff; font-family: 'OpenSans', sans-serif; font-weight:bold; font-size:14px; display:block; background: url(images/Button/OlderButtonRight2.png) right center no-repeat, url(images/Button/BgList.png) 87% center no-repeat, url(images/Button/OlderButton.png) center center repeat-x; display:block; margin-top:15px; font-style:normal; padding-left:36%; margin-left:2px; border-radius:3px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetOne a:hover {background-color: rgba(0, 0, 0, .7);}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetOne a:active {box-shadow: inset 0 0 10px rgba(0,0,0,0.2), inset 0 5px 5px rgba(0,0,0,0.4);}
+
+#AddNews #DateCongratulations { height:45px; width:50%; margin-top:10px; margin-bottom: 50px; float:left; padding-right:1.8%;}
+#AddNews #DateCongratulations p { width:100%; float:left; text-transform:uppercase; color:#444444; line-height:45px;}
+#AddNews #DateCongratulations input { float:left; width:100%; height:100%; border:1px solid #d7d7d7; border-radius:5px; font-size:20px; padding:0 15px 0 15px;}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1334px) { /* 1200<width<1334 main 1200*/
+    #FormalizationCabinet #LeftBlockForms #MethodUpOne { width: 600px; margin: 0 auto;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1199px) { /* 980<width<1199 main 980*/
+section { width:98%;}
+    #Formalization h1 {font-size:26px; background-size:35px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #NamePerson p {font-size:14px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #PricePerson p {font-size:14px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #VideoPerson p {font-size:14px;}
+    #FormalizationCabinet #LeftBlockForms #TimeCongratulations input { padding-bottom:0;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms { width:180px; margin-top:5px; margin-left:7%}
+    #ButtonTwoTitleForm { width:180px; margin-top:5px; margin-left:7%}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms1 { width:180px; margin-top:5px; margin-left:7%}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2 { width: 180px;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2 input {width: 180px;  }
+    #FormalizationCabinet #LeftBlockForms #MethodUpOne { width: 585px; margin: 0 auto;}
+    #photo3 { width: 180px;}
+    #photo3 input {width: 180px;  }
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 979px) { /* 768<width<979 main 768*/
+    #FormalizationCabinet { padding-top:15px;}
+    #FormalizationCabinet #LeftBlockForms #BlockName2 p, #FormalizationCabinet #LeftBlockForms #MethodUp p, #FormalizationCabinet #LeftBlockForms #Email2 p, #FormalizationCabinet #LeftBlockForms #Phone2 p, #FormalizationCabinet #LeftBlockForms #BlockName3 p, #FormalizationCabinet #LeftBlockForms #Email3 p, #FormalizationCabinet #LeftBlockForms #Phone3 p, #FormalizationCabinet #LeftBlockForms #CongratulatoryText3 p, #FormalizationCabinet #LeftBlockForms #DateCongratulations p, #FormalizationCabinet #LeftBlockForms #TimeCongratulations p { font-size:12px;}
+    #FormalizationCabinet #LeftBlockForms #TitleTopForms .formaliza {margin-bottom:0; float:none;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms .formaliza {margin-bottom:0; float:none;}
+    #FormalizationCabinet #LeftBlockForms #TitleTopForms #ButtonTopForms {margin-bottom:20px; }
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms {margin-bottom:20px; margin-top:20px;}
+    #ButtonTwoTitleForm {margin-bottom:20px; margin-top:20px;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms1 {margin-bottom:20px; margin-top:20px;}
+    #FormalizationCabinet #LeftBlockForms #DateCongratulations, #FormalizationCabinet #LeftBlockForms #TimeCongratulations { margin-top:15px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #FotoFamosPerson { width:250px; height:276px;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson p.Marker { width:57% !important;}
+    #FormalizationCabinet #RightBlockCabinet #BlockPerson #NamePerson p, #FormalizationCabinet #RightBlockCabinet #BlockPerson #PricePerson p, #FormalizationCabinet #RightBlockCabinet #BlockPerson #VideoPerson p { width:40%;}
+    #FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet { margin:0 auto;}
+    #FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo { margin:0 auto;}
+    #FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTOne { margin:0 auto;}
+    #FormalizationCabinet #LeftBlockForms #RadioButton p {font-size: 10px;}
+    #FormalizationCabinet #LeftBlockForms #RadioButton input { float:left; margin-left: 4px}
+    #FormalizationCabinet #LeftBlockForms #MethodUpOne { width: 445px; margin: 0 auto;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 767px) { /* 480<width<767 main 480*/
+
+    #blockpay1 {width: 100%; text-align: center; float: left; margin-top: 15px}
+    #blockpay1 input {text-align: center}
+    #blockpay2  {width: 100%; text-align: center; float: left; margin-top: 15px}
+    #blockpay2  input {text-align: center }
+    #blockpay3  {width: 100%; text-align: center; float: left; margin-top: 15px}
+    #blockpay3  input {text-align: center; margin-bottom: 15px}
+
+#Formalization { padding:15px 0;}
+#Formalization h1 {font-size:20px; background-size:28px; padding-left:40px;}
+#Formalization #BelowH1Bottom { padding-left:40px;}
+#BlockVideoFormaliz { padding:10px 0;}
+#FormalizationCabinet { padding-top:20px;}
+#FormalizationCabinet #LeftBlockForms #BlockName2 p, #FormalizationCabinet #LeftBlockForms #MethodUp p, #FormalizationCabinet #LeftBlockForms #Email2 p, #FormalizationCabinet #LeftBlockForms #Phone2 p, #FormalizationCabinet #LeftBlockForms #BlockName3 p, #FormalizationCabinet #LeftBlockForms #Event p, #FormalizationCabinet #LeftBlockForms #Email3 p, #FormalizationCabinet #LeftBlockForms #Phone3 p, #FormalizationCabinet #LeftBlockForms #CongratulatoryText3 p, #FormalizationCabinet #LeftBlockForms #DateCongratulations p, #FormalizationCabinet #LeftBlockForms #TimeCongratulations p { font-size:10px; width:22%;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms { margin-bottom:0;}
+    #ButtonTwoTitleForm { margin-bottom:0;}
+#FormalizationCabinet #LeftBlockForms #BlockName2 input, #FormalizationCabinet #LeftBlockForms #Email2 input, #FormalizationCabinet #LeftBlockForms #Phone2 input, #FormalizationCabinet #LeftBlockForms #BlockName3 input, #FormalizationCabinet #LeftBlockForms #Email3 input, #FormalizationCabinet #LeftBlockForms #Phone3 input, #FormalizationCabinet #LeftBlockForms #CongratulatoryText3 textarea, #FormalizationCabinet #LeftBlockForms #DateCongratulations input, #FormalizationCabinet #LeftBlockForms #TimeCongratulations input {width:78%;}
+
+#FormalizationCabinet #LeftBlockForms #CongratulatoryText3 p {width:100%;}
+#FormalizationCabinet #LeftBlockForms #CongratulatoryText3  {margin-top: 60px}
+#FormalizationCabinet #LeftBlockForms #CongratulatoryText3 textarea { width:100%;}
+#FormalizationCabinet #LeftBlockForms #DateCongratulations, #FormalizationCabinet #LeftBlockForms #TimeCongratulations { width:100%;}
+#FormalizationCabinet #LeftBlockForms #DateCongratulations { padding-right:0; margin-bottom:30px;}
+#FormalizationCabinet #LeftBlockForms #TimeCongratulations { padding-left:0;}
+#FormalizationCabinet #LeftBlockForms #DateCongratulations p, #FormalizationCabinet #LeftBlockForms #TimeCongratulations p { width:100%; line-height:1.5; }
+#FormalizationCabinet #LeftBlockForms #DateCongratulations input, #FormalizationCabinet #LeftBlockForms #TimeCongratulations input { width:100%;}
+
+#FormalizationCabinet #RightBlockCabinet { padding:0 10px;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #FotoFamosPerson {margin:20px auto 15px auto;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #FotoFamosPerson { width:160px; height:186px; margin-top:10px;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #NamePerson p, #FormalizationCabinet #LeftBlockForms #MethodUp p, #FormalizationCabinet #RightBlockCabinet #BlockPerson #PricePerson p, #FormalizationCabinet #RightBlockCabinet #BlockPerson #VideoPerson p { width:100%; text-align:center;}
+#FormalizationCabinet #RightBlockCabinet #BlockPerson p.Marker { width:100% !important; line-height:1.5; padding:10px 0; margin-left:0; margin-bottom:5px;}
+
+#FormalizationCabinet #RightBlockCabinet #BlockPerson p.Marker span { font-size:15px;} 
+#FormalizationCabinet #RightBlockCabinet #BlockPerson #NamePerson, #FormalizationCabinet #RightBlockCabinet #BlockPerson #PricePerson, #FormalizationCabinet #RightBlockCabinet #BlockPerson #VideoPerson { line-height:1.5; height:auto;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinet { width:90%; max-width:203px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetTwo { width:90%; max-width:203px;}
+#FormalizationCabinet #RightBlockCabinet #ButtonOrderCabinetOne { width:90%; max-width:203px;}
+    #FormalizationCabinet #LeftBlockForms #RadioButton p {font-size: 10px;}
+    #FormalizationCabinet #LeftBlockForms #RadioButton input { float:left; margin-left: 15px}
+    #FormalizationCabinet #LeftBlockForms #MethodUpOne { width: 285px; margin: 0 auto;}
+
+}
+/*-------------------------------------*/
+@media screen and (max-width: 479px) { /* 320<width<479 main 320*/
+html {width:100%; min-width:307px;}
+    #statusErrorOrderingModal p {margin-bottom: 15px; margin-top: 20px;}
+    #blockpay1 {width: 100%; text-align: center; float: left; margin-top: 15px}
+    #blockpay1 input {text-align: center}
+    #blockpay2  {width: 100%; text-align: center; float: left; margin-top: 15px}
+    #blockpay2  input {text-align: center }
+    #blockpay3  {width: 100%; text-align: center; float: left; margin-top: 15px}
+    #blockpay3  input {text-align: center; margin-bottom: 15px}
+
+#Formalization h1 {background:none; text-align:center; font-size:15px; padding-left:0;}
+#Formalization #BelowH1Bottom { padding-left:0; text-align:center;}
+#FormalizationCabinet { padding-bottom:30px;}
+#FormalizationCabinet p.formaliza { font-size:20px; padding:7px 0 7px 0; text-align:center; width:100%; margin: 5px 0 15px 0;}
+#FormalizationCabinet #LeftBlockForms { width:98%; margin:0 auto;}
+#FormalizationCabinet #LeftBlockForms #TwoTitleForms .formaliza {margin-bottom:15px;}
+#FormalizationCabinet #LeftBlockForms #BlockName2 p, #FormalizationCabinet #LeftBlockForms #MethodUp p, #FormalizationCabinet #LeftBlockForms #Email2 p, #FormalizationCabinet #LeftBlockForms #Phone2 p, #FormalizationCabinet #LeftBlockForms #BlockName3 p, #FormalizationCabinet #LeftBlockForms #Event p, #FormalizationCabinet #LeftBlockForms #Email3 p,#FormalizationCabinet #LeftBlockForms #Phone3 p, #FormalizationCabinet #LeftBlockForms #CongratulatoryText3 p, #FormalizationCabinet #LeftBlockForms #DateCongratulations p, #FormalizationCabinet #LeftBlockForms #TimeCongratulations p { font-size:12px; width:100%; text-align:center; line-height:1.5;}
+#FormalizationCabinet #LeftBlockForms #BlockName2 input, #FormalizationCabinet #LeftBlockForms #MethodUp p, #FormalizationCabinet #LeftBlockForms #Email2 input, #FormalizationCabinet #LeftBlockForms #Phone2 input, #FormalizationCabinet #LeftBlockForms #BlockName3 input, #FormalizationCabinet #LeftBlockForms #Event input, #FormalizationCabinet #LeftBlockForms #Event input, #FormalizationCabinet #LeftBlockForms #Email3 input, #FormalizationCabinet #LeftBlockForms #Phone3 input, #FormalizationCabinet #LeftBlockForms #CongratulatoryText3 textarea, #FormalizationCabinet #LeftBlockForms #DateCongratulations input, #FormalizationCabinet #LeftBlockForms #TimeCongratulations input {width:100%; margin-bottom:10px;}
+#FormalizationCabinet #LeftBlockForms #CongratulatoryText3 textarea { margin-top:0;}
+    #FormalizationCabinet #LeftBlockForms #TitleTopForms #ButtonTopForms { margin-left:0; margin:0 auto; width:100%; text-align:center; margin-bottom:15px; margin-top:10px;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms { margin-left:0; margin:0 auto; width:100%; text-align:center; margin-bottom:15px;}
+    #ButtonTwoTitleForm { margin-left:0; margin:0 auto; width:100%; text-align:center; margin-bottom:15px;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms1 { margin-left:0; margin:0 auto; width:100%; text-align:center; margin-bottom:15px;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2 { width: 100%;}
+    #FormalizationCabinet #LeftBlockForms #TwoTitleForms #ButtonTwoTitleForms #photo2 input {width: 100%;  }
+    #photo3 { width: 100%;}
+    #photo3 input {width: 100%;  }
+
+    #FormalizationCabinet #RightBlockCabinet { width:98%; margin-top:35px;}
+    #FormalizationCabinet #LeftBlockForms #RadioButton p {font-size: 11px;}
+    #FormalizationCabinet #LeftBlockForms #Phone2 { margin-bottom:70px; }
+    #FormalizationCabinet #LeftBlockForms #DateCongratulations { padding-right:0; margin-bottom:30px;}
+    #FormalizationCabinet #LeftBlockForms #RadioButton input { float:left; margin-left: 14px}
+    #FormalizationCabinet #LeftBlockForms #MethodUpOne { width: 320px; margin: 0 auto;}
+
+}
+
+#box4 {
+
+  /*  background-color: #ccc;
+    color: #333;
+    padding: 1px;*/
+    text-align: center;
+    width: 67px;
+    height: auto;
+
+    text-indent: 0px;
+  /*  border: 1px solid #888;*/
+    -moz-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    -webkit-transition: all 2s ease-out;
+    cursor: pointer;}
+#box4:hover {
+    /*background-color: #33A0D3;
+    color: #000;*/
+    -webkit-transform: scale(3) translate(18px,10px);
+    -moz-transform: scale(3) translate(18px,10px);
+    -o-transform: scale(3) translate(18px,10px);
+
+    }
+#box5 {
+
+    /*  background-color: #ccc;
+      color: #333;
+      padding: 1px;*/
+    text-align: center;
+    width: 67px;
+    height: auto;
+
+    text-indent: 0px;
+    /*  border: 1px solid #888;*/
+    -moz-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    -webkit-transition: all 2s ease-out;
+    cursor: pointer;}
+#box5:hover {
+    /*background-color: #33A0D3;
+    color: #000;*/
+    -webkit-transform: scale(3) translate(18px,-15px);
+    -moz-transform: scale(3) translate(18px,-15px);
+    -o-transform: scale(3) translate(18px,-15px);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

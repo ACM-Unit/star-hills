@@ -1,0 +1,107 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, big, em, font, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit;  font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
+:focus { outline: 0;}
+ol, ul { list-style: none;}
+table { border-collapse: separate; border-spacing: 0;}
+caption, th, td { text-align: left; font-weight: normal;}
+strong,b{font-weight:bold}
+em{font-style:italic}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+/*-------------------------------------*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans.eot');
+    src: url('fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+    url('fonts/OpenSans.woff') format('woff'),
+    url('fonts/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*-------------------------------------*/
+*{-moz-box-sizing: border-box; box-sizing: border-box;}
+html {width:100%;}
+body {font-size:14px; color: #7e7e7e; background: #fff; line-height:1.3;  font-family: 'OpenSans', sans-serif;}
+a {color: #6a9b9a; }
+a:hover {text-decoration:none;}
+.clr,#clr,.Clr {clear: both;}
+/*-------------------------------------*/
+section { width:1140px; margin:0 auto;}
+#MyOrdersAll {padding:25px 0;}
+#MyOrdersAll h1 {text-transform:uppercase; font-size:30px; font-weight:bold; color:#444444; background: url(images/CheckIn/BgTitle.png) left top no-repeat; padding-left:50px;}
+#MyOrdersAll h1 span {color:#e32026;}
+#MyOrdersAll #BelowH1Bottom {padding-left:50px; text-transform:uppercase; font-weight:bold; font-size:12px; color:#2f9cd0;}
+
+#ButtonBlock { padding:15px 0; background:url(images/BgBlockSlider.jpg) left bottom repeat; margin-bottom:20px;}
+#ButtonBlock .One { float:left; margin-right:15px;}
+#ButtonBlock .Two { float:left; margin-right:15px;}
+#ButtonBlock .One a { text-align:center; width:165px; height:40px; text-decoration:none; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31; display:block;  box-shadow: 0 1px 0 #a70f27;}
+#ButtonBlock .One a p {color:#fff ; border:1px solid #c27073; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:17px; text-shadow:0 -1px 1px #0d4067;}
+#ButtonBlock .One a:hover {background: linear-gradient(to bottom, #d5433a, #ec6137);}
+#ButtonBlock .Two a { text-align:center; width:175px; height:40px; text-decoration:none; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd; display:block;  box-shadow: 0 1px 0 #a8a8a8;}
+#ButtonBlock .Two a p {color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:38px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:17px;}
+#ButtonBlock .Two a:hover {background: linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+#BlockAllVideo {width:100%; background: url(images/MyOrders/BgAll.jpg)center bottom no-repeat;}
+#BlockAllVideo #BlockVideo{ overflow:auto;}
+#BlockAllVideo #BlockVideo .OneVideo { border-bottom:1px solid #cccccc; padding:20px 0;}
+#BlockAllVideo #BlockVideo .OneVideo:last-child { border-bottom:none;}
+#BlockAllVideo #BlockVideo .OneVideo .BlVideo { float:left; overflow:hidden;}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes { float:left; padding-left:15px; width:40%;}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .TitleOneVideo { font: italic bold 20px Georgia, "Times New Roman", Times, serif; color:#444444; margin-bottom:10px;}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .TitleOneVideo p {}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .NameDate {}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .NameDate p { float:left;}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .Confirmation { margin-top:20px;}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .Confirmation img { float:left; width:28px; height:28px; border-radius:50%; margin-right:10px;}
+#BlockAllVideo #BlockVideo .OneVideo .RightDes .Confirmation p { float:left; line-height:28px;}
+.OneVideo .One { float:left; margin-left:15px;}
+.OneVideo .One div { cursor: pointer; text-align:center; width:165px; height:30px; text-decoration:none; background: linear-gradient(to top, #d5433a, #ec6137); border-radius:3px; border:1px solid #e10f31; display:block;  box-shadow: 0 1px 0 #a70f27;}
+.OneVideo .One div p {color:#fff ; border:1px solid #c27073; display:block; width:100%; height:30px; line-height:38px; border-radius:3px; text-transform:uppercase; font-weight:bold; font-size:12px;}
+.OneVideo .One div:hover {background: linear-gradient(to bottom, #d5433a, #ec6137);}
+
+#BlockAllVideo #BlockVideo .OneVideo .ButtonMoreOneVideo {float:right; width:165px; height:32px; background: linear-gradient(to top, #e6e6e6, #f5f5f5); border-radius:3px; border:1px solid #bdbdbd;  box-shadow: 0 1px 0 #a8a8a8; margin:0 2% 0 0;}
+#BlockAllVideo #BlockVideo .OneVideo .ButtonMoreOneVideo a {text-decoration:none; color:#262626 ; border:1px solid #f9f9f9; display:block; width:100%; height:30px; line-height:32px; border-radius:3px; background:url(images/Cabinet/BgLogin.png) 91% center no-repeat; text-transform:uppercase; font-weight:bold; font-size:13px; padding-left:15px;}
+#BlockAllVideo #BlockVideo .OneVideo .ButtonMoreOneVideo a:hover {background:url(images/Cabinet/BgLogin.png) 91% center no-repeat, linear-gradient(to bottom, #e6e6e6, #f5f5f5);}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1334px) { /* 1200<width<1334 main 1200*/
+
+
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 1199px) { /* 980<width<1199 main 980*/
+    section { width:98%;}
+    #MyOrdersAll h1 {font-size:26px; background-size:35px;}
+    #BlockAllVideo #BlockVideo .OneVideo .RightDes {width:42%;}
+    #BlockAllVideo #BlockVideo .OneVideo .ButtonMoreOneVideo { width:18%;}
+
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 979px) { /* 768<width<979 main 768*/
+
+    #BlockAllVideo #BlockVideo .OneVideo .RightDes { width:52%;}
+    #BlockAllVideo #BlockVideo .OneVideo .ButtonMoreOneVideo { float:left; margin-top:25px; width:180px; margin-left:15px;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 767px) { /* 480<width<767 main 480*/
+    #MyOrdersAll h1 {font-size:20px; background-size:28px; padding-left:40px;}
+    #MyOrdersAll #BelowH1Bottom {padding-left:40px;}
+    #ButtonBlock .One { width:30%; margin-left:2.7%; margin-right:0;}
+    #ButtonBlock .Two { width:30%; margin-left:2.7%; margin-right:0;}
+    #ButtonBlock .One a { width:100%;}
+    #ButtonBlock .Two a {width:100%;}
+    #BlockAllVideo #BlockVideo .OneVideo .BlVideo { width:100%;}
+    #BlockAllVideo #BlockVideo .OneVideo .BlVideo .Center { margin:0 auto;}
+    #BlockAllVideo #BlockVideo .OneVideo .RightDes { width:100%;}
+    #BlockAllVideo #BlockVideo .OneVideo .ButtonMoreOneVideo { float:right;}
+}
+/*-------------------------------------*/
+@media screen and (max-width: 479px) { /* 320<width<479 main 320*/
+    html {width:100%; min-width:307px;}
+    #MyOrdersAll h1 {background:none; text-align:center; font-size:15px; padding-left:0;}
+    #MyOrdersAll #BelowH1Bottom { padding-left:0; text-align:center;}
+    #ButtonBlock .One a p { font-size:12px;}
+    #ButtonBlock .Two a p { font-size:12px;}
+}

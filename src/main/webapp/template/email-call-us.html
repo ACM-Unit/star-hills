@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<title>Клиент оформил заявку:</title>
+<body>
+<style type="text/css">
+    .tabl {
+        background: #ffffff
+    }
+
+    .tabl td {
+        max-width: 200px;
+        word-wrap: break-word;
+    }
+
+    h1 {
+        color: #98bfd2;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        font-size: 24px;
+        font-weight: normal;
+        text-align: center;
+    }
+</style>
+<!-- Container Table -->
+<table cellpadding="0" cellspacing="0" border="0" width="99%" bgcolor="#F6F6F5">
+    <tr>
+        <td align="center">
+            <!-- Email Wrapper Table -->
+            <table class="tabl" cellpadding="0" cellspacing="0" border="0" width="800" style="background: #ffffff;">
+                <tr>
+                    <td colspan="4" aligh="center" style="max-width: 200px;word-wrap: break-word;"><h1
+                            style="color: #98bfd2;font-family: Arial,Helvetica,sans-serif;padding: 0;margin: 0;font-size: 24px;font-weight: normal;text-align: center;">
+                      ${title}</h1></td>
+                </tr>
+                <tr>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">Имя клиента:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;">${firstname}</td>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">фамилия клиента:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;">${lastname}</td>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">Email клиента:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;">${email}</td>
+                </tr>
+            </table>
+            <table class="tabl" cellpadding="0" cellspacing="0" border="0" width="800" style="margin-top: 50px; background: #ffffff;">
+                <tr>
+                    <td style="max-width: 200px;word-wrap: break-word;font-weight: bold">Текст:</td>
+                    <td style="max-width: 200px;word-wrap: break-word;">${text}</td>
+                </tr>
+            </table>
+            <!-- End Email Wrapper Table -->
+        </td>
+    </tr>
+</table>
+<!-- End Container Table -->
+</body>
+</html>
